@@ -1,0 +1,33 @@
+Country,Model,Team,Type,Reform impact,"Federal
+tax","State
+tax",Benefit programs,Integrated microdata,Local areas,"Open
+source",Public interface,"API
+access",Notes
+US,TPC microsim,Tax Policy Center,Non-profit,✅,✅,✅,❌,,,❌,❌,❌,
+US,TF microsim,Tax Foundation,Non-profit,✅,✅,❌,❌,,,❌,❌,❌,
+US,TRIM3,Urban Institute,Non-profit,✅,❌,❌,✅,,,❌,❌,❌,
+US,ATTIS,Urban Institute,Non-profit,✅,✅,✅,✅,,,❌,❌,❌,
+US,ITEP microsim,ITEP,Non-profit,✅,✅,✅,❌,,,❌,❌,❌,
+US,Tax-Calculator,Policy Simulation Library,Non-profit,✅,✅,❌,❌,,,✅,✅,❌,
+US,JCT microsim,Joint Committee on Taxation,Government,✅,✅,❌,❌,,,❌,❌,❌,
+US,CBO microsim,Congressional Budget Office,Government,✅,✅,❌,✅,,,❌,❌,❌,
+US,Benefits Data Trust,Benefits Data Trust,Non-profit,❌,❌,❌,✅,,,❌,❌,❌,They apply people for benefits.
+US,BenefitKitchen,Benefit Kitchen,For-profit,❌,❌,❌,✅,,,❌,✅,✅,Free individual app; subscription fee for API access
+US,BenefitsCliffs.com,Georgia Center for Opportunity,Non-profit,❌,❌,❌,✅,,,❌,✅,❌,App is paywalled
+US,SNAPScreener.com / MedicaidScreener.com,Ben Molin / Jump Credit,For-profit,❌,❌,❌,✅,,,❌,✅,✅,"SNAP, WIC, and Medicaid only. Provides table with state-level parameters."
+US,MRelief,MRelief,Non-profit,❌,❌,❌,✅,,,❌,❌,❌,SNAP only. They help people apply.
+US,Policy Rules Database,Atlanta Fed,Government,❌,🟠,🟠,✅,,,✅,✅,❌,Data and code are shared upon request; open-sourcing in progress
+US,REMI microsim,REMI,For-profit,✅,✅,✅,❌,,,❌,✅,❌,Little public info - is it even a microsim?
+US,State microsims,Various states,Government,✅,❓,✅,❓,,,❌,❌,❌,Capabilities likely vary considerably across states; little public info to our knowledge
+US,Budget Lab Tax Model,Budget Lab at Yale,,✅,✅,❌,❌,,,✅,❌,❌,
+US,PWBM,Penn Wharton Budget Model,,✅,✅,🟠,🟠,,,❌,❌,❌,
+US,Taxes and Growth Model,Tax Foundation,Non-profit,✅,✅,❌,❌,,,❌,✅,❌,
+US,PolicyEngine US,PolicyEngine,Non-profit,✅,✅,✅,✅,,,✅,✅,✅,
+UK,Intra-Governmental Tax and Benefit Microsimulation model,HM Treasury,Government,✅,✅,,❌,❌,❌,❌,❌,❌,"Good, easy to understand video. Website is dense and academic."
+UK,Policy Simulation Model,Department of Work and Pensions,Government,✅,❌,,✅,❌,❌,❌,❌,❌,"Not much information here. Talk about traffic, crowd or pedestrian and health science modeling."
+UK,TAXBEN,Institute for Fiscal Studies,Non-profit,✅,✅,,✅,❌,❌,❌,❌,❌,"Not user friendly. Very academic nd seems geared for policy analysts, not the layperson"
+UK,Tax-Benefit Model,Institute of Public Policy Research,Non-profit,✅,✅,,✅,❌,❌,❌,❌,❌,Comprehensive explanation on Wikipedia. They point to EUROMOD as an example. How do you get a mention on Wikipedia?
+UK,Tax-Transfer Model,Landman Economics,For-profit,✅,✅,,✅,❌,❌,❌,❌,❌,Geared towards policy analysts and planners. Very dense and academic.
+UK,UKMOD,University of Essex,Non-profit,✅,✅,,✅,❌,❌,✅,✅,❌,"Easy to understand videos. Easy to navigate through the website. Claim to be the only open access model for the UK. Offers news, training course details and related papers to customers."
+UK,EntitledTo,EntitledTo,For-profit,❌,❌,,✅,❌,❌,❌,✅,❌,"user friendly site. Offers three options to advisers; free, upgrade, and a further upgrade. Mission is a short, but effective statement. Focus on empowerment to help people claim benefits they're entitled to."
+UK,PolicyEngine UK,PolicyEngine,Non-profit,✅,✅,,✅,✅,✅,✅,✅,✅,
