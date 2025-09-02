@@ -3,9 +3,10 @@ import { MarkdownView } from '../components/MarkdownView'
 
 export const Budget: React.FC = () => {
   const [meta, setMeta] = useState<any | null>(null)
+  const base = import.meta.env.BASE_URL || '/'
   useEffect(() => {
-    fetch('/content/budget.json').then(r => r.ok ? r.json() : null).then(setMeta).catch(() => {})
-  }, [])
+    fetch(base + 'content/budget.json').then(r => r.ok ? r.json() : null).then(setMeta).catch(() => {})
+  }, [base])
   return (
     <div className="container" style={{ display: 'grid', gap: 16 }}>
       {meta && (
@@ -20,4 +21,3 @@ export const Budget: React.FC = () => {
     </div>
   )
 }
-

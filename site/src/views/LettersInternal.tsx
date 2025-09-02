@@ -57,12 +57,14 @@ const letterDrafts: LetterDraft[] = [
 export const LettersInternal: React.FC = () => {
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
   const [letterContent, setLetterContent] = useState<string>('')
+  const [selectedEmail, setSelectedEmail] = useState<string>('')
   const [loading, setLoading] = useState(false)
+  const base = import.meta.env.BASE_URL || '/'
 
   useEffect(() => {
     if (selectedLetter) {
       setLoading(true)
-      fetch(`/docs/pose/letters/drafts/${selectedLetter}`)
+      fetch(`${base}docs/pose/letters/drafts/${selectedLetter}`)
         .then(res => res.text())
         .then(text => {
           setLetterContent(text)
@@ -73,7 +75,7 @@ export const LettersInternal: React.FC = () => {
           setLoading(false)
         })
     }
-  }, [selectedLetter])
+  }, [selectedLetter, base])
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -251,14 +253,27 @@ Matt`
                     </span>
                   </td>
                   <td>
-                    <button onClick={() => setSelectedLetter(letter.filename)}>
+                    <button onClick={() => {
+                      setSelectedLetter(letter.filename)
+                      setSelectedEmail('')
+                    }}>
                       View Draft
                     </button>
                     <button onClick={() => {
-                      const key = letter.name.split(' ')[0].toLowerCase()
-                      copyToClipboard(emailTemplates[key as keyof typeof emailTemplates] || '')
+                      const nameToKey: Record<string, string> = {
+                        'James Poterba': 'poterba',
+                        'John Sabelhaus': 'sabelhaus',
+                        'George Callas': 'callas',
+                        'Mark Franks': 'franks',
+                        'Martin Perron': 'perron',
+                        'Matthew Unrath': 'unrath'
+                      }
+                      const key = nameToKey[letter.name]
+                      const email = emailTemplates[key as keyof typeof emailTemplates] || ''
+                      setSelectedEmail(email)
+                      setSelectedLetter(null)
                     }}>
-                      Copy Email
+                      View Email
                     </button>
                   </td>
                 </tr>
@@ -284,8 +299,20 @@ Matt`
                 </div>
               </>
             )
+          ) : selectedEmail ? (
+            <>
+              <div className="preview-header">
+                <h2>Email Template</h2>
+                <button onClick={() => copyToClipboard(selectedEmail)}>
+                  Copy Email Text
+                </button>
+              </div>
+              <div className="letter-content">
+                <pre style={{whiteSpace: 'pre-wrap', fontFamily: 'inherit'}}>{selectedEmail}</pre>
+              </div>
+            </>
           ) : (
-            <p>Select a letter to preview</p>
+            <p>Select a letter or email to preview</p>
           )}
         </div>
       </div>

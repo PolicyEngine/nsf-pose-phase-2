@@ -22,7 +22,7 @@ Phase I References (selected)
 - Ahmadi, V. (2024). How PolicyEngine UK models behavioural responses. https://policyengine.org/uk/research/behavioural-responses
 - Feenberg, D. & Coutts, E. (1993). An Introduction to the TAXSIM Model. JPAM. https://www.jstor.org/stable/3325474
 - Ghenis, M. (2024). NEO Philanthropy Awards $200,000 Grant to PolicyEngine. https://policyengine.org/us/research/neo-philanthropy
-- Ghenis, M. (2024). Nuffield Foundation awards £250k to enhance PolicyEngine UK. https://policyengine.org/us/research/uk-nuffield-grant
+- Ghenis, M. (2024). Nuffield Foundation awards £251,296 to enhance PolicyEngine UK. https://policyengine.org/us/research/uk-nuffield-grant
 - Ghenis, M. & Gross, B. (2024). PolicyEngine Powers Niskanen Center's Analysis. https://policyengine.org/us/research/niskanen-center-analysis
 - Ghenis, M., Woodruff, N., DeBacker, J., & Ahmadi, V. (2024). PolicyEngine US Launches Behavioral Responses. https://policyengine.org/us/research/us-behavioral-responses
 - Henson, E. (2024). MyFriendBen Receives Grant to Expand Access to Public Benefits. https://www.myfriendben.org/myfriendben-receives-grant-to-expand-access-to-public-benefits/
@@ -47,7 +47,12 @@ Validation and Peer Models (for References Cited)
 - Congressional Budget Office (CBO): https://www.cbo.gov/
 - Joint Committee on Taxation (JCT): https://www.jct.gov/
 - IPPR (UK): https://www.ippr.org/
+- Institute for Fiscal Studies (UK IFS): https://ifs.org.uk/
+- Resolution Foundation (UK): https://www.resolutionfoundation.org/
+- Centre for Policy Studies (UK): https://cps.org.uk/
 - HM Treasury (UK): https://www.gov.uk/government/organisations/hm-treasury
+- HM Treasury (2024). HMT Modelling - Policy Engine: Algorithmic Transparency Record. https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine
+- Nuffield Foundation (2024). Enhancing, localising and democratising tax-benefit policy analysis. https://www.nuffieldfoundation.org/project/enhancing-localising-and-democratising-tax-benefit-policy-analysis
 - Office for Budget Responsibility (UK OBR): https://obr.uk/
 - SPSDM (Statistics Canada): https://www.statcan.gc.ca/eng/microsimulation/spsdm/spsdm
 

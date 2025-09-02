@@ -15,13 +15,14 @@ import { LettersInternal } from '../views/LettersInternal'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 
 export const App: React.FC = () => {
+  const base = import.meta.env.BASE_URL || '/'
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={base}>
       <div>
         <nav className="nav-container">
           <div className="nav container">
             <NavLink className="logo" to="/" aria-label="PolicyEngine Home">
-              <img src="/assets/policyengine-logo.svg" alt="PolicyEngine" />
+              <img src={`${base}assets/policyengine-logo.svg`} alt="PolicyEngine" />
             </NavLink>
             <ul className="nav-links">
               <li><NavLink to="/" className={({isActive}) => `nav-link ${isActive ? 'active' : ''}`}>Home</NavLink></li>

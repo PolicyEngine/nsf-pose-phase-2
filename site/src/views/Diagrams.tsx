@@ -34,6 +34,7 @@ export const Diagrams: React.FC = () => {
   const ref1 = useRef<HTMLDivElement>(null)
   const ref2 = useRef<HTMLDivElement>(null)
   const ref3 = useRef<HTMLDivElement>(null)
+  const base = import.meta.env.BASE_URL || '/'
   useEffect(() => {
     mermaid.initialize({ startOnLoad: false })
     const render = async () => {
@@ -47,7 +48,7 @@ export const Diagrams: React.FC = () => {
       }
       // Render Future-State Tech Stack (from ../strategy) if available
       try {
-        const resp = await fetch('/content/techStack.json')
+        const resp = await fetch(base + 'content/techStack.json')
         if (resp.ok) {
           const data = await resp.json()
           const nodes: string[] = Object.keys(data.nodes || {})
@@ -64,7 +65,7 @@ export const Diagrams: React.FC = () => {
       } catch {}
     }
     render()
-  }, [])
+  }, [base])
   return (
     <div style={{ display: 'grid', gap: 24 }}>
       <section>

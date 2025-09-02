@@ -11,33 +11,23 @@ Alexandria, VA 22314
 
 Dear Review Committee:
 
-I am writing to express my enthusiastic support for PolicyEngine's Phase II POSE proposal to establish an Open-Source Ecosystem for transparent economic policy analysis. As an Assistant Professor at USC's Sol Price School of Public Policy and former U.S. Census Bureau economist, I have both used PolicyEngine extensively in my research and observed its potential to transform how government agencies conduct policy analysis.
+I strongly support PolicyEngine's Phase II POSE proposal. As a former Census Bureau economist working on the National Experimental Wellbeing Statistics project and now at USC, I understand both government needs and research applications for transparent policy modeling.
 
-## Professional Background and Government Experience
+## Background
 
-My career has bridged government statistical production and academic research, providing unique insight into the challenges both sectors face in policy analysis. At the Census Bureau, I worked on the NEWS (New Economic Well-being Statistics) project, an ambitious effort to combine survey, administrative, and commercial data to produce comprehensive measures of economic well-being. This experience taught me both the power and limitations of existing policy modeling tools, particularly when trying to integrate multiple data sources and program rules.
+At Census, the NEWS project's reliance on TAXSIM exposed critical limitations: inability to examine logic when results were unexpected, delays waiting for updates to implement new provisions, and inability to validate against administrative records. These constraints fundamentally limited our statistical production.
 
-The NEWS project relied heavily on TAXSIM for tax calculations, and through this work I became intimately familiar with the constraints closed-source models impose on government statistics. When TAXSIM produced unexpected results, we could not examine the underlying logic, forcing time-consuming correspondence with the model's developer. Implementing new tax provisions required waiting for external updates, delaying our ability to produce timely statistics. Most critically, the closed nature prevented us from fully validating calculations against administrative tax records, limiting our confidence in published estimates.
+## Current Work
 
-## Current Research Using PolicyEngine
+For my IRP/HHS-funded project analyzing marginal tax rates and benefit cliffs, I'm exploring PolicyEngine's integration of federal/state taxes with SNAP, TANF, Medicaid, and other programs. This comprehensive approach reveals cliffs invisible when programs are analyzed separately, with state-specific modeling capturing crucial geographic variations.
 
-I am currently using PolicyEngine as the core analytical engine for a major research project funded by the Institute for Research on Poverty through the Department of Health and Human Services. This project analyzes the distribution of marginal tax rates and benefit cliffs using linked administrative data, addressing fundamental questions about work incentives in the American safety net that have profound implications for welfare reform.
+## Government Bridge
 
-PolicyEngine has proven transformative for this research by enabling analysis previously impossible with closed models. The platform integrates federal taxes, state taxes, SNAP, TANF, Medicaid, childcare subsidies, housing assistance, and other programs to calculate true effective marginal tax rates. This comprehensive approach reveals benefit cliffs invisible when programs are analyzed in isolation. The ability to process custom administrative microdata while maintaining privacy protections allows me to validate model predictions against actual benefit receipt patterns. State-specific policy modeling captures geographic variations crucial for understanding why work incentives differ dramatically across regions.
+Through relationships with Census colleagues including Jon Rothbaum, I'm exploring PolicyEngine adoption for the Supplemental Poverty Measure and distributional national accounts.
 
-The open-source nature fundamentally changes how I conduct research. When I identify discrepancies between PolicyEngine calculations and administrative records, I can examine the exact code responsible, understand the issue, and either adjust my analysis or contribute improvements. This transparency has already led to several model enhancements that benefit the entire research community.
+## Academic Perspective
 
-## Commitment to Government Adoption
-
-My position allows me to serve as a bridge between academic research and government statistical production. I maintain close relationships with Census Bureau colleagues, including recent strategic meetings with Jon Rothbaum and others exploring PolicyEngine adoption for official statistics. These discussions focus on using PolicyEngine for the Supplemental Poverty Measure, where transparent methodology would address longstanding concerns about measurement choices, and for distributional national accounts, where open calculations would enable external validation of controversial allocation methods.
-
-As PolicyEngine establishes its Open-Source Ecosystem, I commit to leveraging these relationships to promote government adoption. I will share methods for using PolicyEngine with restricted-access government microdata, ensuring agencies can adopt the platform while maintaining statutory confidentiality requirements. My research comparing PolicyEngine outputs to administrative records provides validation frameworks agencies need for quality assurance. I will develop training materials specifically designed for government economists familiar with TAXSIM but new to open-source tools, easing the transition process.
-
-## Teaching and Workforce Development
-
-At USC's Sol Price School, I am integrating PolicyEngine into our curriculum to prepare the next generation of policy analysts. Graduate students in my courses use PolicyEngine to understand how policies actually function, moving beyond theoretical discussions to hands-on analysis. Dissertation students employ the platform to conduct original research, with several already contributing improvements back to the codebase. Our policy labs connect students with state and local agencies using PolicyEngine, creating a pipeline of analysts comfortable with open-source policy tools.
-
-This educational integration is strategic for the OSE's long-term success. As my students enter government agencies, think tanks, and research institutions, they bring familiarity with PolicyEngine and expectations for transparent analysis. This generational change will accelerate adoption across the policy ecosystem.
+My position at USC's Sol Price School provides opportunities to introduce students and colleagues to transparent policy modeling tools, potentially creating a pipeline of analysts familiar with open-source approaches.
 
 ## Strategic Importance for Policy Research
 

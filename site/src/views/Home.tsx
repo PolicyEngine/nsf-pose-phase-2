@@ -3,8 +3,9 @@ import { MarkdownView } from '../components/MarkdownView'
 
 export const Home: React.FC = () => {
   const [deadline, setDeadline] = useState<string | null>(null)
+  const base = import.meta.env.BASE_URL || '/'
   useEffect(() => {
-    fetch('/content/pose_questions.yaml')
+    fetch(base + 'content/pose_questions.yaml')
       .then(r => (r.ok ? r.text() : ''))
       .then(text => {
         if (!text) return
@@ -12,7 +13,7 @@ export const Home: React.FC = () => {
         if (m && m[1]) setDeadline(m[1])
       })
       .catch(() => {})
-  }, [])
+  }, [base])
   return (
     <div className="container" style={{ display: 'grid', gap: 16 }}>
       <div className="headline">
@@ -22,7 +23,7 @@ export const Home: React.FC = () => {
       <p style={{ maxWidth: 900 }}>
         Establishing a sustainable, robust open‑source ecosystem for transparent, reproducible tax‑and‑benefit microsimulation — with secure supply chain practices, formal governance, and growing contributor pathways.
       </p>
-      <MarkdownView src="/content/site_overview.md" />
+      <MarkdownView src="content/site_overview.md" />
     </div>
   )
 }

@@ -5,9 +5,10 @@ type Row = Record<string, string>
 export const Competitive: React.FC = () => {
   const [rows, setRows] = useState<Row[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const base = import.meta.env.BASE_URL || '/'
 
   useEffect(() => {
-    fetch('/content/competitive.csv')
+    fetch(base + 'content/competitive.csv')
       .then(r => {
         if (!r.ok) throw new Error('No CSV found; using .xlsx link below.')
         return r.text()
@@ -24,7 +25,7 @@ export const Competitive: React.FC = () => {
         setRows(data)
       })
       .catch(e => setError(e.message))
-  }, [])
+  }, [base])
 
   return (
     <div>
@@ -55,7 +56,7 @@ export const Competitive: React.FC = () => {
         <p>{error || 'Loading…'}</p>
       )}
       <p>
-        Source: <a href="/content/PolicyEngine competitive landscape.xlsx">download original .xlsx</a>
+        Source: <a href={base + 'content/PolicyEngine competitive landscape.xlsx'}>download original .xlsx</a>
       </p>
     </div>
   )

@@ -11,37 +11,25 @@ Alexandria, VA 22314
 
 Dear Review Committee:
 
-I am writing to express my strong support for PolicyEngine's Phase II POSE proposal to establish an Open-Source Ecosystem for economic policy modeling. As a Lawyer/Developer leading Rules as Code initiatives at the Canadian Digital Service, I have evaluated PolicyEngine extensively for potential adoption within the Canadian government and can attest to its transformative potential for modernizing how governments implement and communicate policy.
+I strongly support PolicyEngine's Phase II POSE proposal. As a Lawyer/Developer leading Rules as Code at the Canadian Digital Service, PolicyEngine has inspired our approach to modernizing government policy implementation, particularly through its use of AI coding agents and modern software practices.
 
-## Professional Background and Rules as Code Expertise
+## Rules as Code Leadership
 
-My unique background combines legal training with software development expertise, positioning me at the intersection of policy design and computational implementation. At the Canadian Digital Service, and previously at the Canada School of Public Service's Rules as Code Lab, I have served as project manager, developer, and cross-disciplinary translator, helping drafters, lawyers, subject matter experts, and programmers collaborate effectively to encode legislation into executable form.
+My legal and development background positions me at the intersection of policy design and computational implementation. PolicyEngine's AI coding agents for automating rule encoding highlights efficiency gains possible when modernizing from Canada's dated architectures to modern Python stacks. The platform's transparency through open-source, CI/CD, and TDD provides crucial counterweight to black-box models proliferating elsewhere.
 
-Through this work, I have evaluated numerous approaches to computational policy implementation. PolicyEngine represents the most mature and comprehensive implementation of Rules as Code principles I have encountered. The platform demonstrates exceptional legislative traceability, with every calculation linking to specific statutes and regulations. Its version control preserves historical policy rules, enabling point-in-time calculations essential for compliance and auditing. The semantic clarity of PolicyEngine's policy encoding makes rules understandable to both technical and policy audiences, while its compositional design allows complex policies to build from simple, reusable components that mirror legislative structure.
+## Canadian Exploration
 
-## Canadian Government Integration and Current Use
+While awaiting PolicyEngine's Canadian model, we see transformative potential for modeling federal-provincial benefit interactions, particularly the Canada Child Benefit. PolicyEngine's practices—open-source, comprehensive testing, version control—establish standards for government adoption without vendor lock-in or procurement barriers.
 
-I am actively working to integrate PolicyEngine into Canadian government systems, recognizing its potential to transform how we deliver services to citizens. Our pilot projects are exploring PolicyEngine for modeling federal benefit interactions, particularly the Canada Child Benefit and its complex interactions with provincial programs. The platform's ability to handle federal-provincial policy interactions is especially valuable in Canada's federated system, where benefits from different levels of government must be coordinated.
+## OSE Interest
 
-We are demonstrating how PolicyEngine can power citizen-facing benefit calculators that provide accurate, personalized information about entitlements. During policy development, we show decision-makers real-time impacts of proposed changes, enabling evidence-based design iterations. The open-source nature is crucial for government adoption—it allows full auditing by our security teams, ensures no vendor lock-in that could compromise sovereignty over policy implementation, and enables collaborative improvement across departments without procurement barriers.
+Once the Canadian model is developed, I would be interested in exploring implementation validation and sharing Rules as Code Lab best practices. French-language capabilities would be essential for Canadian deployment and valuable for francophone communities worldwide.
 
-## Commitment to the Open-Source Ecosystem
+## Strategic Value
 
-As PolicyEngine establishes its Open-Source Ecosystem, I am committed to contributing both technical expertise and strategic guidance from the government perspective. I will lead efforts to implement Canadian tax and benefit rules within PolicyEngine, creating a foundation for broader government adoption. My position allows me to champion PolicyEngine adoption within Canadian federal and provincial governments, demonstrating its value through successful implementations.
+PolicyEngine's AI-accelerated rule encoding with rigorous testing shows how to reduce policy-to-implementation time while maintaining accuracy. The modern practices—Python architectures, CI/CD pipelines—represent the future of government technology.
 
-I will contribute best practices from our Rules as Code Lab experience, helping other governments navigate the transition from traditional policy implementation to computational approaches. Given Canada's bilingual requirements, I will help develop French-language capabilities essential for Canadian deployment and valuable for francophone communities worldwide. The knowledge exchange between US, Canadian, and UK implementations will accelerate progress in all jurisdictions, and I am committed to facilitating this cross-border learning.
-
-## Strategic Importance for Government Modernization
-
-Governments worldwide are recognizing that policy implementation through code requires fundamental changes in how we work. The traditional model, where policy is written in legal language then interpreted by programmers months or years later, creates dangerous gaps between intent and implementation. These gaps lead to incorrect benefit calculations, delayed service delivery, and erosion of public trust.
-
-PolicyEngine's OSE offers a better path by enabling policy makers to see exactly how their rules are encoded and verify accuracy before deployment. Service designers can build user interfaces confident that underlying calculations are correct. Auditors can trace every calculation back to its legislative authority. Citizens can understand not just what they're entitled to, but why. Researchers can analyze policy impacts using the same tools government uses, ensuring alignment between academic analysis and operational reality.
-
-## International Collaboration and Standards Development
-
-PolicyEngine's OSE can catalyze international collaboration on challenges common to all democratic governments. By establishing harmonized modeling standards, countries can share solutions while maintaining sovereignty over policy choices. Cross-country learning on validation methods will improve accuracy for all participants. Comparative analysis tools will help policy makers understand how different approaches to similar problems perform in practice.
-
-Canada's extensive experience with Rules as Code, combined with our commitment to open government and bilingual service delivery, positions us as valuable contributors to the OSE. Our participation will strengthen the ecosystem while advancing our domestic digital government objectives.
+Canada's Rules as Code experience and bilingual requirements position us as valuable OSE contributors, strengthening the ecosystem while advancing our digital government objectives.
 
 ## Recommendation
 

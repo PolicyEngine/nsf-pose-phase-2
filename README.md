@@ -21,3 +21,11 @@ Site usage
 
 Reference
 - See `../atlas` for examples of: assembling content from markdown, enforcing word counts, and generating site content.
+
+Deployment
+- Published at: https://policyengine.github.io/nsf-pose-phase-2
+- Auto-deploys on push to `main` via `.github/workflows/site-deploy.yml`.
+- CI builds on PRs via `.github/workflows/site-ci.yml`.
+- Notes:
+  - The Vite `base` is set from `BASE_PATH` so the site works under `/nsf-pose-phase-2/`.
+  - GitHub Pages deep links work via a `404.html` fallback created during deployment.
