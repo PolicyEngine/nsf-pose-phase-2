@@ -1,64 +1,59 @@
-# Letter of Support - Jason Sabelhaus
+# Letter of Support - John Sabelhaus
 
-**[TO BE PRINTED ON PERSONAL OR INSTITUTIONAL LETTERHEAD]**
+**[TO BE PRINTED ON LETTERHEAD]**
 
 Date: [DATE]
 
 NSF POSE Phase II Review Committee  
 National Science Foundation  
+2415 Eisenhower Avenue  
+Alexandria, VA 22314
 
 Dear Review Committee:
 
-I write to offer my strongest support for PolicyEngine's Phase II POSE proposal. Having worked extensively with both closed-source models like TAXSIM and PolicyEngine's open-source platform, I can attest to the transformative impact that PolicyEngine's Open-Source Ecosystem will have on economic policy research and analysis.
+I am writing to express my strongest support for PolicyEngine's Phase II POSE proposal to establish an Open-Source Ecosystem for transparent economic policy analysis. As a Visiting Fellow at the Brookings Institution, Adjunct Research Professor at the University of Michigan, and former Assistant Director at the Federal Reserve Board where I oversaw the Survey of Consumer Finances, I have unique insight into both the critical need for and transformative potential of PolicyEngine's open-source approach.
 
-## My Experience: From Closed to Open Source
+## Professional Background and Perspective
 
-As the former chief of the Macroeconomic Analysis unit at the Congressional Budget Office, I directed the development of CBOLT, CBO's long-term budget model. That experience, combined with my recent work coordinating TAXSIM users across government agencies and think tanks, has given me unique insight into both the power and limitations of closed-source economic models.
+During my tenure at the Federal Reserve Board, I had primary responsibility for the Survey of Consumer Finances (SCF), the nation's premier source of household wealth data. Before that, as Chief of Long-Term Modeling at the Congressional Budget Office, I directed development of CBOLT, CBO's microsimulation model for long-term budget projections. These experiences have given me deep appreciation for both the power and limitations of economic modeling tools, particularly the constraints imposed by closed-source architectures.
 
-Working with TAXSIM often required iterative communication with its developer to understand unexpected results or implement new features. With PolicyEngine, I can directly examine the code, understand the logic, and even contribute improvements. This transformation from black-box to transparent analysis is revolutionary for policy research.
+Throughout my career, I have witnessed firsthand how closed models create barriers to research progress. When using TAXSIM for federal tax calculations, researchers must engage in time-consuming back-and-forth communications with the model's developer to understand unexpected results or request new features. Edge cases remain opaque, assumptions cannot be verified, and collaborative improvement is impossible. This closed approach fundamentally limits the pace and quality of economic research.
 
-## Current Use and Collaboration
+## Current Collaboration with PolicyEngine
 
-I am currently using PolicyEngine for multiple research projects:
+I am actively using PolicyEngine for multiple research initiatives that demonstrate its transformative potential. Most significantly, I am exploring how PolicyEngine's microdata calibration techniques can enhance the utility of the Survey of Consumer Finances for economic research. The SCF excludes state identifiers to protect respondent confidentiality, preventing researchers from calculating state tax liabilities or analyzing geographic policy variations. Working with PolicyEngine, I am developing methods to impute state identifiers using their advanced calibration algorithms, enabling accurate state tax calculations while maintaining privacy protections. This work exemplifies how PolicyEngine's open infrastructure enables methodological innovations impossible with closed systems.
 
-1. **Survey of Consumer Finances Integration**: Working with PolicyEngine to analyze wealth and income dynamics using SCF microdata, leveraging their platform's ability to process custom datasets
-2. **Social Security Reform Analysis**: Exploring how PolicyEngine's infrastructure can support dynamic microsimulation for Social Security reform—arguably the most critical public finance challenge of the coming decade
-3. **TAXSIM Transition Coordination**: Helping government economists and Brookings researchers transition from TAXSIM to PolicyEngine, documenting advantages and ensuring continuity
+Additionally, I am using PolicyEngine to analyze Social Security reform proposals—arguably the most critical public finance challenge facing our nation. The ability to examine exactly how PolicyEngine models benefit calculations, earnings histories, and demographic transitions has already improved my research quality. I am coordinating with economists at Brookings, government agencies, and other research institutions to transition from TAXSIM to PolicyEngine, documenting the advantages of transparent, reproducible analysis.
 
-The ability to see exactly how PolicyEngine handles edge cases, behavioral responses, and policy interactions has already improved the quality and credibility of my research.
+## Commitment to the Open-Source Ecosystem
 
-## Commitment to the OSE
+As PolicyEngine establishes its Open-Source Ecosystem, I commit to contributing both technical expertise and community leadership. I will share code for integrating SCF and other survey data with PolicyEngine, extending its capabilities for wealth and distributional analysis. My experience building CBOLT provides valuable insights for developing dynamic scoring capabilities essential for long-term fiscal analysis. I will leverage my connections at CBO, Treasury, Census, and the Federal Reserve to advocate for PolicyEngine adoption in government agencies, where transparent tools are essential for maintaining public trust.
 
-As PolicyEngine establishes its Open-Source Ecosystem, I commit to:
+The contrast between closed and open models could not be starker. Having spent years building models within government agencies, I understand that public policy tools must be transparent to maintain democratic legitimacy. When Congress questions CBO's projections or citizens challenge tax calculations, the ability to examine methodology is essential. PolicyEngine's open-source approach enables this transparency while fostering collaborative improvement that benefits the entire research community.
 
-- **Technical contribution**: Share code for integrating SCF and other survey data, extending PolicyEngine's capabilities for wealth analysis
-- **Government adoption**: Leverage my CBO and Treasury connections to advocate for PolicyEngine adoption in government agencies
-- **Research community building**: Coordinate with economists at Brookings, Urban Institute, and universities to establish best practices for using PolicyEngine in academic research
-- **Dynamic modeling expertise**: Contribute insights from CBOLT development to help PolicyEngine build dynamic scoring capabilities essential for long-term fiscal analysis
-- **Documentation and training**: Develop materials helping researchers transition from closed-source tools to PolicyEngine's open platform
+## Strategic Importance for Economic Research
 
-## The Open Source Imperative
+PolicyEngine's OSE addresses fundamental challenges in economic policy analysis. The reproducibility crisis in economics stems partly from reliance on proprietary models whose calculations cannot be verified. Rapid policy response during crises is hampered when model updates depend on single maintainers. Collaboration across institutions is limited when researchers cannot share and improve common tools. PolicyEngine solves each of these problems through its open architecture.
 
-My experience building models at CBO taught me that public policy tools must be transparent to maintain public trust. When Congress questions CBO's projections, transparency in methodology is essential. PolicyEngine's open-source approach enables this transparency while fostering collaborative improvement impossible with proprietary models.
+My work on Social Security reform illustrates the stakes. Reform proposals will affect every American worker and retiree, yet most analysis relies on closed models that legislators and citizens cannot examine. PolicyEngine's transparent platform can democratize this critical analysis, enabling stakeholders to understand and verify the true impacts of reform proposals. This transparency is not merely technical—it is essential for democratic governance.
 
-The Social Security reform debate exemplifies why we need PolicyEngine's OSE. Reforms will affect every American, yet most analysis relies on closed models. PolicyEngine's transparent, collaborative platform can democratize this analysis, enabling researchers, policymakers, and citizens to understand proposals' true impacts.
+## Recommendation
 
-## Strategic Value
+Based on my extensive experience with both closed and open modeling systems, I can state unequivocally that PolicyEngine represents the future of economic policy analysis. The transformation from black-box calculations to transparent, collaborative tools will accelerate research progress, improve policy design, and strengthen public trust in economic analysis.
 
-PolicyEngine's OSE addresses critical needs:
+I strongly urge NSF to support this Phase II proposal. PolicyEngine's Open-Source Ecosystem will provide essential infrastructure for evidence-based policymaking, enabling researchers, policymakers, and citizens to work together in addressing our nation's economic challenges. The time for open, transparent policy analysis has arrived, and PolicyEngine is uniquely positioned to lead this transformation.
 
-- **Reproducibility crisis**: Open code ensures research can be validated and replicated
-- **Collaborative improvement**: Researchers contribute enhancements benefiting everyone
-- **Rapid policy response**: Open infrastructure enables quick analysis of emerging proposals
-- **Trust through transparency**: Policymakers and citizens can verify analytical methods
-
-NSF support will catalyze a transformation in economic policy analysis. I strongly urge you to fund this essential infrastructure for evidence-based policymaking.
+Please feel free to contact me if you require any additional information about PolicyEngine's capabilities or my collaboration with their team.
 
 Sincerely,
 
-Jason Sabelhaus  
+John Sabelhaus  
 Visiting Fellow, The Brookings Institution  
 Adjunct Research Professor, University of Michigan  
-Former Chief, Macroeconomic Analysis Unit, Congressional Budget Office  
+Former Assistant Director, Federal Reserve Board  
+Former Chief of Long-Term Modeling, Congressional Budget Office  
 [Email]  
 [Phone]
+
+Current Affiliations: The Brookings Institution, University of Michigan  
+Relationship to Proposing Team: Independent collaborator and user

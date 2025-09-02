@@ -6,87 +6,64 @@ Date: [DATE]
 
 NSF POSE Phase II Review Committee  
 National Science Foundation  
+2415 Eisenhower Avenue  
+Alexandria, VA 22314
 
 Dear Review Committee:
 
-As Executive Vice President for Public Finance at Arnold Ventures, I am pleased to provide this letter of strong support for PolicyEngine's Phase II POSE proposal to establish an Open-Source Ecosystem for economic policy analysis.
+As Executive Vice President for Public Finance at Arnold Ventures, I am pleased to provide this letter of strong support for PolicyEngine's Phase II POSE proposal to establish an Open-Source Ecosystem for economic policy analysis. Based on both our substantial philanthropic investment in PolicyEngine and my direct experience using the platform for congressional policy work, I can attest to its transformative potential for evidence-based policymaking.
 
-## Arnold Ventures' Investment in PolicyEngine
+## Arnold Ventures' Investment and Partnership
 
-Arnold Ventures has invested significantly in PolicyEngine through three major grants:
+Arnold Ventures has made significant investments in PolicyEngine through three major grants supporting local area modeling capabilities, enhancement of the Current Population Survey microdata, and comprehensive model validation. These investments reflect our conviction that transparent, accessible policy analysis tools are essential prerequisites for evidence-based policymaking and informed democratic debate.
 
-1. **Local Area Modeling**: Enabling state and local analysis crucial for understanding policy impacts beyond federal averages
-2. **Enhanced Current Population Survey**: Improving the microdata foundation for accurate distributional analysis  
-3. **Model Validation and Accuracy**: Ensuring PolicyEngine meets the highest standards for policy research
+Our support extends beyond financial investment. My team actively uses PolicyEngine in our engagement with Congress on tax reform, particularly as we approach the critical 2025 reconciliation process. The expiration of major provisions from the 2017 Tax Cuts and Jobs Act creates a generational opportunity for tax reform, and PolicyEngine has proven invaluable for analyzing the complex interactions and trade-offs inherent in comprehensive tax legislation.
 
-These investments reflect our conviction that transparent, accessible policy analysis tools are essential for evidence-based policymaking.
+## Active Use in Congressional Engagement
 
-## Active Use in Policy Development
+During recent preparations for the 2025 reconciliation process, PolicyEngine has transformed how we engage with members of Congress and their staff on tax policy. The platform enabled us to disentangle the complex interactions between the Alternative Minimum Tax and State and Local Tax deductions—two of the most watched and politically sensitive provisions in the tax code. When congressional staff questioned specific calculations during meetings, we could show them exactly how the model works, building trust in the analysis through transparency.
 
-Our team actively uses PolicyEngine in our work with Congress on tax reform. Most recently, during preparations for the 2025 reconciliation process, PolicyEngine proved invaluable for:
+The ability to perform real-time policy iterations during congressional meetings has fundamentally changed the nature of these discussions. Rather than presenting static analyses prepared in advance, we can test scenarios suggested by members and staff immediately, enabling genuinely collaborative policy development. This capability to show state-by-state and demographic distributional impacts in real-time helps build the coalitions necessary for successful legislation.
 
-- **AMT-SALT Interaction Analysis**: Disentangling the complex interactions between the Alternative Minimum Tax and State and Local Tax deductions—two of the most watched provisions in tax reform debates
-- **Real-time Policy Iteration**: Testing multiple reform scenarios during congressional meetings, enabling data-driven discussion with members and staff
-- **Distributional Impact Assessment**: Understanding how proposals affect different income groups and states, critical for building political coalitions
+Most importantly, PolicyEngine's open-source nature addresses the skepticism that often greets policy analysis from advocacy organizations. When we present findings, skeptics can examine the underlying code themselves, verify our assumptions, and even run alternative scenarios. This transparency transforms potentially adversarial discussions into collaborative explorations of policy options.
 
-The ability to modify and examine PolicyEngine's code has been crucial. When congressional staff question specific calculations, we can show them exactly how the model works, building trust in the analysis.
+## Commitment to the Open-Source Ecosystem
 
-## Commitment to the OSE
+Arnold Ventures is committed to supporting PolicyEngine's transition to a sustainable Open-Source Ecosystem. We will consider additional grants to support OSE infrastructure development and expansion, recognizing that sustainable public goods require patient capital during their establishment phase. Our extensive network of relationships with policymakers, researchers, and other philanthropic organizations positions us to connect PolicyEngine with users who need transparent analysis tools and funders who share our commitment to evidence-based policy.
 
-Arnold Ventures commits to supporting PolicyEngine's Open-Source Ecosystem through:
+Beyond financial support, we will contribute strategic guidance based on our experience building sustainable social sector organizations. I am willing to participate in governance structures that ensure the OSE serves the needs of policy practitioners while maintaining the technical excellence required for credible analysis. We will document and share our use cases, demonstrating how PolicyEngine enables more effective policy advocacy grounded in transparent analysis.
 
-1. **Continued funding**: We will consider additional grants to support OSE infrastructure and expansion
-2. **Policy engagement**: Connect PolicyEngine with policymakers who need transparent analysis tools
-3. **Use case development**: Share our experience using PolicyEngine for congressional engagement as a model for other organizations
-4. **Governance participation**: Contribute to strategic planning ensuring the OSE serves policy practitioner needs
-5. **Sustainability planning**: Advise on diversified funding strategies based on our philanthropic expertise
+## Strategic Importance for Democratic Governance
 
-## Strategic Importance for Policy Reform
+My experience in senior positions at the House Ways and Means Committee, Senate Finance Committee, and National Economic Council has taught me that information asymmetries undermine good policymaking. When only a handful of organizations possess the tools to analyze policy proposals comprehensively, democratic deliberation suffers. PolicyEngine's open approach democratizes policy analysis, enabling think tanks to verify government estimates, state officials to understand federal proposal impacts, and citizens to engage meaningfully in policy debates.
 
-The 2025 reconciliation process will shape American tax policy for a generation. Major provisions of the 2017 Tax Cuts and Jobs Act expire in 2025, creating a critical window for reform. Policymakers need tools that can:
+The traditional model, where policy analysis depends on proprietary models accessible only to well-resourced institutions, creates an uneven playing field that favors established interests. PolicyEngine levels this field by providing sophisticated analytical capabilities to anyone with internet access. This democratization is not merely about fairness—it improves policy outcomes by enabling more voices to contribute evidence-based insights to policy debates.
 
-- Rapidly analyze complex proposals
-- Show state-by-state impacts
-- Model behavioral responses
-- Integrate tax and transfer program interactions
-- Provide transparent, defensible estimates
+## Sustainability Through Community
 
-PolicyEngine uniquely provides these capabilities in an open, accessible format. Its OSE will ensure these tools remain available and improve continuously through community contribution.
+Arnold Ventures' philanthropic philosophy emphasizes building sustainable solutions that outlast our funding. PolicyEngine's OSE model aligns perfectly with this approach. Community contributions ensure continuous improvement without dependence on any single funder. Open-source architecture prevents vendor lock-in and enables institutional adoption without procurement barriers. Distributed development reduces costs while improving quality through diverse perspectives. Transparent governance builds the trust necessary for broad adoption across the ideological spectrum.
 
-## The Open Source Advantage
-
-Traditional closed economic models create information asymmetries that hinder good policy. When only a few organizations can analyze proposals, policy debates suffer. PolicyEngine's open approach democratizes analysis, enabling:
-
-- Think tanks to verify government estimates
-- State officials to understand federal proposal impacts
-- Researchers to improve methodologies collaboratively
-- Citizens to engage meaningfully in policy debates
-
-## Sustainability and Scale
-
-Arnold Ventures' philosophy emphasizes sustainable, scalable solutions. PolicyEngine's OSE model aligns perfectly with this approach:
-
-- Community contributions ensure continuous improvement
-- Open source prevents vendor lock-in
-- Distributed development reduces costs
-- Transparent governance builds trust
-
-NSF support will catalyze PolicyEngine's transition from grant-dependent project to self-sustaining infrastructure serving the entire policy community.
+The proposed OSE represents a fundamental shift from grant-dependent projects to community-sustained infrastructure. This transition is essential for PolicyEngine to achieve its potential as a permanent resource for democratic policymaking.
 
 ## Recommendation
 
-I strongly urge NSF to support PolicyEngine's Phase II proposal. As someone who has worked in senior positions at the House Ways and Means Committee, the Senate Finance Committee, and the National Economic Council, I understand the critical need for transparent, accurate policy analysis tools. PolicyEngine's OSE will provide essential infrastructure for evidence-based policymaking at a pivotal moment for American fiscal policy.
+I strongly urge NSF to support PolicyEngine's Phase II proposal. As someone who has worked at the highest levels of fiscal policymaking in both Congress and the Executive Branch, I understand the critical need for transparent, accurate, and accessible policy analysis tools. PolicyEngine provides these capabilities today, and the proposed OSE will ensure they remain available and continuously improve to meet evolving policy challenges.
 
-The combination of technical excellence, practical policy application, and commitment to transparency makes PolicyEngine uniquely deserving of NSF support.
+The combination of technical excellence, practical policy application, and commitment to transparency makes PolicyEngine uniquely deserving of NSF support. This investment will catalyze a transformation in how our democracy analyzes, debates, and decides critical policy questions.
 
 Sincerely,
 
 George Callas  
 Executive Vice President, Public Finance  
 Arnold Ventures  
+1717 West Loop South, Suite 1900  
+Houston, TX 77027  
 [Email]  
 [Phone]
 
 Former Senior Tax Counsel, House Ways and Means Committee  
 Former Tax Counsel, Senate Finance Committee  
 Former Special Assistant to the President for Economic Policy
+
+Current Affiliation: Arnold Ventures  
+Relationship to Proposing Team: Independent funder and user
