@@ -1,0 +1,10 @@
+Conclusion and Roadmap
+
+PolicyEngine is already used to answer real questions about tax and benefit policy. Phase II funding will not change what the code does so much as how the ecosystem around it works. Our plan focuses on the practices that make an open‑source ecosystem durable: governance that anyone can understand and rely on; release engineering that institutions can trust; contributor pathways that turn users into maintainers; and evaluation that shows, in public, whether adoption and quality are improving.
+
+The immediate steps are straightforward. We complete I‑Corps for POSE in January and publish the adoption‑blockers report and onboarding materials. We formalize governance and security—CODEOWNERS, RFCs, signed releases, and SBOM—so partners have clear assurances. We release stable versions of L0, MicroImpute, and MicroCalibrate with examples that shorten time‑to‑first‑contribution, and we document the calibration pipeline so state and congressional district runs are reproducible. With partners, we run at least two pilots that demonstrate the end‑to‑end path from a policy question to a reviewed, reproducible answer.
+
+From there the work becomes a cadence. We ship on a predictable schedule; we answer issues and reviews quickly; we recruit and support new maintainers; and each quarter we look at the dashboard and change course if the evidence says we should. The product of this process is not just a model but a public, verifiable way of working that others can adopt and extend. That is the point of an ecosystem: it outlasts any single team.
+
+Timing and Decisions
+Based on recent POSE cycles, we expect roughly six to eight months from the September deadline to an award start. In practice, that means decisions in February to April 2026 and a start window in March to June 2026. Our January I‑Corps for POSE work feeds directly into an early design‑freeze milestone before the broad rollout. Phase II dollars are strictly for ecosystem enablement and operations; Phase I covers scoping, and we will not duplicate that scope in Phase II.

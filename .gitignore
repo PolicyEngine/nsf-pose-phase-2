@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.Trashes
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.venv/
+.env
+.env.*
+
+# Node / Vite site
+site/node_modules/
+site/dist/
+site/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editors
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+
+# Generated artifacts (rebuilt on sync)
+docs/pose/assembled.docx
+site/public/content/assembled.docx
+site/public/content/budget.json

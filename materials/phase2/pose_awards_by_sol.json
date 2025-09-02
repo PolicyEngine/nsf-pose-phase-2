@@ -1,0 +1,1 @@
+{"response":{"serviceNotification":[{"notificationType":"ERROR","notificationCode":"AwardAPI-002","notificationMessage":"Invalid parameter(s) sent in the request. Invalid Parameter(s) {solicitationNumber}"}]}}

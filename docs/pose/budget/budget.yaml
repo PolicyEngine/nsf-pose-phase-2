@@ -1,0 +1,59 @@
+A_senior_personnel:
+  - description: PI and co‑PI salary (≤2 months/year each)
+    amount: 120000
+  - description: Technical lead (OSE enablement)
+    amount: 160000
+
+B_other_personnel:
+  - description: Software engineer (release engineering, docs, CI)
+    amount: 180000
+  - description: Data scientist (validation, dashboards)
+    amount: 120000
+  - description: Community/partnerships (0.5 FTE)
+    amount: 90000
+
+C_fringe:
+  - description: Fringe benefits (estimated)
+    amount: 150000
+
+D_equipment:
+  - description: Security hardware keys, signing token HSMs, laptops
+    amount: 30000
+
+E_travel:
+  - description: I‑Corps for POSE cohort sessions
+    travelers: 3
+    days: 5
+    destination:
+      city: Washington
+      state: DC
+      fy: 2025
+      month: 9
+    airfare: 800
+  - description: Partner workshops & conferences
+    travelers: 3
+    days: 3
+    destination:
+      city: Washington
+      state: DC
+      fy: 2025
+      month: 11
+    airfare: 600
+
+F_participant_support:
+  - description: Contributor workshops/hackathons (stipends, materials)
+    amount: 40000
+
+G_other_direct:
+  - description: Security audit (consultant)
+    amount: 60000
+  - description: Independent evaluation subaward
+    amount: 90000
+  - description: Cloud/Infrastructure (compute, storage, CI, scanning)
+    amount: 120000
+  - description: Publications/dissemination, materials/supplies
+    amount: 20000
+
+I_indirect:
+  - rate: 0.12  # 12% de minimis or NICRA example; adjust to actual
+
