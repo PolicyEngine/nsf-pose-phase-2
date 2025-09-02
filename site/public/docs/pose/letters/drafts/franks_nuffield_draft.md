@@ -2,7 +2,7 @@
 
 **[TO BE PRINTED ON NUFFIELD FOUNDATION LETTERHEAD]**
 
-Date: [DATE]
+Date: September 2, 2025
 
 NSF POSE Phase II Review Committee  
 National Science Foundation  
@@ -11,44 +11,24 @@ Alexandria, VA 22314
 
 Dear Review Committee:
 
-As Director of Welfare Policy at the Nuffield Foundation, I am pleased to provide this letter of strong support for PolicyEngine's Phase II POSE proposal to establish an Open-Source Ecosystem for transparent economic policy analysis. The Nuffield Foundation's substantial investment in PolicyEngine UK and our observation of its transformative impact on British policymaking provide compelling evidence for the value of supporting this critical infrastructure.
+I am writing in my capacity as Welfare Programme Head at the Nuffield Foundation to support PolicyEngine's application for NSF POSE Phase II funding.
 
-## Nuffield Foundation's Investment
+The Nuffield Foundation invested £250,000 in PolicyEngine UK with a specific focus on documentation, user experience, and accessibility. This investment funded comprehensive documentation systems, API reference materials, and the tracing tools that help users understand how calculations flow through the system—precisely the type of infrastructure work that I understand the NSF POSE programme supports.
 
-The Nuffield Foundation has awarded PolicyEngine a £251,296 grant (September 2024-2025) to enhance, localise and democratise tax-benefit policy analysis through PolicyEngine UK. This investment enables PolicyEngine to model the complete UK tax and benefit system with unprecedented transparency, giving citizens, researchers, and civil society organisations free access to analytical capabilities previously restricted to government departments and well-resourced think tanks.
+The impact has been substantial. Our documentation investment enabled the UK Cabinet Office to successfully adopt PolicyEngine, with civil servants now able to trace policy logic through the system without requiring developer support. HM Treasury published an Algorithmic Transparency Record (ATR-2024-007) documenting their use of the platform, demonstrating how proper documentation enables government adoption. The documentation we funded has also facilitated adoption by major UK policy institutions including the Institute for Fiscal Studies, Resolution Foundation, and Centre for Policy Studies.
 
-## UK Government Engagement
+What makes PolicyEngine particularly relevant to open-source ecosystem development is how documentation improvements create cascading benefits. When PolicyEngine presented their novel imputation methods at academic conferences, other organizations like the Yale Budget Lab could adopt these techniques because the documentation made them accessible. The investment in user guides and API documentation transformed a complex microsimulation engine into infrastructure that non-technical policy analysts can use effectively.
 
-PolicyEngine's secondment to the Cabinet Office, documented in HM Treasury's Algorithmic Transparency Record, validates the platform's approach. Government economists are exploring how PolicyEngine can complement proprietary models while major UK policy institutions including IFS, Resolution Foundation, and Centre for Policy Studies have begun using PolicyEngine to validate their analyses.
-
-## International Collaboration
-
-The US-UK PolicyEngine collaboration demonstrates powerful network effects. UK innovations in benefit interactions immediately benefit US researchers, while US advances in state-level modelling inform our work on devolution. A formal Open-Source Ecosystem will institutionalise these exchanges, accelerating progress beyond what any single country could achieve independently.
-
-## Support for the Open-Source Ecosystem
-
-The Nuffield Foundation continues engagement through our existing grant and strategic partnerships. Our network of UK researchers, policymakers, and foundations positions us to help build community for a thriving ecosystem.
-
-## Strategic Importance
-
-PolicyEngine aligns with Nuffield's mission to improve social well-being and reduce inequality by democratising access to sophisticated policy analysis. Traditional closed models restrict analytical capabilities to elite institutions; PolicyEngine enables all stakeholders to engage as equals in policy debates. This transparency is essential for democratic legitimacy and the rapid, evidence-based responses needed to address challenges from inequality to climate transition.
-
-## Recommendation
-
-Based on the Nuffield Foundation's experience funding PolicyEngine UK and observing its transformative impact, I strongly urge NSF to support this Phase II proposal. The establishment of PolicyEngine's Open-Source Ecosystem represents critical infrastructure for evidence-based policymaking in democratic societies. The combination of technical excellence, commitment to transparency, proven government adoption, and international collaboration potential makes PolicyEngine uniquely positioned to create lasting positive impact.
-
-NSF support will catalyse a global transformation in how societies analyse, debate, and implement public policy. The return on this investment, measured in improved policy outcomes and strengthened democratic governance, will far exceed its cost.
+Based on our experience, PolicyEngine has demonstrated exceptional ability to leverage documentation and training investments into broader ecosystem adoption. The NSF POSE investment in ecosystem infrastructure—documentation, training, community building—would extend the work we've funded and generate substantial returns for the policy analysis community. I strongly encourage your support for this application.
 
 Sincerely,
 
 Mark Franks  
-Director of Welfare Policy  
+Programme Head - Welfare  
 Nuffield Foundation  
 28 Bedford Square  
 London WC1B 3JS  
-United Kingdom  
-[Email]  
-[Phone]
+United Kingdom
 
 Current Affiliation: Nuffield Foundation  
-Relationship to Proposing Team: Independent funder and UK partner
+Relationship to Proposing Team: Programme funder

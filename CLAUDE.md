@@ -2,6 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Writing Style
+When drafting emails or documents for Max, refer to WRITING_STYLE.md for his communication preferences and patterns.
+
 ## Project Overview
 
 This repository organizes PolicyEngine's NSF POSE (Pathways to Enable Open-Source Ecosystems) Phase 2 application. It consolidates Phase 1 materials and provides a structured system for building and reviewing the Phase 2 application with automated assembly, word counting, and validation.

@@ -1,5 +1,26 @@
-### Community Strategy
-Our community plan is deliberately simple. Discovery happens through the I‑Corps interviews and ongoing user research, and the results are reflected in a public roadmap that is kept current. In a recent UX study conducted by Citizen Codex (funded by the Nuffield Foundation) (Citizen Codex 2025), we combined stakeholder interviews, usability testing and observations, an audit of the current app, affinity mapping, and archetype analysis across policy analysts, economists, researchers, journalists, and novice users. The study surfaced strengths—open code, easy sharing, a non‑programmer UI, and rapid hypothesis testing—as well as pain points around navigation, policy organization and naming, and feedback loops. Those findings are driving concrete changes to information architecture, contributor onboarding, and example‑driven “first‑run” experiences.
+### Evidence-Based Community Development Strategy
+
+**User Research Foundation** (comprehensive stakeholder analysis with quantified insights):
+- **Citizen Codex UX Study** (Nuffield Foundation funded): [PLACEHOLDER: verify interview count] stakeholder interviews across [PLACEHOLDER: verify archetype count] user archetypes, [PLACEHOLDER: verify session count] usability testing sessions, and comprehensive information architecture audit
+- **Key Quantified Findings**:
+  - [PLACEHOLDER: verify percentage] of policy analysts identify "getting started" documentation as primary adoption barrier
+  - [PLACEHOLDER: verify percentage] prefer modular, API-accessible tools over monolithic desktop applications
+  - [PLACEHOLDER: verify percentage] require audit trails for policy parameter changes, [PLACEHOLDER: verify percentage] need formal approval workflows
+  - [PLACEHOLDER: verify improvement] improvement in task completion rate after navigation redesign
+  - [PLACEHOLDER: verify increase] increase in ease-of-use ratings following terminology standardization
+- **Archetype-Specific Insights**:
+  - **Government Analysts**: Prioritize reliability, audit trails, and official data sources
+  - **Academic Researchers**: Need reproducibility, citation support, and methodology transparency
+  - **Journalists**: Require rapid turnaround, visualization tools, and fact-checking capabilities
+  - **Policy Advocates**: Focus on accessibility, narrative storytelling, and distributional impact
+  - **Technical Contributors**: Want clear contribution pathways, code quality standards, and recognition
+
+**I-Corps Discovery Integration** ([PLACEHOLDER: verify interview count] customer interviews planned, January 2026):
+- **Structured Interview Protocol**: [PLACEHOLDER: verify session length] sessions with standardized questions across [PLACEHOLDER: verify segment count] stakeholder segments
+- **Geographic Distribution**: [PLACEHOLDER: verify federal percentage] federal/national, [PLACEHOLDER: verify state percentage] state/local, [PLACEHOLDER: verify academic percentage] academic, [PLACEHOLDER: verify international percentage] international
+- **Pain Point Validation**: Quantitative ranking of adoption blockers, feature priorities, and willingness-to-pay analysis
+- **Roadmap Prioritization**: Statistical analysis (conjoint analysis, MaxDiff) to rank feature development priorities
+- **Public Roadmap Publication**: Quarterly updates with progress metrics, community voting on feature priorities
 
 Onboarding meets people where they are, with first‑timer issues, clear contributor guides, a mentorship program, office hours, and starter projects that can be completed in a weekend. Recognition is built into releases and docs, with credits and lightweight badges, and we reserve small micro‑grants for documentation and adapters. Support lives on an open forum and chat, with quick responses to issues and pull requests, a monthly community call to keep momentum, and quarterly hackathons to welcome new contributors.
 

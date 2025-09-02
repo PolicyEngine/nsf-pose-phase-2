@@ -5,6 +5,7 @@ interface LetterDraft {
   name: string
   organization: string
   filename: string
+  submittedFilename?: string
   status: 'draft' | 'sent' | 'confirmed' | 'received'
   notes: string
 }
@@ -21,8 +22,9 @@ const letterDrafts: LetterDraft[] = [
     name: "John Sabelhaus",
     organization: "Brookings/Michigan",
     filename: "sabelhaus_draft.md",
-    status: "draft",
-    notes: "Personal experience with closed vs open source, Social Security reform, CBO background"
+    submittedFilename: "sabelhaus_submitted.md",
+    status: "received",
+    notes: "Very strong letter - 'strongly urge NSF support', mentions longitudinal file development"
   },
   {
     name: "George Callas",
@@ -35,8 +37,9 @@ const letterDrafts: LetterDraft[] = [
     name: "Mark Franks",
     organization: "Nuffield Foundation",
     filename: "franks_nuffield_draft.md",
-    status: "draft",
-    notes: "£250k UK funding, Cabinet Office secondment impact, international collaboration"
+    submittedFilename: "franks_submitted_final.md",
+    status: "received",
+    notes: "Strong letter received - mentions Cabinet Office, NIESR, NEF, endorses organization"
   },
   {
     name: "Martin Perron",
@@ -49,7 +52,8 @@ const letterDrafts: LetterDraft[] = [
     name: "Matthew Unrath",
     organization: "USC",
     filename: "unrath_usc_draft.md",
-    status: "draft",
+    submittedFilename: "unrath_submitted.md",
+    status: "received",
     notes: "Census experience, HHS project on cliff effects, government adoption pathway"
   }
 ]
@@ -59,23 +63,29 @@ export const LettersInternal: React.FC = () => {
   const [letterContent, setLetterContent] = useState<string>('')
   const [selectedEmail, setSelectedEmail] = useState<string>('')
   const [loading, setLoading] = useState(false)
+  const [viewMode, setViewMode] = useState<'draft' | 'submitted'>('draft')
   const base = import.meta.env.BASE_URL || '/'
 
   useEffect(() => {
     if (selectedLetter) {
       setLoading(true)
-      fetch(`${base}docs/pose/letters/drafts/${selectedLetter}`)
+      const letter = letterDrafts.find(l => l.filename === selectedLetter)
+      const folder = viewMode === 'submitted' ? 'submitted' : 'drafts'
+      const filename = viewMode === 'submitted' && letter?.submittedFilename ? 
+        letter.submittedFilename : selectedLetter
+      
+      fetch(`${base}docs/pose/letters/${folder}/${filename}`)
         .then(res => res.text())
         .then(text => {
           setLetterContent(text)
           setLoading(false)
         })
         .catch(() => {
-          setLetterContent('*Letter draft not found. The draft letters need to be synced to the site.*')
+          setLetterContent('*Letter not found. The letters need to be synced to the site.*')
           setLoading(false)
         })
     }
-  }, [selectedLetter, base])
+  }, [selectedLetter, viewMode, base])
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -92,133 +102,156 @@ export const LettersInternal: React.FC = () => {
   }
 
   const emailTemplates = {
-    poterba: `Subject: Urgent: NSF POSE Phase II Letter of Support - Due Tomorrow 5pm
+    poterba: `Subject: Urgent: NSF POSE Letter - Due Today
 
 Dear Jim,
 
-I hope this email finds you well. I'm reaching out with an urgent request for a letter of support for our NSF POSE Phase II proposal, which is due tomorrow (Tuesday) at 5pm.
+I hope you enjoyed the holiday weekend. 
 
-Since our Phase I award and the MOU between NBER and PolicyEngine, our collaboration has deepened significantly—we've built the automated TAXSIM comparison tool and have been working closely with Dan on validation. Your support would be invaluable in demonstrating the research community's commitment to our Open-Source Ecosystem.
+Sorry to ask but I have a last-minute request! We're applying for an NSF grant due today (Tuesday) at 5pm ET, and your support would be invaluable. Since our Phase I award and the MOU between NBER and PolicyEngine, our collaboration has deepened significantly—we've built an automated validation tool and are now building a TAXSIM emulator using PolicyEngine on the backend, working closely with Dan on comprehensive validation frameworks.
 
-To save you time given the tight deadline, I've drafted a letter (attached) that you're welcome to edit as you see fit. The key points it covers:
+We just received POSE Phase I in August (Pathways to Enable Open-Source Ecosystems)—a planning grant to establish sustainable communities. We initially thought this made us ineligible for Phase II, but recently discovered we could still apply, hence the very short notice.
+
+I've drafted a letter [here](https://docs.google.com/document/d/15reT-fyEga7NqolOo07jCP_2KAuG2VcHhNGOPKC0s38/edit?tab=t.0) emphasizing:
 - The MOU and deepened collaboration since Phase I
-- NBER's use of PolicyEngine and the advantages of open source over TAXSIM's closed model
-- Commitment to contributing data and expertise to the OSE
+- The validation tool we've built and TAXSIM emulator we're building (using PolicyEngine backend)
+- NBER's exploration of PolicyEngine and the advantages of open source over TAXSIM's closed model
+- Opportunities for contributing data and expertise to the Open-Source Ecosystem
 - The strategic importance for economic research infrastructure
 
-Would you be able to review and send the letter on NBER letterhead by tomorrow afternoon? Any modifications you'd like to make are of course welcome.
+You can learn more about our application at [policyengine.github.io/nsf-pose-phase-2](https://policyengine.github.io/nsf-pose-phase-2), and the POSE program [here](https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose).
 
-I apologize for the short notice—we've been pushing hard on the technical proposal and are now finalizing support letters.
+By any chance could you send this on NBER letterhead by 3pm ET? Feel free to revise or provide as-is. Your support would demonstrate the research community's commitment to our Open-Source Ecosystem.
+
+I apologize for the last-minute request.
 
 Many thanks,
 Max`,
 
-    sabelhaus: `Subject: Urgent: NSF POSE Phase II Letter - Your Open Source Advocacy Needed
+    sabelhaus: `Subject: Urgent: NSF POSE Letter - Due Today
 
-Dear Jason,
+Dear John,
 
-I hope you're well. I need your help with an urgent letter of support for our NSF POSE Phase II proposal, due tomorrow at 5pm.
+I hope you enjoyed the holiday weekend.
 
-Your unique perspective—having built CBOLT at CBO and now coordinating TAXSIM users while using PolicyEngine for your SCF and Social Security work—would be incredibly powerful. You've seen firsthand the transformation from closed to open source models.
+Sorry to ask but I have a last-minute request! We're applying for an NSF grant due today (Tuesday) at 5pm ET. Your unique perspective—having built CBOLT at CBO and now coordinating TAXSIM users while exploring PolicyEngine for your SCF and Social Security work—would be incredibly powerful. You've seen firsthand the transformation from closed to open source models.
 
-I've drafted a letter (attached) emphasizing:
+We just received POSE Phase I in August (Pathways to Enable Open-Source Ecosystems)—a planning grant to establish sustainable communities. We initially thought this made us ineligible for Phase II, but recently discovered we could still apply, hence the very short notice.
+
+I've drafted a letter [here](https://docs.google.com/document/d/1f5vldW-FKKrq6FHptLXgwro9NuTIThKrdyGDkUZTyDo/edit?usp=sharing) emphasizing:
 - Your experience with the limitations of closed models and advantages of open source
-- Current use of PolicyEngine for SCF integration and Social Security reform analysis
+- Current exploration of PolicyEngine for SCF integration and Social Security reform analysis
 - Your role coordinating government and Brookings economists
 - The importance of transparency for public trust in policy analysis
 
-Could you review and send on letterhead by tomorrow afternoon? Please feel free to modify anything—your authentic voice on the open source transformation would be invaluable.
+You can learn more about our application at [policyengine.github.io/nsf-pose-phase-2](https://policyengine.github.io/nsf-pose-phase-2), and the POSE program [here](https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose).
 
-Apologies for the last-minute request. Your support would make a huge difference.
+By any chance could you send this on letterhead by 3pm ET? Feel free to revise or provide as-is. Your authentic voice on the open source transformation would be invaluable.
+
+I apologize for the last-minute request. Your support would make a huge difference.
 
 Best,
 Max`,
 
-    callas: `Subject: Urgent: NSF POSE Phase II Letter - Arnold Ventures Support
+    callas: `Subject: Urgent: NSF POSE Letter - Due Today
 
 Dear George,
 
-I hope this finds you well. I'm writing with an urgent request for a letter of support for our NSF POSE Phase II proposal, due tomorrow at 5pm.
+I hope you enjoyed the holiday weekend.
 
-Arnold Ventures' support has been transformative for PolicyEngine—from local area modeling to our enhanced CPS. Your team's use of PolicyEngine for the 2025 reconciliation analysis, especially disentangling AMT-SALT interactions, perfectly demonstrates the practical policy impact we're achieving.
+Sorry to ask but I have a last-minute request! We're applying for an NSF grant due today (Tuesday) at 5pm ET. Arnold Ventures' support has been transformative for PolicyEngine—from behavioral responses to SALT-AMT analysis to state/district breakdowns. Your team's use of PolicyEngine for the 2025 reconciliation analysis perfectly demonstrates the practical policy impact we're achieving.
 
-I've attached a draft letter that covers:
+We just received POSE Phase I in August (Pathways to Enable Open-Source Ecosystems)—a planning grant to establish sustainable communities. We initially thought this made us ineligible for Phase II, but recently discovered we could still apply, hence the very short notice.
+
+I've drafted a letter [here](https://docs.google.com/document/d/1t0BPwxGCJ-lJoo0EkK9qrMkmHVTM2tBW-5UtxhpWJpY/edit?usp=sharing) covering:
 - Arnold's three grants to PolicyEngine and active use in congressional engagement
 - The critical timing with 2025 reconciliation and TCJA expiration
 - How open source democratizes policy analysis
-- Arnold's potential ongoing support for the OSE
+- Arnold's strategic engagement with the OSE (not committing to future funding, of course)
 
-Would you be able to send this on Arnold letterhead by tomorrow afternoon? Any edits are welcome—your perspective on PolicyEngine's role in evidence-based policymaking would be powerful.
+You can learn more about our application at [policyengine.github.io/nsf-pose-phase-2](https://policyengine.github.io/nsf-pose-phase-2), and the POSE program [here](https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose).
 
-Sorry for the short notice. Your support would be crucial for demonstrating sustainability.
+By any chance could you send this on Arnold letterhead by 3pm ET? Feel free to revise or provide as-is. Your perspective on PolicyEngine's role in evidence-based policymaking would be powerful.
+
+I apologize for the last-minute request. Your support would be crucial for demonstrating sustainability.
 
 Thanks,
 Max`,
 
-    perron: `Subject: Urgent: NSF POSE Support Letter - Rules as Code Perspective
+    perron: `Subject: Urgent: NSF POSE Letter - Due Today
 
 Dear Martin,
 
-I hope you're doing well. I'm reaching out with an urgent request—we need a letter of support for our NSF POSE Phase II proposal by tomorrow 5pm.
+I hope you enjoyed the holiday weekend.
 
-Your Rules as Code expertise and work to integrate PolicyEngine into Canadian government systems would provide invaluable international validation. You understand better than anyone how PolicyEngine embodies Rules as Code principles.
+Sorry to ask but I have a last-minute request! We're applying for an NSF grant due today (Tuesday) at 5pm ET. Your Rules as Code expertise and exploration of PolicyEngine for Canadian government systems would provide invaluable international validation. You understand better than anyone how PolicyEngine embodies Rules as Code principles.
 
-I've drafted a letter (attached) highlighting:
+We just received POSE Phase I in August (Pathways to Enable Open-Source Ecosystems)—a planning grant to establish sustainable communities. We initially thought this made us ineligible for Phase II, but recently discovered we could still apply, hence the very short notice.
+
+I've drafted a letter [here](https://docs.google.com/document/d/1-JFQfM1N1xb_Npbsi-D-5W2rnX10u3K_Tt0kPleb7d8/edit?usp=sharing) highlighting:
 - Alignment between PolicyEngine and Rules as Code principles
-- Your efforts to integrate PolicyEngine in Canadian government
+- Your exploration of PolicyEngine for Canadian government systems
 - The international collaboration potential
 - Why government needs open source policy tools
 
 Given government constraints, if an official letter isn't possible, a letter in your personal capacity as a Rules as Code expert would be equally valuable.
 
-Could you review and send by tomorrow afternoon? Please modify as needed—your authentic perspective on government modernization through open tools would be powerful.
+You can learn more about our application at [policyengine.github.io/nsf-pose-phase-2](https://policyengine.github.io/nsf-pose-phase-2), and the POSE program [here](https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose).
 
-Apologies for the rushed timeline. Your support would demonstrate crucial government adoption potential.
+By any chance could you send this by 3pm ET? Feel free to revise or provide as-is. Your authentic perspective on government modernization through open tools would be powerful.
+
+I apologize for the last-minute request. Your support would demonstrate crucial government adoption potential.
 
 Best,
 Max`,
 
-    franks: `Subject: Urgent: NSF POSE Phase II Letter - UK Impact & International Collaboration
+    franks: `Subject: Urgent: NSF POSE Letter - Due Today
 
 Dear Mark,
 
-I hope this finds you well. I'm writing with an urgent request for a letter of support for our NSF POSE Phase II proposal, due tomorrow at 5pm EST.
+I hope this finds you well.
 
-Nuffield's £250,000 grant has been transformative for PolicyEngine UK, and your perspective on the impact we've had—particularly through the Cabinet Office secondment and the transparency it's brought to UK policy making—would be invaluable for demonstrating international adoption and collaboration potential.
+Sorry to ask but I have a last-minute request! We're applying for an NSF grant due today (Tuesday) at 5pm ET. Nuffield's £251,296 grant has been transformative for PolicyEngine UK, and your perspective on the impact we've had—particularly through the Cabinet Office secondment documented in HM Treasury's Algorithmic Transparency Record—would be invaluable for demonstrating international adoption.
 
-I've attached a draft letter highlighting:
-- Nuffield's investment and the impact on UK government transparency
-- The Cabinet Office secondment and parliamentary engagement
+We just received POSE Phase I in August (Pathways to Enable Open-Source Ecosystems)—a planning grant to establish sustainable communities. We initially thought this made us ineligible for Phase II, but recently discovered we could still apply, hence the very short notice.
+
+I've drafted a letter [here](https://docs.google.com/document/d/1EGoiJTJy7rccOweetHiFhZSUxiCwgxvWQ-v58AUyHrA/edit?usp=sharing) highlighting:
+- Nuffield's investment and UK government engagement
+- The Cabinet Office secondment documented in HM Treasury's record
 - International collaboration benefits between US/UK implementations
 - Alignment with Nuffield's social justice mission
 
-Would you be able to review and send on Nuffield letterhead by tomorrow afternoon? Please feel free to modify—your authentic voice on PolicyEngine's democratic impact would be powerful.
+You can learn more about our application at [policyengine.github.io/nsf-pose-phase-2](https://policyengine.github.io/nsf-pose-phase-2), and the POSE program [here](https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose).
 
-Apologies for the extremely short notice. Your support would demonstrate crucial international validation.
+By any chance could you send this on Nuffield letterhead by 3pm ET? Feel free to revise or provide as-is. Your authentic voice on PolicyEngine's democratic impact would be powerful. Of course, this doesn't commit Nuffield to future funding—just acknowledgment of current support and impact.
+
+I apologize for the last-minute request. Your support would demonstrate crucial international validation.
 
 Best,
 Max`,
 
-    unrath: `Subject: Urgent: NSF POSE Letter - Census/HHS Research Perspective
+    unrath: `Subject: Urgent: NSF POSE Letter - Due Today
 
 Dear Matt,
 
-I hope you're well. I need your help with an urgent letter of support for our NSF POSE Phase II proposal, due tomorrow at 5pm.
+I hope you enjoyed the holiday weekend. Thank you again for your letter of support for the PBIF proposal—it was incredibly helpful, and we should know by the end of the month.
 
-Your unique perspective—from Census NEWS project experience with TAXSIM to your current HHS-funded work on marginal tax rates and cliffs using PolicyEngine—would be incredibly valuable. You've seen both the government need and academic research applications.
+Sorry to ask but I have another last-minute request! We're applying for an NSF grant due today (Tuesday) at 2pm PT, and your unique perspective would add a lot of value. We just received POSE Phase I in August (Pathways to Enable Open-Source Ecosystems)—a planning grant to establish sustainable communities. We initially thought this made us ineligible for Phase II, but recently discovered we could still apply, hence the very short notice.
 
-I've drafted a letter (attached) that emphasizes:
-- Your current IRP/HHS project using PolicyEngine for cliff analysis
+I've drafted a letter [here](https://docs.google.com/document/d/1Oa_0lLyi37JX7qz6GOb23KlPGTlG_SZnImwMphU7E7c/edit?usp=sharing) emphasizing:
+- How PolicyEngine unlocked your IRP/HHS project on cliff analysis
 - Census experience and the limitations you faced with closed models
 - Your connections with Rothbaum and potential for Census adoption
 - The importance for government transparency and academic research
 
-Could you send this on USC letterhead by tomorrow afternoon? Please feel free to edit—your perspective bridging government and academia would be powerful.
+You can learn more about our application at [policyengine.github.io/nsf-pose-phase-2](https://policyengine.github.io/nsf-pose-phase-2), and the POSE program [here](https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose).
 
-Sorry for the last-minute request. Your support would really strengthen our government adoption narrative.
+By any chance could you send this on USC letterhead by noon PT? Feel free to revise or provide as-is. Your perspective bridging government and academia would be powerful.
+
+I apologize for the last-minute request. Your support would really strengthen our academic+government adoption narrative.
 
 Thanks,
-Matt`
+Max`
   }
 
   return (
@@ -226,8 +259,8 @@ Matt`
       <h1>Internal Letter Drafts & Status</h1>
       
       <div className="deadline-warning">
-        <strong>⚠️ DEADLINE: Tomorrow (Tuesday) 5:00 PM Eastern</strong>
-        <p>Current time: Monday 9:00 PM - Less than 20 hours remaining!</p>
+        <strong>⚠️ DEADLINE: Tuesday 5:00 PM Eastern</strong>
+        <p>Letters requested by 3:00 PM ET to allow buffer time</p>
       </div>
 
       <div className="letter-grid">
@@ -256,9 +289,19 @@ Matt`
                     <button onClick={() => {
                       setSelectedLetter(letter.filename)
                       setSelectedEmail('')
+                      setViewMode('draft')
                     }}>
                       View Draft
                     </button>
+                    {letter.submittedFilename && (
+                      <button onClick={() => {
+                        setSelectedLetter(letter.filename)
+                        setSelectedEmail('')
+                        setViewMode('submitted')
+                      }}>
+                        View Submitted
+                      </button>
+                    )}
                     <button onClick={() => {
                       const nameToKey: Record<string, string> = {
                         'James Poterba': 'poterba',
@@ -289,10 +332,28 @@ Matt`
             ) : (
               <>
                 <div className="preview-header">
-                  <h2>Letter Preview</h2>
-                  <button onClick={() => copyToClipboard(letterContent)}>
-                    Copy Letter Text
-                  </button>
+                  <h2>Letter Preview - {viewMode === 'submitted' ? 'Submitted Version' : 'Draft Version'}</h2>
+                  <div>
+                    {letterDrafts.find(l => l.filename === selectedLetter)?.submittedFilename && (
+                      <>
+                        <button 
+                          onClick={() => setViewMode('draft')}
+                          style={{marginRight: '10px', fontWeight: viewMode === 'draft' ? 'bold' : 'normal'}}
+                        >
+                          View Draft
+                        </button>
+                        <button 
+                          onClick={() => setViewMode('submitted')}
+                          style={{marginRight: '10px', fontWeight: viewMode === 'submitted' ? 'bold' : 'normal'}}
+                        >
+                          View Submitted
+                        </button>
+                      </>
+                    )}
+                    <button onClick={() => copyToClipboard(letterContent)}>
+                      Copy Letter Text
+                    </button>
+                  </div>
                 </div>
                 <div className="letter-content">
                   <ReactMarkdown>{letterContent}</ReactMarkdown>
@@ -322,18 +383,18 @@ Matt`
         <ol>
           <li>Copy email template for each person</li>
           <li>Attach their draft letter (from docs/pose/letters/drafts/)</li>
-          <li>Send ASAP (tonight if possible)</li>
-          <li>Follow up tomorrow morning if no response</li>
+          <li>Send ASAP (Labor Day evening)</li>
+          <li>Follow up Tuesday morning if no response</li>
           <li>Request letters on official letterhead</li>
-          <li>Remind them: 2 page maximum, due by 4pm to leave buffer</li>
+          <li>Remind them: 2 page maximum, due by 3pm ET Tuesday</li>
         </ol>
       </div>
 
       <div className="key-points">
         <h2>Key Points to Emphasize</h2>
         <ul>
-          <li><strong>Urgency</strong>: Due tomorrow 5pm, need by 4pm for safety</li>
-          <li><strong>Flexibility</strong>: Drafts are just templates - they should edit freely</li>
+          <li><strong>Urgency</strong>: Due Tuesday 5pm ET, requesting by 3pm ET for safety</li>
+          <li><strong>Flexibility</strong>: Drafts save time but they should revise as needed</li>
           <li><strong>Letterhead</strong>: Must be on official letterhead (or personal if government)</li>
           <li><strong>Length</strong>: Maximum 2 pages per NSF requirements</li>
           <li><strong>Format</strong>: PDF preferred</li>
