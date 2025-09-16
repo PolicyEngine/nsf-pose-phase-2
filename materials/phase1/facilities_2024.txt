@@ -1,0 +1,20 @@
+Facilities, Equipment and Other Resources
+PolicyEngine will leverage the following resources to carry out the proposed work:
+Computational Infrastructure
+	•	Cloud computing resources: PolicyEngine utilizes scalable cloud infrastructure to host its modeling platform, web application, and APIs. This includes virtual machines, databases, and storage systems necessary for development, testing, and production deployment.
+	•	Version control and collaboration tools: The project uses industry-standard tools such as Git for version control and GitHub for collaborative software development, issue tracking, and documentation.
+	•	Continuous integration/continuous deployment (CI/CD) pipelines: Automated testing and deployment infrastructure ensures code quality and facilitates rapid iteration.
+Software and Data Resources
+	•	Open-source codebase: PolicyEngine's existing codebase, including tax-benefit microsimulation models for the US and UK, provides a strong foundation for further development.
+	•	Integrated datasets: Curated microdata sets form the basis for policy simulations and impact analyses.
+	•	Third-party open-source libraries: PolicyEngine leverages a variety of open-source statistical, data science, and web development libraries.
+Personnel Expertise
+	•	Core development team: A multidisciplinary team with expertise in economics, public policy, software engineering, and data science.
+	•	Open-source contributor network: A growing community of volunteer developers, economists, and policy experts who contribute to various aspects of the project.
+	•	Advisory network: Access to subject matter experts in academia, think tanks, and government agencies who provide guidance on model development and policy analysis.
+Organizational Resources
+	•	Nonprofit status: PolicyEngine operates under the fiscal sponsorship of the Policy Simulation Library Foundation, providing administrative and legal infrastructure.
+	•	Community engagement platforms: Slack workspace and other communication tools to facilitate collaboration among team members and the broader community.
+	•	Project management tools: Software for task tracking, roadmap planning, and team coordination.
+PolicyEngine is committed to making these resources available for the successful execution of the proposed work. The organization's lean operational model and ability to leverage open-source contributions allow for efficient use of resources in pursuing its mission of democratizing access to policy analysis tools.
+

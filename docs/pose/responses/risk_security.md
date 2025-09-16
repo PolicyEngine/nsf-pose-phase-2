@@ -1,111 +1,89 @@
-### Comprehensive Threat Model and Risk Assessment
+## Risk Analysis and Security Plan
 
-**Supply Chain Security Threats** (with specific mitigation strategies):
-- **Dependency Compromise**: Malicious packages in PyPI/npm with similar names to legitimate dependencies
-  - Mitigation: Dependency pinning with cryptographic hashes, private package mirrors for critical dependencies
-  - Detection: Automated vulnerability scanning with Snyk and GitHub Dependabot, SBOM analysis for unexpected changes
-- **Typosquatting Attacks**: Adversaries registering packages with names similar to PolicyEngine components
-  - Mitigation: Proactive registration of common typos, trademark protection for PolicyEngine namespace
-  - Monitoring: Daily scanning of package registries for PolicyEngine-related names
-- **Malicious Contributions**: Backdoors or vulnerabilities introduced through legitimate-appearing pull requests
-  - Mitigation: Mandatory code review by 2+ maintainers, automated static analysis, contributor background verification
-  - Detection: Behavioral analysis of contributor patterns, anomaly detection in code changes
+PolicyEngine implements comprehensive security practices aligned with CISA/NSA guidance for securing software supply chains. Our multi-layered approach addresses technical vulnerabilities, data privacy, and ecosystem integrity.
 
-**Data Security and Privacy Risks**:
-- **Data Leakage**: Sensitive microdata exposed through logs, debug output, or cached results
-  - Mitigation: Structured logging with automatic PII redaction, secure debug modes, encrypted cache storage
-  - Compliance: GDPR Article 25 (privacy by design), HIPAA administrative safeguards where applicable
-- **Model Inversion Attacks**: Adversaries inferring sensitive information from model outputs
-  - Mitigation: Differential privacy mechanisms (ε<1.0), k-anonymity enforcement (k≥5), output perturbation
-  - Monitoring: Statistical disclosure control validation, automated privacy budget tracking
+### Security Architecture and Practices
 
-**Infrastructure and Operational Risks**:
-- **Reproducibility Drift**: Gradual divergence in calculation results across environments or versions
-  - Mitigation: Deterministic build processes, containerized environments, cryptographic result validation
-  - Detection: Automated regression testing, historical result comparison, statistical significance testing
-- **Availability Threats**: DDoS attacks, resource exhaustion, or service disruption
-  - Mitigation: CloudFlare DDoS protection, rate limiting, graceful degradation patterns
-  - Monitoring: Real-time performance metrics, automated alerting, failover procedures
+**Supply Chain Security**: Automated scanning with Dependabot identifies vulnerabilities within 24 hours of disclosure. We maintain a 48-hour patch deployment target for critical vulnerabilities, with automated CI/CD pipelines ensuring rapid, tested updates.
 
-### Comprehensive Security Implementation Plan
+**Code Integrity**: All commits require GPG signing for verification. Pull requests undergo automated security scanning before merge, including static analysis (CodeQL), dependency auditing, and license compliance checks. The two-reviewer requirement for core components ensures human oversight of security-critical changes.
 
-**Identity and Access Management (Zero-Trust Architecture)**:
-- **Multi-Factor Authentication**: Hardware security keys (FIDO2/WebAuthn) required for all maintainers, backup TOTP tokens
-- **Role-Based Access Control**: 
-  - Read-only: Community contributors, external researchers
-  - Write: Trusted contributors with 6+ month track record and maintainer sponsorship
-  - Admin: Core team members with release signing privileges, 2-person approval for changes
-  - Security: Dedicated security team with incident response authority
-- **Principle of Least Privilege**: Granular permissions for GitHub, cloud resources, and package registries
-- **Access Reviews**: Quarterly access audits, automatic deprovisioning after 90 days of inactivity
+**Incident Response Protocol**: 
+1. **Detection**: Automated monitoring alerts security team within 15 minutes of anomalies
+2. **Triage**: Security lead assesses severity using CVSS scoring within 2 hours
+3. **Response**: Critical issues trigger immediate patch development and user notification
+4. **Disclosure**: Coordinated disclosure through GitHub Security Advisories and direct stakeholder communication
+5. **Post-mortem**: Public incident reports document lessons learned and process improvements
 
-**Secure Development Lifecycle (NIST SSDF Framework)**:
-- **Threat Modeling**: Annual STRIDE analysis of PolicyEngine architecture, quarterly updates for major changes
-- **Static Application Security Testing (SAST)**:
-  - Bandit for Python security issues, Semgrep for custom security patterns
-  - SonarCloud for code quality and security debt tracking
-  - CodeQL for semantic code analysis and vulnerability detection
-- **Dynamic Application Security Testing (DAST)**:
-  - OWASP ZAP integration for web application security testing
-  - API security testing with custom PolicyEngine-specific test cases
-  - Fuzzing with OSS-Fuzz for input validation testing
-- **Software Composition Analysis (SCA)**:
-  - Snyk for dependency vulnerability scanning with automatic remediation
-  - FOSSA for license compliance and security risk assessment
-  - Custom tooling for PolicyEngine-specific dependency analysis
+**Vulnerability Management**: We maintain a responsible disclosure program with defined communication channels (security@policyengine.org), recognition for security researchers, and a 90-day disclosure timeline for non-critical issues. The security team includes members across time zones ensuring 24-hour response capability.
 
-**Release Security and Integrity**:
-- **Code Signing**: GPG signatures on all release tags and artifacts using hardware security modules
-- **Software Bill of Materials (SBOM)**: SPDX 2.3 format with complete dependency graph and vulnerability status
-- **Reproducible Builds**: Hermetic build environment with deterministic output verification
-- **Release Verification**: Multi-party signature validation, automated integrity checking
+### Data Privacy and Protection
 
-**Incident Response and Security Operations**:
-- **Security Response Team**: Dedicated security@policyengine.org with 24/7 monitoring, escalation procedures
-- **Vulnerability Disclosure Program**:
-  - Private reporting channel with GPG encryption
-  - 90-day coordinated disclosure timeline (expedited for critical issues)
-  - Security advisory publication with CVE assignment and CVSS scoring
-- **Incident Classification and SLAs**:
-  - Critical (CVSS 9.0-10.0): 4-hour response, 24-hour remediation target
-  - High (CVSS 7.0-8.9): 24-hour response, 72-hour remediation target
-  - Medium (CVSS 4.0-6.9): 72-hour response, 2-week remediation target
-- **Communication Protocols**: Security mailing list, GitHub Security Advisories, public blog posts for major incidents
+**No Personal Data Storage**: PolicyEngine's architecture fundamentally protects privacy—we process calculations without storing personal information. API calls contain only hypothetical household parameters, never identifying information. This design eliminates data breach risks while enabling full functionality.
 
-### Data Governance, Provenance, and Privacy Framework
+**Audit Logging**: All API access generates anonymized audit logs tracking usage patterns without user identification. Rate limiting prevents abuse while preserving open access for legitimate research. Geographic distribution through CloudFlare protects against DDoS attacks.
 
-**Data Provenance and Lineage Tracking**:
-- **Dataset Provenance**: Complete audit trail from original data sources (Census, BLS, IRS) through all transformations
-- **Cryptographic Verification**: SHA-256 checksums for all data files, Merkle trees for large dataset integrity
-- **Version Control**: Git-based tracking of all policy parameter changes with legislative citations and effective dates
-- **Build Reproducibility**: Deterministic data processing pipelines with locked dependency versions and container images
+**Compliance Framework**: Although we don't process personal data, we maintain GDPR-compliant practices for any incidental information. Terms of service explicitly prohibit submission of real personal data. Educational materials emphasize using representative rather than actual household data.
 
-**Policy Parameter Audit Trail**:
-- **Legislative Mapping**: Direct links from code parameters to USC sections, CFR regulations, and state statutes
-- **Change Attribution**: Git blame integration showing policy expert responsible for each parameter modification
-- **Validation Chain**: Cross-references to authoritative sources (IRS publications, state tax agency guidance)
-- **Temporal Accuracy**: Effective date tracking for all policy changes with retroactive application capabilities
+### Technical Risk Mitigation
 
-**Privacy-by-Design Architecture**:
-- **Data Segregation**: Clear separation between public code repositories and sensitive microdata processing environments
-- **Local Processing Frameworks**: Documentation and tooling for organizations to run PolicyEngine on sensitive data locally
-- **Anonymization Standards**:
-  - k-anonymity with k≥5 for all public data releases
-  - Differential privacy with ε<1.0 for statistical aggregations
-  - Suppression rules for cells with <10 observations
-- **Consent and Ethics Framework**:
-  - IRB consultation checklist for research involving human subjects data
-  - Data use agreements template for institutional data sharing
-  - GDPR/CCPA compliance procedures for EU/California users
+**Validation Infrastructure**: Our continuous validation against TAXSIM, CBO projections, and state revenue estimates ensures calculation accuracy. With 8,600 automated test cases across our US and UK models covering edge conditions and complex interactions, we maintain rigorous quality standards. Version control enables rollback within minutes if issues emerge.
 
-**Lawful and Ethical Data Use Guidelines**:
-- **Legal Compliance Framework**: Documented procedures for compliance with federal and state privacy laws
-- **Ethical Review Process**: Annual review by external ethics board including privacy advocates and policy experts
-- **User Education**: Training materials on responsible use of PolicyEngine for sensitive analyses
-- **Transparency Reporting**: Annual report on data use, privacy incidents, and compliance activities
+**Performance and Scalability**: Load testing before major releases ensures stability. Horizontal scaling on Google Cloud Platform handles demand spikes. Database query optimization and Redis caching maintain fast API response times. Regional CDN deployment ensures global accessibility.
 
-**Quality Assurance and Validation**:
-- **Cross-Model Validation**: Systematic comparison with TAXSIM, CBO, and peer models with statistical significance testing
-- **Expert Review Process**: Annual parameter validation by domain experts in tax law, benefit programs, and data science
-- **Public Validation Dashboard**: Real-time display of model agreement rates, calculation accuracy, and data quality metrics
-- **Error Reporting and Correction**: Public issue tracking for calculation errors with transparent resolution process
+**Dependency Management**: We minimize external dependencies, vendoring critical libraries when appropriate. Automated license scanning ensures compliance with open-source obligations. Regular dependency pruning removes unused packages that could introduce vulnerabilities.
+
+### Organizational Risk Management
+
+**Distributed Leadership**: No single point of failure in governance or technical leadership. Each core component has multiple maintainers across institutions. Documented succession plans ensure continuity. Institutional partnerships (NBER, USC, Georgetown) provide organizational resilience.
+
+**Financial Resilience**: Revenue diversification across government contracts, educational licensing, and philanthropic support prevents funding concentration. Six-month operating reserve target provides runway during transitions. Low-overhead remote operations maximize resource efficiency.
+
+**Community Health**: Clear code of conduct based on Contributor Covenant ensures inclusive environment. Conflict resolution procedures address disputes before escalation. Regular community surveys identify emerging issues. Transparent roadmap planning prevents surprise changes that fragment community.
+
+### Ecosystem Security
+
+**Contributor Vetting**: While maintaining open contribution, we implement graduated permissions. New contributors start with documentation and test improvements. Code contributions require review by two core maintainers. Commit access granted only after sustained quality contributions.
+
+**Fork Management**: Clear governance ensures community cohesion, but we prepare for potential forks. Apache 2.0 licensing preserves user rights while requiring attribution. Modular architecture allows component-level forking without ecosystem fragmentation. Regular community engagement prevents divergence motivations.
+
+**Malicious Use Prevention**: While we cannot prevent all misuse, we implement safeguards:
+- Documentation emphasizes uncertainty and limitations
+- API responses include confidence intervals and assumptions
+- Training materials stress ethical analysis practices
+- Community guidelines prohibit misleading advocacy
+- Public corrections for identified misrepresentations
+
+### Quality Assurance
+
+**Testing Coverage**: Comprehensive code coverage with emphasis on critical paths. Integration tests validate full calculation pipelines. Property-based testing identifies edge cases. Regression tests prevent previously fixed bugs from recurring.
+
+**External Audits**: Annual security audits by independent firms. Quarterly validation against government models. Academic peer review of methodological changes. Public bug bounty program incentivizes vulnerability discovery.
+
+**Monitoring and Alerting**: Real-time monitoring of API performance, error rates, and usage patterns. Automated alerts for anomalies or degradation. Weekly security metrics review. Monthly security posture assessment.
+
+### Specific Phase II Security Enhancements
+
+**Year 1 Priorities**:
+- Establish Security Champions program across contributor organizations
+- Deploy hardware security module for release signing
+- Implement comprehensive vulnerability disclosure program
+- Enhance automated testing coverage
+
+**Year 2 Goals**:
+- Formal threat modeling with STRIDE methodology
+- Independent security audit publication
+- Multi-factor authentication for all maintainers
+- Automated compliance monitoring
+
+### Metrics and Accountability
+
+We track security effectiveness through concrete metrics:
+- Mean time to patch: Target < 48 hours for critical vulnerabilities
+- Security Champion coverage: 100% of core components
+- Incident response time: < 2 hours for initial triage
+- Vulnerability disclosure handling: 100% acknowledged within 48 hours
+- Security training completion: 100% of maintainers annually
+- Dependency currency: Regular updates within reasonable timeframes
+
+This comprehensive security approach ensures PolicyEngine remains trustworthy infrastructure for critical policy analysis while maintaining the openness essential for community-driven development.

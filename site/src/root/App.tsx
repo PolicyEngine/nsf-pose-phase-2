@@ -12,6 +12,7 @@ import { Budget } from '../views/Budget'
 import { Awards } from '../views/Awards'
 import { LetterRubric } from '../views/LetterRubric'
 import { LettersInternal } from '../views/LettersInternal'
+import { SimulatedReviews } from '../views/SimulatedReviews'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 
 export const App: React.FC = () => {
@@ -53,6 +54,7 @@ export const App: React.FC = () => {
               <Route path="/references" element={<References />} />
               <Route path="/rubric" element={<LetterRubric />} />
               <Route path="/letters-internal" element={<LettersInternal />} />
+              <Route path="/reviews" element={<SimulatedReviews />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </div>

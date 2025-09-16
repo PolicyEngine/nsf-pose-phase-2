@@ -1,28 +1,52 @@
-### Evidence-Based Community Development Strategy
+## Community Building
 
-**User Research Foundation** (comprehensive stakeholder analysis with quantified insights):
-- **Citizen Codex UX Study** (Nuffield Foundation funded): [PLACEHOLDER: verify interview count] stakeholder interviews across [PLACEHOLDER: verify archetype count] user archetypes, [PLACEHOLDER: verify session count] usability testing sessions, and comprehensive information architecture audit
-- **Key Quantified Findings**:
-  - [PLACEHOLDER: verify percentage] of policy analysts identify "getting started" documentation as primary adoption barrier
-  - [PLACEHOLDER: verify percentage] prefer modular, API-accessible tools over monolithic desktop applications
-  - [PLACEHOLDER: verify percentage] require audit trails for policy parameter changes, [PLACEHOLDER: verify percentage] need formal approval workflows
-  - [PLACEHOLDER: verify improvement] improvement in task completion rate after navigation redesign
-  - [PLACEHOLDER: verify increase] increase in ease-of-use ratings following terminology standardization
-- **Archetype-Specific Insights**:
-  - **Government Analysts**: Prioritize reliability, audit trails, and official data sources
-  - **Academic Researchers**: Need reproducibility, citation support, and methodology transparency
-  - **Journalists**: Require rapid turnaround, visualization tools, and fact-checking capabilities
-  - **Policy Advocates**: Focus on accessibility, narrative storytelling, and distributional impact
-  - **Technical Contributors**: Want clear contribution pathways, code quality standards, and recognition
+### User-Centric Community Strategy
 
-**I-Corps Discovery Integration** ([PLACEHOLDER: verify interview count] customer interviews planned, January 2026):
-- **Structured Interview Protocol**: [PLACEHOLDER: verify session length] sessions with standardized questions across [PLACEHOLDER: verify segment count] stakeholder segments
-- **Geographic Distribution**: [PLACEHOLDER: verify federal percentage] federal/national, [PLACEHOLDER: verify state percentage] state/local, [PLACEHOLDER: verify academic percentage] academic, [PLACEHOLDER: verify international percentage] international
-- **Pain Point Validation**: Quantitative ranking of adoption blockers, feature priorities, and willingness-to-pay analysis
-- **Roadmap Prioritization**: Statistical analysis (conjoint analysis, MaxDiff) to rank feature development priorities
-- **Public Roadmap Publication**: Quarterly updates with progress metrics, community voting on feature priorities
+PolicyEngine's community strategy prioritizes users—policy analysts, researchers, benefits counselors—over developers. While technical contributors are essential, our primary community consists of people using microsimulation for policy analysis, not building microsimulation software.
 
-Onboarding meets people where they are, with first‑timer issues, clear contributor guides, a mentorship program, office hours, and starter projects that can be completed in a weekend. Recognition is built into releases and docs, with credits and lightweight badges, and we reserve small micro‑grants for documentation and adapters. Support lives on an open forum and chat, with quick responses to issues and pull requests, a monthly community call to keep momentum, and quarterly hackathons to welcome new contributors.
+**User segments and engagement**:
+- **Policy analysts**: Monthly webinars on modeling current legislation, peer support forums, direct access to PolicyEngine experts during office hours
+- **Researchers**: Validation workshops comparing results across models, collaborative parameter updating, shared test case development
+- **Benefits counselors**: Training on eligibility rules, simplified interfaces for client screening, community-maintained resource guides
+- **Students**: Campus ambassadors, policy modeling competitions, summer research projects using real data
 
-### Design Commitments (from UX Research)
-We are turning research into visible changes. We will simplify navigation and policy organization so that common tasks (select a policy, set a timeframe, view distributional and budget results) are one or two clicks away. Policy naming will follow a consistent style guide and include search‑forward aliases (e.g., common nicknames for credits) to reduce confusion. The first‑run experience will offer example‑driven walkthroughs for analysts and non‑programmers, with copy‑to‑notebook snippets for those who prefer code. Feedback loops become explicit: the app will include a “suggest a fix” entry point that opens a pre‑filled issue with context, and the public roadmap will mark items that came from user studies so contributors see how their input moves work forward. To support international adopters (e.g., Canadian government teams), we will prioritize basic localization (bilingual documentation and UI strings) so contributors and users can work in their preferred language.
+### Structured Support Programs
+
+**Office hours** (timezone-distributed):
+- Tuesday 2pm ET: State/local government focus
+- Wednesday 6pm ET: Academic researchers and students  
+- Thursday 10am PT: Benefits organizations and west coast users
+- Format: 30-minute demo + 30-minute Q&A, recorded for asynchronous viewing
+
+**Documentation by user type**:
+- **Quickstart guides**: "Analyze a bill in 10 minutes" for legislators
+- **Course materials**: Complete syllabi for instructors
+- **API cookbooks**: Code examples for developers
+- **Validation guides**: Comparison methods for researchers
+
+### Building Bridges Across Communities
+
+PolicyEngine connects previously isolated communities:
+- **Researchers ↔ Policymakers**: USC research on benefit cliffs directly informing state legislation
+- **UK ↔ US**: Nuffield-funded local modeling techniques adapted for US congressional districts
+- **Academia ↔ Benefits access**: MyFriendBen using research-grade models for real-world eligibility
+
+**Community events**:
+- Annual conference rotating between DC (policy), NYC (finance), SF (tech)
+- Regional workshops at NCSL, NTA, ASSA meetings
+- Virtual hackathons focused on specific policy questions
+
+### Contributor Recognition
+
+- **Impact badges**: "Helped 10,000 families access benefits"
+- **Research citations**: Papers using PolicyEngine acknowledged in release notes
+- **Policy influence**: Dashboard tracking legislation analyzed using PolicyEngine
+- **Career development**: Letters of recommendation, conference speaking opportunities
+
+### Success Metrics
+
+- **Active users**: 10,000 monthly active users by Year 2 (April 2028)
+- **Geographic distribution**: Users in all 50 states plus 10 countries
+- **Sector diversity**: 40% government, 30% academic, 20% nonprofit, 10% commercial
+- **Support effectiveness**: 90% of questions answered within 24 hours
+- **Community contributions**: 100+ user-contributed test cases, 50+ documentation improvements

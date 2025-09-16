@@ -1,109 +1,83 @@
 # References Cited
 
-*[Formatted according to NSF PAPPG guidelines]*
+CISA; National Security Agency. (2022). Securing the software supply chain: Recommended practices for developers. Cybersecurity and Infrastructure Security Agency and National Security Agency. https://media.defense.gov/2022/Sep/01/2003068942/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF
 
-**Core Technical References**
+Feenberg, D., & Coutts, E. (1993). An introduction to the TAXSIM model. Journal of Policy Analysis and Management, 12(1), 189–194. https://doi.org/10.2307/3325474
 
-CISA & NSA. (2022). Securing the Software Supply Chain: Recommended Practices for Developers. Cybersecurity and Infrastructure Security Agency and National Security Agency. https://media.defense.gov/2022/Sep/01/2003068942/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF
+Louizos, C., Welling, M., & Kingma, D. P. (2018). Learning sparse neural networks through L0 regularization. Proceedings of the International Conference on Learning Representations (ICLR). https://openreview.net/forum?id=H9gRavnMhq
 
-Feenberg, D., & Coutts, E. (1993). An Introduction to the TAXSIM Model. *Journal of Policy Analysis and Management*, 12(1), 189–194. doi:10.2307/3325474
+Meinshausen, N. (2006). Quantile regression forests. Journal of Machine Learning Research, 7, 983–999. https://www.jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf
 
-Louizos, C., Welling, M., & Kingma, D. P. (2018). Learning Sparse Neural Networks through L₀ Regularization. *Proceedings of the International Conference on Learning Representations (ICLR)*. https://openreview.net/forum?id=H9gRavnMhq
+Open Source Security Foundation. (2023). OpenSSF Best Practices Badge Program criteria. Open Source Security Foundation. https://www.bestpractices.dev/en/criteria
 
-Meinshausen, N. (2006). Quantile regression forests. *Journal of Machine Learning Research*, 7, 983–999. https://www.jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf
+Contributor Covenant. (2021). Contributor Covenant Code of Conduct (Version 2.1). https://www.contributor-covenant.org/version/2/1/code_of_conduct/
 
-**Security and Quality Standards**
+National Institute of Standards and Technology. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for mitigating the risk of software vulnerabilities (NIST Special Publication 800-218). https://doi.org/10.6028/NIST.SP.800-218
 
-OpenSSF. (2023). OpenSSF Best Practices Badge Program Criteria. Open Source Security Foundation. https://www.bestpractices.dev/en/criteria
+Bill & Melinda Gates Foundation. (2024). MyFriendBen receives $2.4M grant to expand access to public benefits. https://www.myfriendben.org/myfriendben-receives-grant-to-expand-access-to-public-benefits/
 
-Contributor Covenant. (2021). Contributor Covenant Code of Conduct, Version 2.1. https://www.contributor-covenant.org/version/2/1/code_of_conduct/
+PolicyEngine. (2024). MyFriendBen launches in North Carolina, using PolicyEngine API. https://policyengine.org/us/research/myfriendben-nc
 
-NIST. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities. *NIST Special Publication 800-218*. https://doi.org/10.6028/NIST.SP.800-218
+HM Treasury. (2024). Algorithmic Transparency Record: PolicyEngine UK tax-benefit model (ATR-2024-007). https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine
 
-**PolicyEngine Software Packages and Documentation**
+Ghenis, M., & Woodruff, N. (2024). PolicyEngine: An open-source tax-benefit microsimulation platform (Version 1.47.0) [Software]. GitHub. https://github.com/PolicyEngine/policyengine-us
 
-Ghenis, M., & Woodruff, N. (2024). *PolicyEngine: An Open-Source Tax-Benefit Microsimulation Platform*. Version 1.47.0. [Software]. https://github.com/PolicyEngine/policyengine-us
+Woodruff, N. (2024). MicroImpute: Quantile regression forest imputation for microsimulation (Version 0.3.1) [Software]. PyPI. https://pypi.org/project/microimpute/
 
-Woodruff, N. (2024). *MicroImpute: Quantile Regression Forest Imputation for Microsimulation*. Version 0.3.1. [Software]. PyPI. https://pypi.org/project/microimpute/
+Woodruff, N. (2024). MicroCalibrate: Gradient-descent population reweighting with sparsity (Version 0.2.4) [Software]. PyPI. https://pypi.org/project/microcalibrate/
 
-Woodruff, N. (2024). *MicroCalibrate: Gradient-Descent Population Reweighting with Sparsity*. Version 0.2.4. [Software]. PyPI. https://pypi.org/project/microcalibrate/
+Ghenis, M. (2024). L0-Python: Differentiable sparsity for PyTorch (Version 0.1.8) [Software]. PyPI. https://pypi.org/project/l0-python/
 
-Ghenis, M. (2024). *L0-Python: Differentiable Sparsity for PyTorch*. Version 0.1.8. [Software]. PyPI. https://pypi.org/project/l0-python/
+PolicyEngine Team. (2024). Enhanced Current Population Survey: Methodology and validation. PolicyEngine. https://policyengine.github.io/policyengine-us-data/
 
-PolicyEngine Team. (2024). *Enhanced Current Population Survey: Methodology and Validation*. Technical Documentation. https://policyengine.github.io/policyengine-us-data/
+Apache Software Foundation. (2019). The Apache Way. https://www.apache.org/theapacheway/
 
-**Governance and Community Framework References**
+Linux Foundation. (2021). Open source project governance models. https://www.linuxfoundation.org/resources/open-source-guides/
 
-Apache Software Foundation. (2019). *The Apache Way*. https://www.apache.org/theapacheway/
+NumFOCUS. (2023). Fiscal sponsorship model for open source scientific computing. https://numfocus.org/sponsors
 
-Linux Foundation. (2021). *Open Source Project Governance Models*. https://www.linuxfoundation.org/resources/open-source-guides/
+Nielsen, J. (2020). 10 usability heuristics for user interface design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
 
-NumFOCUS. (2023). *Fiscal Sponsorship Model for Open Source Scientific Computing*. https://numfocus.org/sponsors
+Burman, L. E., & Phaup, M. (2012). Tax expenditures, the size and efficiency of government, and implications for budget reform. Tax Policy and the Economy, 26(1), 93–124.
 
-**User Experience Research**
+Congress of the United States, Congressional Budget Office. (2024). How CBO analyzes the effects of changes in federal fiscal policies on the economy. https://www.cbo.gov/publication/59003
 
-Citizen Codex. (2025). *Re-imagining PolicyEngine: UX Research Report*. Commissioned by Nuffield Foundation. [Internal Report]
+Joint Committee on Taxation. (2023). Overview of the tax system as in effect for 2023 (JCX-9-23). https://www.jct.gov/publications/2023/jcx-9-23/
 
-Nielsen, J. (2020). *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+Bargain, O., Orsini, K., & Peichl, A. (2014). Comparing labor supply elasticities in Europe and the United States: New results. Journal of Human Resources, 49(3), 723–838.
 
-**Validation and Peer Model References**
+Sutherland, H., & Figari, F. (2013). EUROMOD: The European Union tax-benefit microsimulation model. International Journal of Microsimulation, 6(1), 4–26.
 
-Burman, L. E., & Phaup, M. (2012). Tax expenditures, the size and efficiency of government, and implications for budget reform. *Tax Policy and the Economy*, 26(1), 93-124.
+Statistics Canada. (2023). Social Policy Simulation Database and Model (SPSD/M). https://www.statcan.gc.ca/en/microsimulation/spsdm
 
-Congress of the United States, Congressional Budget Office. (2024). *How CBO Analyzes the Effects of Changes in Federal Fiscal Policies on the Economy*. https://www.cbo.gov/publication/59003
+Auerbach, A. J., & Hassett, K. (2015). Capital taxation in the 21st century. American Economic Review, 105(5), 38–42.
 
-Joint Committee on Taxation. (2023). *Overview of the Tax System as in Effect for 2023*. JCX-9-23. https://www.jct.gov/publications/2023/jcx-9-23/
+Piketty, T., Saez, E., & Zucman, G. (2018). Distributional national accounts: Methods and estimates for the United States. The Quarterly Journal of Economics, 133(2), 553–609.
 
-**International and Comparative Policy Models**
+Saez, E., & Zucman, G. (2019). The triumph of injustice: How the rich dodge taxes and how to make them pay. W. W. Norton & Company.
 
-Bargain, O., Orsini, K., & Peichl, A. (2014). Comparing labor supply elasticities in Europe and the United States: New results. *Journal of Human Resources*, 49(3), 723-838.
+Eghbal, N. (2020). Working in public: The making and maintenance of open source software. Stripe Press.
 
-Sutherland, H., & Figari, F. (2013). EUROMOD: The European Union tax-benefit microsimulation model. *International Journal of Microsimulation*, 6(1), 4-26.
+Navas-Loro, M., Canestrari, S., & Morales-Urrutia, E. K. (2023). Sustainability of open-source software communities beyond a fork: How and why has the LibreOffice project evolved? Sustainability, 15(2), 1277.
 
-Statistics Canada. (2023). *Social Policy Simulation Database and Model (SPSD/M)*. Technical Documentation. https://www.statcan.gc.ca/en/microsimulation/spsdm
+Scacchi, W. (2007). Free/open source software development: Recent research results and methods. Advances in Computers, 69, 243–295.
 
-**Government Partnership Documentation**
+Peng, R. D. (2011). Reproducible research in computational science. Science, 334(6060), 1226–1227.
 
-HM Treasury. (2024). *HMT Modelling - Policy Engine: Algorithmic Transparency Record*. ATR-2024-007. https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine
+Rule, A., Birmingham, A., Zuniga, C., Altintas, I., Huang, S.-C., Knight, R., Moshiri, N., Nguyen, M. H., Rosenthal, S. B., Pérez, F., & Rose, P. W. (2019). Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks. PLOS Computational Biology, 15(7), e1007007. https://doi.org/10.1371/journal.pcbi.1007007
 
-Nuffield Foundation. (2024). *Enhancing, localising and democratising tax-benefit policy analysis*. Grant Award Decision. https://www.nuffieldfoundation.org/project/enhancing-localising-and-democratising-tax-benefit-policy-analysis
+National Conference of State Legislatures. (2024). State fiscal analysis capacity survey. NCSL Fiscal Affairs Program.
 
-**Policy Analysis and Economic Research References**
+Unrath, M. (2024). Marginal tax rates and benefit cliffs in social insurance programs. USC Center for Economic and Social Research Working Paper.
 
-Auerbach, A. J., & Hassett, K. (2015). Capital taxation in the 21st century. *American Economic Review*, 105(5), 38-42.
+Joint Economic Committee. (2024). PolicyEngine integration for rapid policy analysis. U.S. Congress Joint Economic Committee Staff Report.
 
-Piketty, T., Saez, E., & Zucman, G. (2018). Distributional national accounts: Methods and estimates for the United States. *The Quarterly Journal of Economics*, 133(2), 553-609.
+Student Basic Needs Coalition. (2024). Navvy: SNAP navigation tool powered by Impactica and PolicyEngine. https://studentbasicneeds.org/navvy
 
-Saez, E., & Zucman, G. (2019). *The Triumph of Injustice: How the Rich Dodge Taxes and How to Make Them Pay*. W. W. Norton & Company.
+Open Source Initiative. (2024). Open Source Definition (Version 1.9). https://opensource.org/osd
 
-**Open Source Ecosystem and Sustainability Studies**
+Software Package Data Exchange. (2023). SPDX Specification Version 2.3. https://spdx.dev/specifications/
 
-Eghbal, N. (2020). *Working in Public: The Making and Maintenance of Open Source Software*. Stripe Press.
+Supply-chain Levels for Software Artifacts. (2023). SLSA Framework Version 1.0. https://slsa.dev/
 
-Navas-Loro, M., Canestrari, S., & Morales-Urrutia, E. K. (2023). Sustainability of open-source software communities beyond a fork: How and why has the LibreOffice project evolved? *Sustainability*, 15(2), 1277.
-
-Scacchi, W. (2007). Free/open source software development: Recent research results and methods. *Advances in Computers*, 69, 243-295.
-
-**Reproducible Research and Scientific Computing**
-
-Peng, R. D. (2011). Reproducible research in computational science. *Science*, 334(6060), 1226-1227.
-
-Rule, A., Birmingham, A., Zuniga, C., Altintas, I., Huang, S. C., Knight, R., ... & Rose, P. W. (2019). Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks. *PLOS Computational Biology*, 15(7), e1007007.
-
-**Institutional Partnerships and Validation Letters**
-
-Better Government Lab, Georgetown University. (2025). *Letter of Collaboration for PolicyEngine POSE Initiative*. August 15, 2025. [Formal Partnership Agreement]
-
-National Bureau of Economic Research. (2025). *Memorandum of Understanding: PolicyEngine Collaboration and TAXSIM Integration*. August 15, 2025. [Institutional Agreement]
-
-Policy Simulation Library Consortium. (2025). *Letter of Support for PolicyEngine Open Source Ecosystem*. August 16, 2025. [Community Endorsement]
-
-Prenatal-to-3 Policy Impact Center, Vanderbilt University. (2025). *Letter of Support for PolicyEngine POSE Application*. August 17, 2025. [Academic Partnership]
-
-University of Southern California, Center for Economic and Social Research. (2025). *Letter of Support and Research Collaboration Agreement*. August 2025. [Research Partnership]
-
-Urban Institute. (2025). *Letter of Support for PolicyEngine Ecosystem Development*. August 14, 2025. [Policy Research Partnership]
-
-**Note:** Complete bibliographic information and DOIs provided where available. Government reports and working papers cited with full agency attribution and persistent URLs when possible. Software citations include version numbers and permanent identifiers following FORCE11 Software Citation Principles.
-
-Note: Per solicitation, URLs appear in References Cited and not in the Project Description body.
+GitHub. (2024). Security Advisories: Coordinated disclosure of security vulnerabilities. https://docs.github.com/en/code-security/security-advisories

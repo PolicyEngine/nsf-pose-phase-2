@@ -1,99 +1,60 @@
-# POSE Application (Assembled)
-
-## Project Summary (with Keywords)
-# Project Summary
-
-**Title: PolicyEngine: Building an Open Ecosystem for Tax-Benefit Microsimulation**
-
-## Overview
-
-PolicyEngine proposes to establish an open-source ecosystem (OSE) for **tax-benefit microsimulation** that democratizes access to policy analysis tools currently restricted to a dozen well-resourced institutions. Our platform enables any organization—from state legislatures to community colleges to benefits navigators—to analyze how tax and transfer policies affect their constituents. Building on our Phase I award (#2434925) and proven adoption by the U.S. Joint Economic Committee, UK Cabinet Office, and major research institutions, we will develop the governance, training infrastructure, and contributor pathways necessary to sustain this critical public infrastructure.
-
-The ecosystem addresses an urgent democratic need: policy decisions affecting trillions in spending rely on proprietary models costing millions annually to operate. State and local governments, which implement most safety net programs, lack tools to analyze policy interactions. Universities cannot teach students using real models. Community organizations cannot verify benefit eligibility. PolicyEngine transforms this landscape by providing free, transparent, validated microsimulation that matches institutional-grade accuracy while enabling universal access.
-
-## Intellectual Merit
-
-This project advances computational social science by creating the first fully open infrastructure for tax-benefit microsimulation with three key innovations:
-
-1. **Validated transparency**: Our models achieve 96% agreement with NBER's TAXSIM across thousands of test cases while exposing every calculation step, enabling researchers to verify and extend analyses.
-
-2. **Modular ecosystem architecture**: Separation of rules engines, data enhancement, and analysis tools allows specialized communities to maintain components while ensuring system coherence.
-
-3. **Reproducible policy research**: Every PolicyEngine analysis includes shareable links with full parameters, enabling exact replication and systematic meta-analysis of policy proposals.
-
-## Broader Impacts
-
-The OSE will transform policy analysis through four pathways:
-
-**Democratized Access**: Organizations currently excluded from microsimulation—state legislatures, community colleges, local governments—gain sophisticated analytical capabilities. USC researchers report PolicyEngine enabled their marginal tax rate research that "would not be possible without a fully open tax-benefit rules engine."
-
-**Educational Integration**: We will develop curriculum modules for economics and public policy programs, with committed adoption at USC, Georgetown, and through NBER's network. Students will learn using the same tools that analyze real legislation.
-
-**Benefits Access**: Our partnership with MyFriendBen (backed by $2.4M from Gates Foundation) demonstrates immediate impact—identifying $800M in unclaimed benefits for Colorado families. The open rules engine enables any organization to build eligibility screening tools.
-
-**State/Local Capacity**: Through partnerships with NCSL and direct engagement with state legislators, we address massive unmet demand for policy analysis at the state level, where most safety net programs are administered but analytical capacity is minimal.
-
-Keywords: tax-benefit microsimulation; open-source infrastructure; policy analysis; computational social science; reproducible research
----
+# Project Description
 
 ## Context of OSE
-# Context of OSE
 
-## Vision and Need
+### Vision and Need
 
 Our vision is to establish PolicyEngine as the foundational open-source ecosystem for tax-benefit microsimulation—critical infrastructure for evidence-based policymaking. The need is urgent: current policy debates affecting millions of Americans rely on black-box models accessible only to institutions that can afford millions in annual operating costs. The Tax Policy Center operates at $3.2M annually; Penn Wharton Budget Model at $1.8M. Meanwhile, state legislatures making critical safety net decisions, universities teaching policy analysis, and community organizations helping families access benefits all lack basic microsimulation tools.
 
 Recent policy debates exposed this democratic deficit. When Congress considered the American Rescue Plan's $1.9 trillion expansion, only 12 institutions could independently verify distributional claims. State legislators implementing Medicaid expansion or TANF modifications operate blind to interaction effects. As NY State Senator Gounardes noted after using PolicyEngine: "For the first time, my staff could model our tax credit proposals ourselves instead of waiting weeks for external analysis."
 
-## Product Maturity and Adoption
+### Product Maturity and Adoption
 
-PolicyEngine has achieved product-market fit with explosive growth and measurable impact. Government adoption spans federal and state levels: the Joint Economic Committee now uses PolicyEngine for analyzing federal proposals, with staff reporting it enables "rapid iteration on policy designs previously requiring weeks of contractor time." The UK Cabinet Office's integration is so successful that Nikhil Woodruff is currently on secondment there, helping expand usage across HM Treasury and DWP. State legislators in 16 states actively use the platform, with New York Senator Gounardes publicly crediting PolicyEngine for enabling his child tax credit design.
+PolicyEngine has achieved product-market fit with explosive growth and measurable impact. Government adoption spans federal and state levels: the Joint Economic Committee now uses PolicyEngine for analyzing federal proposals. The UK Cabinet Office's integration is so successful that Nikhil Woodruff is currently on secondment there, helping expand usage across HM Treasury and DWP (HM Treasury, 2024). State legislators in multiple states including New York use the platform, with Senator Gounardes publicly crediting PolicyEngine for enabling his child tax credit design.
 
-Academic validation confirms our technical rigor: 96% agreement with NBER's TAXSIM across 10,000 test cases led to a signed MOU for deep integration. USC's Center for Economic and Social Research uses PolicyEngine for HHS-funded marginal tax rate research, with Professor Unrath stating it "enables research impossible with any other open tool." We've conducted seminars at CBO, Congressional Research Service, and the Joint Economic Committee, with active discussions at Berkeley, Georgetown, Northwestern, USC, Duke, and Harvard about curriculum integration.
+Academic validation confirms our technical rigor through extensive testing against NBER's TAXSIM (Feenberg & Coutts, 1993), leading to ongoing collaboration discussions. USC's Center for Economic and Social Research uses PolicyEngine for HHS-funded marginal tax rate research. We've conducted seminars at CBO, Congressional Research Service, and the Joint Economic Committee, with active discussions at Berkeley, Georgetown, Northwestern, USC, Duke, and Harvard about curriculum integration.
 
-The benefits access ecosystem demonstrates immediate social impact. MyFriendBen's $2.4M Gates Foundation-backed platform identified $800M in unclaimed benefits for 50,000 Colorado families using our API. Five major platforms are migrating from the closed-source BenefitKitchen to PolicyEngine: Benefit Navigator, Impactica (Student Basic Needs Coalition), The Tax Project, Mirza (childcare), and WorkMoney. This migration validates our open approach—organizations choose transparency and community contribution over proprietary lock-in.
+The benefits access ecosystem demonstrates immediate social impact. MyFriendBen's $2.4M Gates Foundation-backed platform identified $800M in unclaimed benefits for 50,000 Colorado families using our API (MyFriendBen, 2025). Multiple organizations in the benefits navigation space are exploring migration to PolicyEngine, validating our open approach—organizations choose transparency and community contribution over proprietary lock-in.
 
-Current platform scale: 200,000+ users generating 2 million API calls monthly, complete coverage of all 50 state tax systems plus SNAP, TANF, Medicaid, WIC, and housing assistance, with 150+ external pull requests and 300+ issues from community contributors demonstrating distributed development already underway.
+Current platform scale demonstrates both usage and development momentum. We serve over 100,000 people per year through our API and partners, with rapid growth as partner numbers and scale increase. The PolicyEngine GitHub organization hosts 146 repositories with over 50,000 commits, 332+ stars, and 620+ forks across the ecosystem. Our comprehensive coverage includes 9,034 parameters and variables—7,828 in policyengine-us alone (4,712 parameters and 3,116 variables) and 1,206 in policyengine-uk—representing the full complexity of modern tax-benefit systems. Each parameter and calculation is traceable to its authoritative source through over 1,800 structured citations to primary government documents embedded in our codebase, ensuring every rule can be verified against official legislation and regulations. Development velocity has exploded in 2025 with 60 new repositories created, compared to just 16 in 2023, representing a 3x acceleration in development pace. With 30+ unique contributors on major repositories and 1,227 open issues on policyengine-us alone, we demonstrate the distributed development essential for a thriving open-source ecosystem. Complete coverage spans all 50 state tax systems plus SNAP, TANF, Medicaid, WIC, and housing assistance, with international expansion underway in Canada, Ireland, New Zealand, and Australia.
 
-The technical foundation is production-ready: comprehensive test coverage, automated validation against six established models, API response times under 200ms, and signed releases with security scanning.
+The technical foundation is production-ready: comprehensive test coverage with 8,600 test cases, automated validation against established models, fast API response times, and signed releases with security scanning.
 
-## Phase I Foundation and I-Corps Focus
+### Phase I Foundation and I-Corps Focus
 
 Our Phase I award (running through July 2026) enables systematic ecosystem discovery through the January 2026 I-Corps cohort. We request Phase II to begin May 1, 2026, allowing us to immediately apply I-Corps insights while maintaining Phase I momentum. Our team—Max Ghenis (PI), Nikhil Woodruff (Technical Lead), and Dan Feenberg (NBER mentor with 30+ years maintaining TAXSIM)—will conduct 100+ stakeholder interviews focusing on three critical questions. First, we will investigate state and local government needs to understand what prevents them from conducting their own analysis, with initial NCSL conversations revealing that Excel-based "models" remain standard despite handling billions in programs. Second, we will explore educational barriers to understand how to integrate microsimulation into curricula, as faculty report using outdated Tax-Calculator or building toy models because production systems are inaccessible. Third, we will examine sustainability models to determine what funding and governance structures ensure long-term viability, exploring consortium models, training revenue, and API licensing while maintaining open access.
 
 These insights will directly shape Phase II implementation, particularly our training programs and state government partnerships.
----
 
-## Ecosystem Establishment/Growth
 ## Ecosystem Establishment Strategy
 
-PolicyEngine already demonstrates the distributed development essential for a thriving open-source ecosystem. External contributors have submitted over 150 pull requests, opened 300+ issues, and maintain independent packages that extend our core platform. UK developers contributed local authority modeling features now being adapted by U.S. states. USC researchers added benefit cliff visualizations that other universities are extending. This organic growth proves the ecosystem's viability—we now formalize and scale these emerging patterns.
+PolicyEngine already demonstrates the distributed development essential for a thriving open-source ecosystem. Our GitHub organization's 146 repositories with over 50,000 commits from 30+ contributors show genuine community engagement. The platform's comprehensive scope—9,034 parameters and variables capturing the full complexity of US and UK tax-benefit systems—requires and attracts diverse expertise. The 1,227 open issues on policyengine-us alone and 620+ forks across our projects indicate active participation beyond our core team. UK developers contributed local authority modeling features now being adapted by U.S. states, while USC researchers added benefit cliff visualizations that other universities are extending. The 3x acceleration in repository creation during 2025—60 new repos compared to 16 in 2023—demonstrates explosive growth as the ecosystem matures. This organic expansion proves the ecosystem's viability; we now formalize and scale these emerging patterns.
 
 We will build three interconnected ecosystems around tax-benefit microsimulation, each addressing specific market needs while contributing to shared infrastructure through distributed development.
 
 ### 1. Policy Analysis Ecosystem (Research & Government)
 
-**Current foundation**: Active users include the Joint Economic Committee, NBER researchers, USC CESR, UK Cabinet Office, and state legislators in NY, DC, and 14 other states. These early adopters validate both the technical capability and the demand for transparent microsimulation.
+Our policy analysis ecosystem builds on strong foundations with active users ranging from the Joint Economic Committee to NBER researchers, USC's Center for Economic and Social Research, the UK Cabinet Office, and state legislators across multiple states including New York and DC. These early adopters validate both the technical capability and the substantial demand for transparent microsimulation tools.
 
-**Expansion strategy**: We will partner with NCSL to onboard 20 state legislatures in Year 1, providing training and dedicated support that enables states to analyze Medicaid expansion, TANF modifications, and tax credit designs—capabilities currently requiring expensive consultants. Building on our UK Cabinet Office success, we will pursue pilots with CBO, Treasury, and state revenue departments, providing validation reports that compare PolicyEngine outputs to internal models to address accuracy concerns. Beyond our current think tank users like the Niskanen Center, we will expand to ideologically diverse organizations, recognizing that both progressive and conservative institutions need transparent baselines for comparing policy proposals.
+The expansion of this ecosystem centers on a partnership with NCSL to onboard 20 state legislatures in Year 1. We will provide comprehensive training and dedicated support that enables states to analyze Medicaid expansion, TANF modifications, and tax credit designs—analytical capabilities that currently require expensive consultants most states cannot afford. Building on the success of our UK Cabinet Office integration, we will pursue pilots with CBO, Treasury, and state revenue departments, providing detailed validation reports that compare PolicyEngine outputs to internal models to address accuracy concerns and build trust. We recognize that ideologically diverse organizations need transparent baselines for comparing policy proposals, so beyond current think tank users like the Niskanen Center, we will expand to institutions across the political spectrum.
 
-**Sustainability**: States contribute to consortium funding pool; federal agencies provide grants for specific enhancements; think tanks sponsor features they need.
+This ecosystem achieves sustainability through a consortium model where states contribute to a shared funding pool, federal agencies provide grants for specific enhancements they need, and think tanks sponsor features that advance their research agendas.
 
 ### 2. Benefits Access Ecosystem  
 
-**Current foundation**: The benefits access ecosystem demonstrates explosive growth through market transition from closed to open source. MyFriendBen ($2.4M Gates Foundation backing) leads the migration, having identified $800M in unclaimed benefits for 50,000 Colorado families using PolicyEngine's API. Critically, five major platforms are actively migrating from BenefitKitchen's closed-source API to PolicyEngine: Benefit Navigator, Impactica (powering Student Basic Needs Coalition's Navvy tool for SNAP navigation), The Tax Project, Mirza (childcare benefits), and WorkMoney. This migration validates our open-source approach—organizations choose transparency, cost-effectiveness, and the ability to contribute improvements over proprietary lock-in.
+The benefits access ecosystem demonstrates explosive growth as organizations transition from closed to open source solutions. MyFriendBen, backed by $2.4 million from the Gates Foundation, leads this adoption wave, having already identified $800 million in unclaimed benefits for 50,000 Colorado families using PolicyEngine's API. The broader movement validates our open-source approach as multiple benefit navigation platforms explore migrating from closed-source alternatives to PolicyEngine. These organizations choose transparency, cost-effectiveness, and the ability to contribute improvements over proprietary lock-in.
 
-**Expansion strategy**: We will accelerate this ecosystem transition by creating standard API integrations and migration tools that enable rapid platform switching, with white-label solutions for immediate deployment. Healthcare systems represent a critical expansion opportunity, as hospitals and clinics increasingly screen patients for benefits—Mount Sinai's program demonstrates how identifying Medicaid eligibility reduces uncompensated care while improving patient outcomes. Commercial partnerships with tax preparation firms will help identify EITC and CTC eligibility among their clients, while banks can integrate our tools for customer financial health assessments and employers can use them for benefits counseling programs.
+To accelerate this ecosystem transition, we will create standard API integrations and migration tools that enable rapid platform switching, complemented by white-label solutions for immediate deployment. Healthcare systems represent a particularly promising expansion opportunity. As hospitals and clinics increasingly screen patients for benefits, programs like Mount Sinai's demonstrate how identifying Medicaid eligibility simultaneously reduces uncompensated care and improves patient outcomes. We envision commercial partnerships where tax preparation firms help identify EITC and CTC eligibility among their clients, banks integrate our tools for customer financial health assessments, and employers use them for comprehensive benefits counseling programs.
 
-**Sustainability**: API licensing for commercial users; grants from healthcare systems; foundation support for community access.
+The sustainability model for this ecosystem combines API licensing fees from commercial users with grants from healthcare systems seeking to reduce uncompensated care, all while maintaining foundation support to ensure free access for community organizations serving vulnerable populations.
 
 ### 3. Educational Ecosystem
 
-**Current foundation**: Academic engagement accelerates across multiple fronts. USC's Professor Unrath commits to fall 2026 curriculum integration after using PolicyEngine for HHS-funded research. Georgetown's Better Government Lab plans student projects analyzing DC policy proposals. Berkeley, Northwestern, and University of South Carolina faculty participated in our seminars and expressed strong interest. Duke and Harvard policy schools initiated conversations about adoption. The NBER network, through Dan Feenberg's involvement, reaches 1,600+ affiliated researchers ready for open-source tools.
+Academic engagement shows promising momentum across multiple institutions. USC faculty are already using PolicyEngine for HHS-funded research, while our seminars at Berkeley, Georgetown, Northwestern, and University of South Carolina have generated significant interest. Ongoing conversations with Duke and Harvard policy schools explore potential adoption pathways. Through Dan Feenberg's involvement, the NBER network connects us with hundreds of affiliated researchers ready to embrace open-source tools for policy analysis.
 
-**Expansion strategy**: We will develop complete course modules tailored to different academic levels and disciplines, with problem sets using real legislation, coding exercises with AI assistance, and policy briefs matching government formats. Annual policy modeling competitions judged by former government economists will engage students competitively, with winners presenting at ASSA meetings to build prestige and visibility. Our "PolicyEngine Certified Analyst" program will provide formal credentials for students and professionals who master tax-benefit rules, microsimulation methods, and reproducible analysis practices. Recognizing that Tax-Calculator remains the most common teaching tool, we will create conversion guides showing migration paths and demonstrating the advantages of integrated benefits modeling over tax-only analysis.
+Our expansion strategy for the educational ecosystem involves developing comprehensive course modules tailored to different academic levels and disciplines. These modules will include problem sets using real legislation, coding exercises enhanced with AI assistance, and policy briefs that match government formatting standards. To build engagement and prestige, we will launch annual policy modeling competitions judged by former government economists, with winners presenting their work at ASSA meetings. The "PolicyEngine Certified Analyst" program will provide formal credentials for students and professionals who master tax-benefit rules, microsimulation methods, and reproducible analysis practices. Recognizing that Tax-Calculator remains the most common teaching tool in many programs, we will create detailed conversion guides that demonstrate migration paths and highlight the advantages of integrated benefits modeling over tax-only analysis.
 
-**Sustainability**: Universities pay for enterprise features and support; certification fees; NSF education grants.
+Universities will sustain this ecosystem through payments for enterprise features and support services, certification fees from the analyst program, and NSF education grants that support curriculum development and student training initiatives.
 
 ### Ecosystem Expansion Opportunities
 
@@ -109,9 +70,7 @@ While Phase II focuses on proven tax-benefit microsimulation markets in the US a
 ### Success Metrics
 
 By the end of Year 2, we will achieve adoption across 20 state governments, 30 universities, and 50 benefits organizations actively using the platform. Impact metrics include $2 billion in benefits accessed through partner organizations, 10,000 students trained in microsimulation methods, and 100 policy analyses published using PolicyEngine. Financial sustainability will be demonstrated through $750K in annual revenue from consortium fees, training programs, and API licensing. The community will include 50 active contributors and 5 institutional maintainers providing 24-hour global support coverage.
----
 
-## Organization and Governance
 ## Organization and Governance
 
 ### Governance Structure
@@ -163,9 +122,7 @@ Current team combines technical expertise with policy domain knowledge:
 - Advisory: Dan Feenberg (NBER/TAXSIM), Georgetown, USC, Vanderbilt partners
 
 **Succession planning**: Each role has documented responsibilities and identified successors. Technical documentation ensures no single point of failure. Institutional partners (NBER, universities) provide continuity beyond individuals.
----
 
-## Continuous Development Model
 ## Continuous Development and Training Infrastructure
 
 ### Curriculum Development Program
@@ -183,7 +140,7 @@ PolicyEngine will transform how tax-benefit policy is taught by providing the fi
 - Guest lecture program connecting students with PolicyEngine users in government
 - Summer internship pipeline focused on using (not developing) the platform for policy research
 
-**Early adoption commitments**: USC (Unrath) integrating into public finance course fall 2026; Georgetown Better Government Lab planning student projects; NBER network distribution to 200+ affiliated faculty. Summer 2026 launch timing allows preparation for fall semester deployment.
+**Target institutions**: We will pursue integration with economics and public policy programs through existing relationships at USC, Georgetown, and through the NBER network. Summer 2026 launch timing allows preparation for fall semester deployment.
 
 ### State and Local Government Training
 
@@ -225,7 +182,7 @@ PolicyEngine's contributor onboarding addresses the unique challenge of bridging
 - Provide requirements and acceptance criteria for features
 
 **Structured Contributor Pathways**:
-- **Good first issues**: Currently 67 tagged issues with difficulty levels (beginner/intermediate/advanced), required skills clearly marked, estimated time commitment, and assigned mentors for each issue
+- **Good first issues**: Tagged issues with difficulty levels (beginner/intermediate/advanced), required skills clearly marked, estimated time commitment, and assigned mentors for each issue
 - **Documentation contributions**: Non-code contributions through user guides, API examples, video tutorials, translations (Spanish high priority), and glossaries bridging policy/technical terminology
 - **Parameter maintenance**: Web interface for updating rates and thresholds, automated validation against official sources, peer review by policy experts, and no coding required for 80% of updates
 - **Validation testing**: Researchers contribute test cases from publications, government staff provide edge cases from operations, and community members submit household scenarios
@@ -255,18 +212,16 @@ Open development accelerates innovation by enabling both human and AI contributo
 - **Training impact**: 1,000+ government staff trained, 5,000+ students educated
 - **Innovation metrics**: 20+ research papers using PolicyEngine, 10+ methodological improvements contributed back
 - **Quality indicators**: 48-hour median issue resolution, 99% API uptime, comprehensive test coverage
----
 
-## Risk Analysis / Security Plan
 ## Risk Analysis and Security Plan
 
-PolicyEngine implements comprehensive security practices aligned with CISA/NSA guidance for securing software supply chains and OpenSSF best practices for open-source projects. Our multi-layered approach addresses technical vulnerabilities, data privacy, and ecosystem integrity.
+PolicyEngine implements comprehensive security practices aligned with CISA/NSA guidance for securing software supply chains. Our multi-layered approach addresses technical vulnerabilities, data privacy, and ecosystem integrity.
 
 ### Security Architecture and Practices
 
-**Supply Chain Security**: Every release includes Software Bill of Materials (SBOM) generation using SPDX format, enabling downstream users to track dependencies. Automated scanning with Dependabot and Snyk identifies vulnerabilities within 24 hours of disclosure. We maintain a 48-hour patch deployment target for critical vulnerabilities, with automated CI/CD pipelines ensuring rapid, tested updates.
+**Supply Chain Security**: Automated scanning with Dependabot identifies vulnerabilities within 24 hours of disclosure. We maintain a 48-hour patch deployment target for critical vulnerabilities, with automated CI/CD pipelines ensuring rapid, tested updates.
 
-**Code Integrity**: All commits require GPG signing, with release artifacts signed using Sigstore for cryptographic verification. Pull requests undergo automated security scanning before merge, including static analysis (CodeQL), dependency auditing, and license compliance checks. The two-reviewer requirement for core components ensures human oversight of security-critical changes.
+**Code Integrity**: All commits require GPG signing for verification. Pull requests undergo automated security scanning before merge, including static analysis (CodeQL), dependency auditing, and license compliance checks. The two-reviewer requirement for core components ensures human oversight of security-critical changes.
 
 **Incident Response Protocol**: 
 1. **Detection**: Automated monitoring alerts security team within 15 minutes of anomalies
@@ -287,9 +242,9 @@ PolicyEngine implements comprehensive security practices aligned with CISA/NSA g
 
 ### Technical Risk Mitigation
 
-**Validation Infrastructure**: Continuous validation against TAXSIM (96% agreement), CBO projections, and state revenue estimates ensures calculation accuracy. Automated testing includes 10,000+ test cases covering edge conditions. Version control enables rollback within minutes if issues emerge.
+**Validation Infrastructure**: Our continuous validation against TAXSIM, CBO projections, and state revenue estimates ensures calculation accuracy. With 8,600 automated test cases across our US and UK models covering edge conditions and complex interactions, we maintain rigorous quality standards. Version control enables rollback within minutes if issues emerge.
 
-**Performance and Scalability**: Load testing simulates 10x current traffic before major releases. Horizontal scaling on Google Cloud Platform handles demand spikes. Database query optimization and Redis caching maintain sub-200ms API response times even under load. Regional CDN deployment ensures global accessibility.
+**Performance and Scalability**: Load testing before major releases ensures stability. Horizontal scaling on Google Cloud Platform handles demand spikes. Database query optimization and Redis caching maintain fast API response times. Regional CDN deployment ensures global accessibility.
 
 **Dependency Management**: We minimize external dependencies, vendoring critical libraries when appropriate. Automated license scanning ensures compliance with open-source obligations. Regular dependency pruning removes unused packages that could introduce vulnerabilities.
 
@@ -316,7 +271,7 @@ PolicyEngine implements comprehensive security practices aligned with CISA/NSA g
 
 ### Quality Assurance
 
-**Testing Coverage**: 85% code coverage with emphasis on critical paths. Integration tests validate full calculation pipelines. Property-based testing identifies edge cases. Regression tests prevent previously fixed bugs from recurring.
+**Testing Coverage**: Comprehensive code coverage with emphasis on critical paths. Integration tests validate full calculation pipelines. Property-based testing identifies edge cases. Regression tests prevent previously fixed bugs from recurring.
 
 **External Audits**: Annual security audits by independent firms. Quarterly validation against government models. Academic peer review of methodological changes. Public bug bounty program incentivizes vulnerability discovery.
 
@@ -325,16 +280,16 @@ PolicyEngine implements comprehensive security practices aligned with CISA/NSA g
 ### Specific Phase II Security Enhancements
 
 **Year 1 Priorities**:
-- Achieve OpenSSF Best Practices Silver Badge
-- Implement SLSA Level 3 build provenance
 - Establish Security Champions program across contributor organizations
 - Deploy hardware security module for release signing
+- Implement comprehensive vulnerability disclosure program
+- Enhance automated testing coverage
 
 **Year 2 Goals**:
-- OpenSSF Best Practices Gold Badge
-- SLSA Level 4 compliance
 - Formal threat modeling with STRIDE methodology
 - Independent security audit publication
+- Multi-factor authentication for all maintainers
+- Automated compliance monitoring
 
 ### Metrics and Accountability
 
@@ -344,12 +299,10 @@ We track security effectiveness through concrete metrics:
 - Incident response time: < 2 hours for initial triage
 - Vulnerability disclosure handling: 100% acknowledged within 48 hours
 - Security training completion: 100% of maintainers annually
-- Dependency currency: 90% of dependencies updated within 30 days of release
+- Dependency currency: Regular updates within reasonable timeframes
 
 This comprehensive security approach ensures PolicyEngine remains trustworthy infrastructure for critical policy analysis while maintaining the openness essential for community-driven development.
----
 
-## Community Building
 ## Community Building
 
 ### User-Centric Community Strategy
@@ -402,9 +355,7 @@ PolicyEngine connects previously isolated communities:
 - **Sector diversity**: 40% government, 30% academic, 20% nonprofit, 10% commercial
 - **Support effectiveness**: 90% of questions answered within 24 hours
 - **Community contributions**: 100+ user-contributed test cases, 50+ documentation improvements
----
 
-## Sustainability
 ## Sustainability Plan
 
 ### Diversified Revenue Model
@@ -445,9 +396,7 @@ PolicyEngine will achieve financial sustainability through multiple revenue stre
 - **Community metrics**: 5+ institutional maintainers; 20+ regular contributors; 24-hour global coverage
 - **Usage metrics**: 10,000+ monthly active users; 100+ published analyses monthly
 - **Impact metrics**: $2B+ in benefits accessed; 20+ states using platform; 10,000+ students trained
----
 
-## Evaluation Plan and Metrics
 ## Evaluation Plan
 
 ### Key Performance Indicators
@@ -492,10 +441,8 @@ External advisors from NBER, Georgetown, USC, and government partners will condu
 - Strategic direction alignment
 
 Results will be published transparently, informing course corrections and demonstrating accountability to funders and users.
----
 
-## Broader Impacts (PAPPG required section)
-# Broader Impacts
+## Broader Impacts
 
 PolicyEngine's open-source ecosystem will transform how society analyzes and implements tax-benefit policy, addressing critical gaps in democratic policymaking infrastructure while advancing scientific understanding of policy effects on diverse populations.
 
@@ -509,7 +456,7 @@ PolicyEngine eliminates these barriers. Our platform has already enabled the Joi
 
 The $80 billion annual gap in unclaimed benefits represents both massive individual hardship and systemic policy failure. Our partnership with MyFriendBen demonstrates the transformative potential of open-source microsimulation for benefits access. Using PolicyEngine's API, MyFriendBen identified $800 million in unclaimed benefits for 50,000 Colorado families. The platform is expanding nationwide with $2.4 million in Gates Foundation support.
 
-This impact multiplies through ecosystem effects. Benefit Navigator, Impactica (powering Student Basic Needs Coalition's SNAP navigator), The Tax Project, Mirza (childcare benefits), and WorkMoney are all migrating from the closed-source BenefitKitchen to PolicyEngine's open infrastructure. Each organization brings domain expertise—student needs, childcare navigation, tax filing—while contributing improvements that benefit the entire ecosystem. We project $2 billion in additional benefits accessed by Year 2 through partner organizations.
+This impact multiplies through ecosystem effects as multiple organizations explore migrating from closed-source alternatives to PolicyEngine's open infrastructure. Each organization brings domain expertise while contributing improvements that benefit the entire ecosystem. We project $2 billion in additional benefits accessed by Year 2 through partner organizations.
 
 ## Transforming Policy Education
 
@@ -525,27 +472,19 @@ PolicyEngine addresses this through targeted capacity building. Our state consor
 
 ## Advancing Diversity, Equity, and Inclusion
 
-The concentration of microsimulation capability in elite institutions perpetuates systemic inequities in policy analysis. PolicyEngine's open-source approach directly addresses these disparities through multiple pathways:
+The concentration of microsimulation capability in elite institutions perpetuates systemic inequities in policy analysis. PolicyEngine's open-source approach directly addresses these disparities through interconnected pathways that expand access and participation.
 
-**Institutional Access**: Partnerships with community colleges, HBCUs, and Hispanic-Serving Institutions ensure diverse institutions can teach and research using professional-grade tools.
+Our partnerships with community colleges, HBCUs, and Hispanic-Serving Institutions ensure that diverse institutions can teach and conduct research using professional-grade tools previously available only to well-resourced universities. The modular architecture of our platform enables community-driven translations and cultural adaptations, making policy analysis accessible to non-English speaking communities who have been historically excluded from these conversations.
 
-**Language and Localization**: Our modular architecture enables community-driven translations and cultural adaptations, making policy analysis accessible to non-English speaking communities.
-
-**Transparent Assumptions**: Open-source code exposes model assumptions for scrutiny, enabling communities to identify and correct biases that disadvantage marginalized populations.
-
-**Participatory Development**: Unlike proprietary models, affected communities can directly contribute improvements based on lived experience of policy impacts.
+Perhaps most importantly, open-source code exposes model assumptions for scrutiny, enabling communities to identify and correct biases that may disadvantage marginalized populations. Unlike proprietary models where affected communities have no voice in how their circumstances are modeled, PolicyEngine enables direct contribution of improvements based on lived experience of policy impacts. This participatory development model transforms beneficiaries from passive subjects of analysis to active contributors shaping how policies affecting their lives are evaluated.
 
 ## Mitigating Potential Negative Impacts
 
-We acknowledge that democratizing policy analysis tools could enable misleading advocacy or politically motivated distortions. PolicyEngine addresses these risks through:
+We acknowledge that democratizing policy analysis tools could enable misleading advocacy or politically motivated distortions. PolicyEngine addresses these risks through comprehensive safeguards built into both our technology and governance structures.
 
-**Validation Transparency**: All calculations include detailed breakdowns enabling fact-checkers to verify claims. Our 96% agreement with TAXSIM provides an accuracy benchmark.
+Every calculation includes detailed breakdowns that enable fact-checkers to verify claims, with continuous validation against TAXSIM and other established models providing accuracy benchmarks that users can reference. Model limitations and parameter sources are explicitly documented throughout the platform, preventing misrepresentation of preliminary analyses as definitive conclusions. Our training materials emphasize responsible analysis practices, uncertainty communication, and ethical considerations in policy modeling, ensuring that users understand both the power and limitations of microsimulation.
 
-**Assumption Documentation**: Model limitations and parameter sources are explicitly documented, preventing misrepresentation of preliminary analyses as definitive.
-
-**Educational Resources**: Training materials emphasize responsible analysis practices, uncertainty communication, and ethical considerations in policy modeling.
-
-**Community Governance**: Our steering committee includes diverse stakeholders who review controversial use cases and establish ethical guidelines for platform use.
+The steering committee, composed of diverse stakeholders from government, academia, and community organizations, reviews controversial use cases and establishes ethical guidelines for platform use. This governance structure ensures that democratization doesn't come at the expense of analytical integrity.
 
 ## Catalyzing Open-Source Innovation
 
@@ -564,12 +503,10 @@ We will track broader impacts through concrete metrics:
 - Policy analyses conducted by previously excluded organizations (target: 1,000 by Year 2)
 
 These metrics demonstrate not just usage but transformative impact on who participates in policy analysis and how evidence informs democratic decision-making.
----
 
-## Conclusion and Roadmap
-# Conclusion
+## Conclusion
 
-PolicyEngine stands at a critical inflection point. We have proven that open-source microsimulation can match proprietary alternatives in accuracy while dramatically expanding access. Government adoption from the Joint Economic Committee to the UK Cabinet Office validates our technical approach. The migration of major benefits platforms from closed-source BenefitKitchen to our open infrastructure demonstrates market demand. With over 200,000 users generating 2 million API calls monthly, we have achieved product-market fit.
+PolicyEngine stands at a critical inflection point. We have proven that open-source microsimulation can match proprietary alternatives in accuracy while dramatically expanding access. Government adoption from the Joint Economic Committee to the UK Cabinet Office validates our technical approach. Growing interest from benefits platforms in migrating from closed-source alternatives demonstrates market demand. Serving over 100,000 people per year through our API and partners, with rapid growth as partnerships scale, we have achieved product-market fit.
 
 Now we must transform this momentum into a self-sustaining ecosystem. NSF POSE Phase II funding provides the crucial catalyst for this transition, enabling us to formalize governance structures, establish contributor pathways, and build the training infrastructure necessary for long-term sustainability.
 
@@ -599,7 +536,7 @@ The ecosystem model we establish becomes a template for other policy technology 
 
 Our team brings unique qualifications to execute this vision. Max Ghenis combines Google Analytics experience with MIT policy training and PolicyEngine's founding vision. Nikhil Woodruff's technical leadership and current UK Cabinet Office secondment demonstrates our platform's government-readiness. Pavel Makarchuk bridges U.S. and international implementations. Dan Feenberg's three decades maintaining TAXSIM provides unmatched expertise in microsimulation sustainability.
 
-Our institutional partners amplify these capabilities. NBER's network reaches hundreds of economists ready to adopt open tools. USC's Center for Economic and Social Research validates our methods through HHS-funded research. Georgetown's Better Government Lab channels student energy into platform improvements. MyFriendBen's benefits navigation demonstrates real-world impact at scale.
+Our institutional partners amplify these capabilities. NBER's network reaches hundreds of economists ready to adopt open tools. USC's Center for Economic and Social Research validates our methods through HHS-funded research. Georgetown's Better Government Lab channels student energy into platform improvements. MyFriendBen's benefits navigation demonstrates real-world impact at scale; MyFriendBen reports screening over 40,000 Colorado households in its first two years with a median monthly benefit value of $1,500 (MyFriendBen, 2025).
 
 ## A Call to Action
 
@@ -612,95 +549,3 @@ The broader impacts extend beyond immediate users. By establishing sustainable o
 PolicyEngine is ready for this next phase. Our technical foundation is solid, our user community is growing, and our vision for democratized policy analysis resonates across political divides. With NSF's partnership, we will build the open-source ecosystem that transforms tax-benefit microsimulation from proprietary privilege to public infrastructure, ensuring that evidence-based policymaking becomes accessible to all who seek to improve their communities.
 
 The future of policy analysis is open, transparent, and community-driven. With POSE Phase II support, PolicyEngine will make that future a reality.
----
-
-# Summary
-- Sections complete: 0/11
-
-## Sections needing attention
-
-## References Cited
-
-# References Cited
-
-CISA; National Security Agency. (2022). Securing the software supply chain: Recommended practices for developers. Cybersecurity and Infrastructure Security Agency and National Security Agency. https://media.defense.gov/2022/Sep/01/2003068942/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF
-
-Feenberg, D., & Coutts, E. (1993). An introduction to the TAXSIM model. Journal of Policy Analysis and Management, 12(1), 189–194. https://doi.org/10.2307/3325474
-
-Louizos, C., Welling, M., & Kingma, D. P. (2018). Learning sparse neural networks through L0 regularization. Proceedings of the International Conference on Learning Representations (ICLR). https://openreview.net/forum?id=H9gRavnMhq
-
-Meinshausen, N. (2006). Quantile regression forests. Journal of Machine Learning Research, 7, 983–999. https://www.jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf
-
-Open Source Security Foundation. (2023). OpenSSF Best Practices Badge Program criteria. Open Source Security Foundation. https://www.bestpractices.dev/en/criteria
-
-Contributor Covenant. (2021). Contributor Covenant Code of Conduct (Version 2.1). https://www.contributor-covenant.org/version/2/1/code_of_conduct/
-
-National Institute of Standards and Technology. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for mitigating the risk of software vulnerabilities (NIST Special Publication 800-218). https://doi.org/10.6028/NIST.SP.800-218
-
-Bill & Melinda Gates Foundation. (2024). MyFriendBen receives $2.4M grant to expand access to public benefits. https://www.myfriendben.org/myfriendben-receives-grant-to-expand-access-to-public-benefits/
-
-PolicyEngine. (2024). MyFriendBen launches in North Carolina, using PolicyEngine API. https://policyengine.org/us/research/myfriendben-nc
-
-HM Treasury. (2024). Algorithmic Transparency Record: PolicyEngine UK tax-benefit model (ATR-2024-007). https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine
-
-Ghenis, M., & Woodruff, N. (2024). PolicyEngine: An open-source tax-benefit microsimulation platform (Version 1.47.0) [Software]. GitHub. https://github.com/PolicyEngine/policyengine-us
-
-Woodruff, N. (2024). MicroImpute: Quantile regression forest imputation for microsimulation (Version 0.3.1) [Software]. PyPI. https://pypi.org/project/microimpute/
-
-Woodruff, N. (2024). MicroCalibrate: Gradient-descent population reweighting with sparsity (Version 0.2.4) [Software]. PyPI. https://pypi.org/project/microcalibrate/
-
-Ghenis, M. (2024). L0-Python: Differentiable sparsity for PyTorch (Version 0.1.8) [Software]. PyPI. https://pypi.org/project/l0-python/
-
-PolicyEngine Team. (2024). Enhanced Current Population Survey: Methodology and validation. PolicyEngine. https://policyengine.github.io/policyengine-us-data/
-
-Apache Software Foundation. (2019). The Apache Way. https://www.apache.org/theapacheway/
-
-Linux Foundation. (2021). Open source project governance models. https://www.linuxfoundation.org/resources/open-source-guides/
-
-NumFOCUS. (2023). Fiscal sponsorship model for open source scientific computing. https://numfocus.org/sponsors
-
-Nielsen, J. (2020). 10 usability heuristics for user interface design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
-
-Burman, L. E., & Phaup, M. (2012). Tax expenditures, the size and efficiency of government, and implications for budget reform. Tax Policy and the Economy, 26(1), 93–124.
-
-Congress of the United States, Congressional Budget Office. (2024). How CBO analyzes the effects of changes in federal fiscal policies on the economy. https://www.cbo.gov/publication/59003
-
-Joint Committee on Taxation. (2023). Overview of the tax system as in effect for 2023 (JCX-9-23). https://www.jct.gov/publications/2023/jcx-9-23/
-
-Bargain, O., Orsini, K., & Peichl, A. (2014). Comparing labor supply elasticities in Europe and the United States: New results. Journal of Human Resources, 49(3), 723–838.
-
-Sutherland, H., & Figari, F. (2013). EUROMOD: The European Union tax-benefit microsimulation model. International Journal of Microsimulation, 6(1), 4–26.
-
-Statistics Canada. (2023). Social Policy Simulation Database and Model (SPSD/M). https://www.statcan.gc.ca/en/microsimulation/spsdm
-
-Auerbach, A. J., & Hassett, K. (2015). Capital taxation in the 21st century. American Economic Review, 105(5), 38–42.
-
-Piketty, T., Saez, E., & Zucman, G. (2018). Distributional national accounts: Methods and estimates for the United States. The Quarterly Journal of Economics, 133(2), 553–609.
-
-Saez, E., & Zucman, G. (2019). The triumph of injustice: How the rich dodge taxes and how to make them pay. W. W. Norton & Company.
-
-Eghbal, N. (2020). Working in public: The making and maintenance of open source software. Stripe Press.
-
-Navas-Loro, M., Canestrari, S., & Morales-Urrutia, E. K. (2023). Sustainability of open-source software communities beyond a fork: How and why has the LibreOffice project evolved? Sustainability, 15(2), 1277.
-
-Scacchi, W. (2007). Free/open source software development: Recent research results and methods. Advances in Computers, 69, 243–295.
-
-Peng, R. D. (2011). Reproducible research in computational science. Science, 334(6060), 1226–1227.
-
-Rule, A., Birmingham, A., Zuniga, C., Altintas, I., Huang, S.-C., Knight, R., Moshiri, N., Nguyen, M. H., Rosenthal, S. B., Pérez, F., & Rose, P. W. (2019). Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks. PLOS Computational Biology, 15(7), e1007007. https://doi.org/10.1371/journal.pcbi.1007007
-
-National Conference of State Legislatures. (2024). State fiscal analysis capacity survey. NCSL Fiscal Affairs Program.
-
-Unrath, M. (2024). Marginal tax rates and benefit cliffs in social insurance programs. USC Center for Economic and Social Research Working Paper.
-
-Joint Economic Committee. (2024). PolicyEngine integration for rapid policy analysis. U.S. Congress Joint Economic Committee Staff Report.
-
-Student Basic Needs Coalition. (2024). Navvy: SNAP navigation tool powered by Impactica and PolicyEngine. https://studentbasicneeds.org/navvy
-
-Open Source Initiative. (2024). Open Source Definition (Version 1.9). https://opensource.org/osd
-
-Software Package Data Exchange. (2023). SPDX Specification Version 2.3. https://spdx.dev/specifications/
-
-Supply-chain Levels for Software Artifacts. (2023). SLSA Framework Version 1.0. https://slsa.dev/
-
-GitHub. (2024). Security Advisories: Coordinated disclosure of security vulnerabilities. https://docs.github.com/en/code-security/security-advisories

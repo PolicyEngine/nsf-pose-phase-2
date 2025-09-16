@@ -55,6 +55,13 @@ const letterDrafts: LetterDraft[] = [
     submittedFilename: "unrath_submitted.md",
     status: "received",
     notes: "Census experience, HHS project on cliff effects, government adoption pathway"
+  },
+  {
+    name: "Sekhar Paladugu",
+    organization: "MyFriendBen",
+    filename: "paladugu_myfriendben_draft.md",
+    status: "draft",
+    notes: "Benefits screening use case, Gates $2.4M grant, active API user, 90% accuracy"
   }
 ]
 

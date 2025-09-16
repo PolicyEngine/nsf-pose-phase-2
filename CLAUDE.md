@@ -2,8 +2,14 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Critical Files
+- **TODO.md** - Persistent task list for NSF POSE Phase II application (deadline Sept 2, 2025)
+- **WRITING_STYLE.md** - Max's communication preferences and patterns
+
 ## Writing Style
 When drafting emails or documents for Max, refer to WRITING_STYLE.md for his communication preferences and patterns.
+
+For NSF documents, prefer narrative prose over bullet points. Use flowing paragraphs that tell a cohesive story rather than lists. Bullets should be used sparingly and only when absolutely necessary for clarity.
 
 ## Project Overview
 

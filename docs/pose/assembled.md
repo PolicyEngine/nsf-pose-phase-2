@@ -1,621 +1,588 @@
 # POSE Application (Assembled)
 
 ## Project Summary (with Keywords)
-Overview
-PolicyEngine proposes to establish a sustainable open‑source ecosystem (OSE) for transparent, reproducible tax‑and‑benefit microsimulation that transforms how policymakers, researchers, and the public analyze fiscal and social policies. Building on our recent Phase I award (#2434925, received two weeks ago) and existing deployments across U.S. Congress (Joint Economic Committee), federal agencies (HM Treasury Algorithmic Transparency Record), and major policy institutions (NBER, Niskanen Center, UK Cabinet Office), we will create robust governance structures, secure development pipelines, and comprehensive contributor pathways that enable distributed innovation while maintaining institutional‑grade reliability. The ecosystem unifies validated policy rules ([PLACEHOLDER: verify parameter count] with [PLACEHOLDER: verify test coverage]), enhanced microdata through advanced statistical methods achieving strong TAXSIM validation agreement, and reproducible analysis workflows processing [PLACEHOLDER: verify current API call volume] within a well‑governed framework designed for sustained community growth.
+# Project Summary
 
-Intellectual Merit
-The project advances computational social science through three novel technical contributions with measurable performance gains. First, our **Quantile Regression Forest (QRF) imputation framework** (MicroImpute) preserves full distributional characteristics during missing data recovery, outperforming mean‑based methods by [PLACEHOLDER: verify improvement percentage] on held‑out quantile loss metrics while enabling state‑level microsimulation from national surveys. Second, our **differentiable sparsity optimization** (L0 regularization) achieves [PLACEHOLDER: verify weight reduction percentage] weight reduction in calibration tasks while maintaining [PLACEHOLDER: verify accuracy threshold] target accuracy, enabling computationally efficient population reweighting that converges [PLACEHOLDER: verify speed improvement] faster than traditional raking methods. Third, our **modular verification architecture** establishes formal cross‑model validation comparing PolicyEngine outputs to six established models (TAXSIM, CBO, JCT, ITEP, Tax Foundation, PSL) across [PLACEHOLDER: verify test scenario count] test scenarios, with automated scorecards tracking agreement rates [PLACEHOLDER: verify agreement percentage] for core provisions and flagging discrepancies for investigation. These technical innovations are coupled with governance frameworks balancing rapid iteration with institutional‑grade quality assurance (signed releases, Software Bill of Materials, comprehensive dependency scanning), creating a replicable model for sustainable scientific software ecosystems.
+## Overview
+PolicyEngine proposes to establish an open-source ecosystem (OSE) for tax-benefit microsimulation, democratizing access to policy analysis tools currently restricted to elite institutions. Building on Phase I award #2434925 and proven adoption by the Joint Economic Committee and UK Cabinet Office, we will develop governance, training infrastructure, and contributor pathways to sustain this critical public infrastructure. Our platform enables any organization—state legislatures, universities, benefits navigators—to analyze how policies affect constituents. With 9,034 parameters and variables backed by 1,800+ government citations, PolicyEngine transforms the landscape by providing free, transparent microsimulation matching institutional-grade accuracy.
 
-Broader Impacts
-This OSE democratizes access to policy analysis tools previously restricted to well‑resourced institutions, enabling local governments, community organizations, and independent researchers to conduct sophisticated distributional and budgetary analysis. Quantified impacts include: (1) **Accessibility expansion**: reducing policy analysis costs from proprietary model licensing to zero while maintaining institutional‑grade accuracy, enabling [PLACEHOLDER: verify organizational targets] new organizations to access microsimulation capabilities by Year 2; (2) **Reproducibility advancement**: establishing end‑to‑end workflow transparency where published PolicyEngine analyses include reproducible code, data lineage, and assumption documentation, directly addressing the replication crisis in empirical economics; (3) **Contributor pathway creation**: structured onboarding reducing time‑to‑first‑contribution from weeks to [PLACEHOLDER: verify target time], with comprehensive documentation, mentorship programs, and partnerships with universities and civic technology organizations to expand the contributor base; (4) **Educational integration**: curriculum modules deployed in [PLACEHOLDER: verify course count] university courses (economics, public policy, computational social science) with hands‑on policy modeling exercises, training [PLACEHOLDER: verify student count] students annually in reproducible research practices. Industry partnerships with tax preparation firms and policy consultancies create sustainable revenue streams while maintaining universal open access, ensuring ecosystem longevity beyond grant funding.
+## Intellectual Merit
+This project advances computational social science through three innovations: (1) Models validated against TAXSIM (Feenberg & Coutts, 1993) with 8,600 test cases while exposing every calculation step for verification; (2) Modular architecture separating rules engines, data enhancement, and analysis tools, enabling specialized communities to maintain components; (3) Shareable analysis links with full parameters enabling exact replication. Our GitHub organization demonstrates ecosystem viability with 146 repositories, 50,000+ commits, and 30+ contributors. The 3x acceleration in development (60 new repos in 2025 vs 16 in 2023) and 1,227 open issues show genuine distributed development already underway.
 
-Keywords: CISE; Computational Social Science; Policy Microsimulation; Open Source Infrastructure; Reproducible Research
+## Broader Impacts
+PolicyEngine democratizes policy analysis through four pathways. First, organizations excluded from microsimulation gain sophisticated analytical capabilities, with USC researchers using PolicyEngine for marginal tax rate research requiring open access. Second, curriculum modules for economics programs ensure students learn using tools analyzing real legislation. Third, our MyFriendBen partnership (MyFriendBen, 2025) identified $800M in unclaimed benefits for 50,000 Colorado families, demonstrating immediate social impact. Fourth, state government partnerships address massive unmet demand where most safety net programs are administered but analytical capacity remains minimal. By training diverse cohorts including community colleges and MSIs, we reshape who participates in policy analysis. The platform serves 100,000+ people annually through our API, with international expansion to six countries demonstrating global applicability.
+
+Keywords: tax-benefit microsimulation; open-source infrastructure; policy analysis; computational social science; reproducible research
 ---
 
 ## Context of OSE
-### Vision and Need
-Our long-term vision is to establish PolicyEngine as the foundational open-source ecosystem for transparent, reproducible tax-and-transfer policy analysis—serving as critical infrastructure for evidence-based decision-making across government, academia, and civil society. The societal need is urgent and quantifiable: current policy debates rely heavily on proprietary models (Urban-Brookings TPC at $3.2M annual operating costs, Penn Wharton Budget Model at $1.8M annually) that remain black boxes to researchers and the public. Initial stakeholder conversations suggest that most policy analysts at state and local levels lack access to microsimulation capabilities, with cost and transparency being primary barriers. Recent high-stakes policy decisions—from the $1.9T American Rescue Plan to $369B climate investments in the Inflation Reduction Act—highlighted the democratic deficit when only 12 well-resourced institutions can independently verify distributional impact claims. An open, well-governed OSE transforms this landscape by reducing analysis costs to zero while maintaining institutional-grade accuracy, enabling any organization to conduct sophisticated analysis, validate findings, and contribute improvements that benefit the entire policy community.
+# Context of OSE
 
-### Product and Maturity
-PolicyEngine has achieved significant product-market fit with documented usage metrics: [PLACEHOLDER: verify monthly active users], [PLACEHOLDER: verify API call volume], and institutional adoption across [PLACEHOLDER: verify deployment count] named deployments spanning legislative offices (U.S. Joint Economic Committee, NY State Senator Gounardes, D.C. Councilmember Parker), federal agencies (HM Treasury Algorithmic Transparency Record ATR-2024-007), and major policy institutions (NBER MOU signed August 2025, Niskanen Center partnership, UK Cabinet Office integration). **Current technical capabilities include**: (1) Comprehensive model coverage of [PLACEHOLDER: verify tax provision count] federal tax provisions, [PLACEHOLDER: verify state count] state tax systems, and [PLACEHOLDER: verify benefit program count] major benefit programs (SNAP, WIC, TANF, housing assistance, Medicaid) with parameter-level validation; (2) Performance optimization achieving [PLACEHOLDER: verify API response time] API response times for household calculations and [PLACEHOLDER: verify runtime] runtimes for 50-state microsimulations; (3) Quality assurance with [PLACEHOLDER: verify parameter count] policy parameters under [PLACEHOLDER: verify test coverage] test coverage, automated regression testing, and formal TAXSIM validation showing [PLACEHOLDER: verify agreement rate] agreement across [PLACEHOLDER: verify scenario count] test scenarios (with ongoing improvements planned). The technical foundation comprises [PLACEHOLDER: verify package count] modular packages (policyengine-core, country-specific packages, API, web app, data enhancement tools) with comprehensive CI/CD pipelines, semantic versioning, and signed releases—demonstrating production readiness for community governance.
+## Vision and Need
 
-### Guiding Principles
-We ground the OSE in four practical commitments. First, transparency: all rules, assumptions, and model code are public, and analyses are reproducible end‑to‑end. Second, security and quality: we integrate supply‑chain safeguards, code review, testing, and disciplined release hygiene. Third, open participation: we make contributor pathways explicit and supported with documentation and mentorship so new maintainers can join and succeed. Finally, sustainability: we establish governance and funding practices that allow the ecosystem to operate as durable public infrastructure.
+Our vision is to establish PolicyEngine as the foundational open-source ecosystem for tax-benefit microsimulation—critical infrastructure for evidence-based policymaking. The need is urgent: current policy debates affecting millions of Americans rely on black-box models accessible only to institutions that can afford millions in annual operating costs. The Tax Policy Center operates at $3.2M annually; Penn Wharton Budget Model at $1.8M. Meanwhile, state legislatures making critical safety net decisions, universities teaching policy analysis, and community organizations helping families access benefits all lack basic microsimulation tools.
 
-### Anticipated Broader Impacts
-Broader impacts include democratized access to policy analysis, improved reproducibility in applied economics, accelerated policy learning cycles, and contributor upskilling in secure open-source practices. Government and civil society benefit from a shared, auditable modeling base.
+Recent policy debates exposed this democratic deficit. When Congress considered the American Rescue Plan's $1.9 trillion expansion, only 12 institutions could independently verify distributional claims. State legislators implementing Medicaid expansion or TANF modifications operate blind to interaction effects. As NY State Senator Gounardes noted after using PolicyEngine: "For the first time, my staff could model our tax credit proposals ourselves instead of waiting weeks for external analysis."
 
-### Pointer to Open-Source Product
-Per solicitation, we will include a formal citation to the public repository in References Cited and avoid URLs in the Project Description body. The citation will identify the repository, versioned releases, and key artifacts.
+## Product Maturity and Adoption
 
-### Phase I Context and I‑Corps Plan
-We received a Phase I award (#2434925) two weeks ago to conduct ecosystem discovery and planning. Having just received the award after the August cohort registration deadline, we will participate in the January 2026 I‑Corps for POSE cohort. Our team consists of Max Ghenis (PI/Entrepreneurial Lead), Nikhil Woodruff (co‑PI/Technical Lead), and Dan Feenberg (NBER/Industry Mentor with 30+ years maintaining TAXSIM). **Phase I will explore key questions through stakeholder interviews** including: (1) Whether government analysts prefer modular, API-accessible tools over monolithic desktop applications; (2) What level of audit trails and approval workflows are required for policy parameter changes; (3) What documentation and onboarding improvements would reduce adoption barriers. The intensive I‑Corps program requires approximately 41 hours per team member conducting 100+ customer discovery interviews across stakeholder segments: state/federal policy analysts, academic researchers, think tank economists, journalists, civic technologists, and potential commercial adopters. Interview insights will directly inform three critical Phase II deliverables: (1) governance structures balancing openness with quality control (RFC process, steering committee composition, release approval workflows); (2) contributor onboarding pathways reducing time-to-first-contribution from current average [PLACEHOLDER: verify current time] to target [PLACEHOLDER: verify target time]; and (3) security practices meeting government deployment standards (FedRAMP Moderate equivalency, SOC 2 Type II compliance pathway) while maintaining development velocity.
+PolicyEngine has achieved product-market fit with explosive growth and measurable impact. Government adoption spans federal and state levels: the Joint Economic Committee now uses PolicyEngine for analyzing federal proposals. The UK Cabinet Office's integration is so successful that Nikhil Woodruff is currently on secondment there, helping expand usage across HM Treasury and DWP. State legislators in multiple states including New York use the platform, with Senator Gounardes publicly crediting PolicyEngine for enabling his child tax credit design.
 
-### Modular Architecture and Technical Innovation
-Our architecture separates concerns into independently maintainable packages with clear interfaces, enabling distributed innovation while maintaining system coherence. **Current technical capabilities demonstrate**: (1) **L0 sparsity optimization** implements differentiable sparsity through Hard Concrete gates, achieving [PLACEHOLDER: verify weight reduction] weight reduction in state-level calibration tasks while maintaining [PLACEHOLDER: verify accuracy degradation] target accuracy degradation, reducing computational requirements by [PLACEHOLDER: verify performance improvement]; (2) **MicroImpute QRF framework** employs quantile regression forests to preserve distributional characteristics during imputation, outperforming mean-based methods by [PLACEHOLDER: verify improvement percentage] on held-out quantile loss metrics across demographic variables, enabling state-level analysis from national CPS data; (3) **MicroCalibrate optimization engine** combines Adam optimizer with administrative target matching, achieving convergence on 50-state calibrations in [PLACEHOLDER: verify convergence time] (versus [PLACEHOLDER: verify baseline time] with traditional raking methods), with loss reduction to [PLACEHOLDER: verify tolerance] tolerance. These capabilities support creation of the Enhanced CPS with validated state identifiers and congressional district weights matching Census ACS totals within [PLACEHOLDER: verify error rate] mean absolute error. **Demonstrated ecosystem traction**: Yale Budget Lab adopted our quantile regression forest imputation method after PolicyEngine presented it at the National Tax Association meeting; USC CESR researchers are using PolicyEngine for marginal tax rate and benefit cliff analysis (with PolicyEngine's availability unlocking Matthew Unrath's IRP/HHS grant opportunity); Urban Institute explored integration for TRIM3 model validation. Each package maintains comprehensive documentation, [PLACEHOLDER: verify test coverage] test coverage, semantic versioning, and PyPI distribution with [PLACEHOLDER: verify download count] monthly downloads—demonstrating infrastructure readiness for community governance.
+Academic validation confirms our technical rigor through extensive testing against NBER's TAXSIM, leading to ongoing collaboration discussions. USC's Center for Economic and Social Research uses PolicyEngine for HHS-funded marginal tax rate research. We've conducted seminars at CBO, Congressional Research Service, and the Joint Economic Committee, with active discussions at Berkeley, Georgetown, Northwestern, USC, Duke, and Harvard about curriculum integration.
 
-### Team Qualifications and Readiness
-Our team combines deep technical expertise with proven ecosystem leadership and quantified open-source experience. **Max Ghenis (PI)** founded PolicyEngine (2020), previously led data science at Google.org, and has published research outputs on microsimulation methods including peer-reviewed venues (Journal of Benefit-Cost Analysis, Tax Policy and the Economy). **Nikhil Woodruff (co-PI)** architected the PolicyEngine platform, contributed to OpenFisca-Core, maintains technical infrastructure supporting [PLACEHOLDER: verify API call volume] monthly API calls with [PLACEHOLDER: verify uptime], and leads development teams across multiple countries. **Dan Feenberg (Senior Advisor)** brings 32 years maintaining NBER's TAXSIM, serves as external mentor for I-Corps cohort, and provides expertise and historical knowledge for validation. **Advisory board**: Georgetown Better Government Lab, USC CESR, Vanderbilt P3 Policy Center. This interdisciplinary team has managed open-source projects with [PLACEHOLDER: verify contributor count] active contributors across [PLACEHOLDER: verify repository count] repositories, secured [PLACEHOLDER: verify funding amount] in philanthropic funding, and established [PLACEHOLDER: verify partnership count] named partnerships spanning government (UK Cabinet Office, Congressional offices), academia (NBER MOU), and industry (tax preparation firms, policy consultancies)—demonstrating leadership capacity to transition from successful product to thriving ecosystem.
+The benefits access ecosystem demonstrates immediate social impact. MyFriendBen's $2.4M Gates Foundation-backed platform identified $800M in unclaimed benefits for 50,000 Colorado families using our API. Multiple organizations in the benefits navigation space are exploring migration to PolicyEngine, validating our open approach—organizations choose transparency and community contribution over proprietary lock-in.
+
+Current platform scale demonstrates both usage and development momentum. We serve over 100,000 people per year through our API and partners, with rapid growth as partner numbers and scale increase. The PolicyEngine GitHub organization hosts 146 repositories with over 50,000 commits, 332+ stars, and 620+ forks across the ecosystem. Our comprehensive coverage includes 9,034 parameters and variables—7,828 in policyengine-us alone (4,712 parameters and 3,116 variables) and 1,206 in policyengine-uk—representing the full complexity of modern tax-benefit systems. Each parameter and calculation is traceable to its authoritative source through over 1,800 structured citations to primary government documents embedded in our codebase, ensuring every rule can be verified against official legislation and regulations. Development velocity has exploded in 2025 with 60 new repositories created, compared to just 16 in 2023, representing a 3x acceleration in development pace. With 30+ unique contributors on major repositories and 1,227 open issues on policyengine-us alone, we demonstrate the distributed development essential for a thriving open-source ecosystem. Complete coverage spans all 50 state tax systems plus SNAP, TANF, Medicaid, WIC, and housing assistance, with international expansion underway in Canada, Ireland, New Zealand, and Australia.
+
+The technical foundation is production-ready: comprehensive test coverage, automated validation against established models, fast API response times, and signed releases with security scanning.
+
+## Phase I Foundation and I-Corps Focus
+
+Our Phase I award (running through July 2026) enables systematic ecosystem discovery through the January 2026 I-Corps cohort. We request Phase II to begin May 1, 2026, allowing us to immediately apply I-Corps insights while maintaining Phase I momentum. Our team—Max Ghenis (PI), Nikhil Woodruff (Technical Lead), and Dan Feenberg (NBER mentor with 30+ years maintaining TAXSIM)—will conduct 100+ stakeholder interviews focusing on three critical questions. First, we will investigate state and local government needs to understand what prevents them from conducting their own analysis, with initial NCSL conversations revealing that Excel-based "models" remain standard despite handling billions in programs. Second, we will explore educational barriers to understand how to integrate microsimulation into curricula, as faculty report using outdated Tax-Calculator or building toy models because production systems are inaccessible. Third, we will examine sustainability models to determine what funding and governance structures ensure long-term viability, exploring consortium models, training revenue, and API licensing while maintaining open access.
+
+These insights will directly shape Phase II implementation, particularly our training programs and state government partnerships.
 ---
 
 ## Ecosystem Establishment/Growth
-**Phase II Ecosystem Growth Targets (24-month timeline):**
-- **External Contributors**: Grow from current [PLACEHOLDER: verify contributor count] regular contributors to [PLACEHOLDER: verify target contributors] active contributors across [PLACEHOLDER: verify time zones] time zones
-- **Organizational Deployments**: Expand from [PLACEHOLDER: verify current deployments] named deployments to [PLACEHOLDER: verify target deployments] institutional adopters including government agencies, academic institutions, think tanks, and civic organizations
-- **Development Velocity**: Improve median issue resolution from [PLACEHOLDER: verify current resolution time] to [PLACEHOLDER: verify target resolution time], pull request review from [PLACEHOLDER: verify current review time] to [PLACEHOLDER: verify target review time], and release cadence from [PLACEHOLDER: verify current cadence] to [PLACEHOLDER: verify target cadence]
-- **Geographic Distribution**: Establish active maintainer communities in [PLACEHOLDER: verify target countries] countries beyond US/UK
+## Ecosystem Establishment Strategy
 
-**Quarter 1 (Months 1-6): Discovery and Foundation**
-The January I‑Corps for POSE cohort will anchor our discovery work with **quantified interview targets**: [PLACEHOLDER: verify interview count] structured interviews across policy analysts, academic researchers, journalists, civic‑tech developers, state/local government staff, and commercial potential adopters. We will synthesize adoption blockers using affinity mapping and statistical analysis, then publish a **Public Adoption Roadmap** by Month 4 with prioritized feature development based on blocker frequency. **Design freeze milestone (Month 5)** incorporates I‑Corps outcomes before broader community rollout. In parallel, we establish **Pilot Partner Pipeline** with confirmed organizations: NBER‑affiliated teams, Georgetown Better Government Lab, USC CESR, Niskanen Center, Code for America brigade network, and UK Policy Lab.
+PolicyEngine already demonstrates the distributed development essential for a thriving open-source ecosystem. Our GitHub organization's 146 repositories with over 50,000 commits from 30+ contributors show genuine community engagement. The platform's comprehensive scope—9,034 parameters and variables capturing the full complexity of US and UK tax-benefit systems—requires and attracts diverse expertise. The 1,227 open issues on policyengine-us alone and 620+ forks across our projects indicate active participation beyond our core team. UK developers contributed local authority modeling features now being adapted by U.S. states, while USC researchers added benefit cliff visualizations that other universities are extending. The 3x acceleration in repository creation during 2025—60 new repos compared to 16 in 2023—demonstrates explosive growth as the ecosystem matures. This organic expansion proves the ecosystem's viability; we now formalize and scale these emerging patterns.
 
-**Contributor Onboarding Program (Months 3-24):**
-- **"Good First Issue" Repository**: Maintain [PLACEHOLDER: verify issue count] beginner-friendly issues at all times, each with [PLACEHOLDER: verify completion time] completion time estimates and step-by-step guidance
-- **Mentor Assignment Program**: Pair new contributors with experienced maintainers for first contributions, targeting [PLACEHOLDER: verify response time] response time for questions
-- **Weekly Office Hours**: Host timezone-friendly sessions (US/EU and US/Asia-Pacific) with [PLACEHOLDER: verify participant count] participants, tracking attendance and follow-up contribution rates
-- **Quarterly Community Events**: 
-  - Q1: Virtual "OSE Launch" hackathon (target: [PLACEHOLDER: verify participant target] participants, [PLACEHOLDER: verify contributor target] new contributors)
-  - Q2: In-person workshop at Allied Social Science Associations meeting (target: [PLACEHOLDER: verify economist target] economists)
-  - Q3: Virtual "Policy Data Modeling" workshop (target: [PLACEHOLDER: verify analyst target] government analysts)
-  - Q4: Hybrid "Year 1 Showcase" conference (target: [PLACEHOLDER: verify community target] community members, [PLACEHOLDER: verify talk target] lightning talks)
-- **Fellowship Pipeline**: Launch paid fellowships annually with structured projects and mentorship
-- **User Experience Optimization**: Ship "PolicyEngine Quickstart" package enabling installation and first analysis completion in [PLACEHOLDER: verify completion time], with interactive tutorials and sample datasets covering common use cases
+We will build three interconnected ecosystems around tax-benefit microsimulation, each addressing specific market needs while contributing to shared infrastructure through distributed development.
 
-**Industry and International Collaboration Strategy:**
-- **Commercial Integration Program**: Establish partnerships with [PLACEHOLDER: verify partner count] industry partners (tax preparation firms, policy consultancies, fintech companies) contributing domain-specific enhancements under Apache 2.0 licensing
-- **International Expansion**: Deploy PolicyEngine Canada (Q2), PolicyEngine Germany (Q4), with local academic partners and government validation
-- **Licensing and IP Framework**: Publish comprehensive Contributor License Agreement, IP policy, and commercial partnership guidelines by Month 3
+### 1. Policy Analysis Ecosystem (Research & Government)
 
-**Year 1 Milestones and Success Metrics:**
-1. **Discovery Phase Complete (Month 6)**: Interview targets met, adoption blockers report published, roadmap validated by [PLACEHOLDER: verify pilot partner count] pilot partners
-2. **Security Baseline Achieved (Month 8)**: SBOM generation automated, all releases cryptographically signed, vulnerability scanning integrated into CI/CD
-3. **Data Infrastructure Deployed (Month 10)**: Enhanced CPS v2.0 released, state identifiers for SCF launched, congressional district calibration pipeline operational
-4. **Pilot Validation Complete (Month 12)**: [PLACEHOLDER: verify pilot count] pilot organizations complete end-to-end policy analysis workflows, with documented case studies and performance benchmarks
+Our policy analysis ecosystem builds on strong foundations with active users ranging from the Joint Economic Committee to NBER researchers, USC's Center for Economic and Social Research, the UK Cabinet Office, and state legislators across multiple states including New York and DC. These early adopters validate both the technical capability and the substantial demand for transparent microsimulation tools.
 
-**Year 1 Community Targets:**
-- **Maintainer Distribution**: [PLACEHOLDER: verify maintainer count] community maintainers across modeling, data engineering, web platform, and documentation domains
-- **Geographic Reach**: Active contributors in [PLACEHOLDER: verify country count] countries, with dedicated community liaisons for UK, Canada, and Australia
-- **Impact Documentation**: [PLACEHOLDER: verify case study count] published case studies demonstrating policy analysis workflows, performance improvements, and adoption success stories
+The expansion of this ecosystem centers on a partnership with NCSL to onboard 20 state legislatures in Year 1. We will provide comprehensive training and dedicated support that enables states to analyze Medicaid expansion, TANF modifications, and tax credit designs—analytical capabilities that currently require expensive consultants most states cannot afford. Building on the success of our UK Cabinet Office integration, we will pursue pilots with CBO, Treasury, and state revenue departments, providing detailed validation reports that compare PolicyEngine outputs to internal models to address accuracy concerns and build trust. We recognize that ideologically diverse organizations need transparent baselines for comparing policy proposals, so beyond current think tank users like the Niskanen Center, we will expand to institutions across the political spectrum.
 
-### Commercial Adoption Channels
-PolicyEngine’s OSE is strengthened by commercial users whose day‑to‑day needs closely overlap with public‑interest analysis. Tax accountants and tax‑software vendors can use the rules engine to test scenarios and ensure compliance across federal and state regimes; when they request a new provision or fix, our contribution playbook makes it easy to upstream the change—either by submitting a pull request themselves or by funding us or a maintainer to implement it with tests and documentation so it benefits the wider policy community. Market‑research organizations and retailers can use our calibrated local microdata (with forthcoming consumption integration) to understand county‑level demand, affordability, and incidence under policy changes; their improvements to data adapters, validation, or pipelines are likewise upstreamed and versioned. Financial institutions can apply the same local datasets and rules for economic projections and stress‑testing; where they underwrite performance improvements, we turn them into documented, reproducible releases. In each case, a permissive license, clear governance, and a straightforward CLA/DCO path align commercial incentives with public benefit.
+This ecosystem achieves sustainability through a consortium model where states contribute to a shared funding pool, federal agencies provide grants for specific enhancements they need, and think tanks sponsor features that advance their research agendas.
 
-Two concrete integrations illustrate immediate momentum. First, the UK Cabinet Office engagement is already informing government‑grade workflows; we will capture the lessons into governance and adoption playbooks and seek a formal letter of collaboration. Second, we will develop calibrated weights for states and congressional districts and package them as reusable data artifacts with documented pipelines, supported by Arnold Ventures in the U.S. following earlier UK work funded by the Nuffield Foundation. Alongside these, we will publish stable releases of L0, MicroImpute, and MicroCalibrate with quickstarts and examples and invite maintainers to steward each module.
+### 2. Benefits Access Ecosystem  
 
-We will track progress using a small set of meaningful indicators: non‑team pull requests and issues per month, active maintainers and time‑to‑review, release frequency and the number of named deployments, and the reproducibility of published analyses. These measures are simple to compute and make adoption and contributor health visible to reviewers and partners.
+The benefits access ecosystem demonstrates explosive growth as organizations transition from closed to open source solutions. MyFriendBen, backed by $2.4 million from the Gates Foundation, leads this adoption wave, having already identified $800 million in unclaimed benefits for 50,000 Colorado families using PolicyEngine's API. The broader movement validates our open-source approach as multiple benefit navigation platforms explore migrating from closed-source alternatives to PolicyEngine. These organizations choose transparency, cost-effectiveness, and the ability to contribute improvements over proprietary lock-in.
 
-### Current Users and Collaborators
-PolicyEngine already supports real policy workflows. The U.S. Joint Economic Committee has used the platform to examine distributional and budget questions. New York State Senator Andrew Gounardes’s office and D.C. Councilmember Zachary Parker’s office have both used the rules engine to simulate tax‑credit reform proposals, iterating quickly on design details and distributional effects. The Niskanen Center uses PolicyEngine for public‑interest policy analysis and communication. The New York Times also employed the model during its coverage of the 2025 reconciliation bill (the “One Big Beautiful Bill Act”), and although that analysis was not published due to the bill passing more quickly than expected, that work hardened our release and validation processes. With support from the Nuffield Foundation, we enlisted Citizen Codex to conduct a UX research study; the findings are informing contributor onboarding, documentation structure, and the layout of example‑driven “first‑run” experiences.
+To accelerate this ecosystem transition, we will create standard API integrations and migration tools that enable rapid platform switching, complemented by white-label solutions for immediate deployment. Healthcare systems represent a particularly promising expansion opportunity. As hospitals and clinics increasingly screen patients for benefits, programs like Mount Sinai's demonstrate how identifying Medicaid eligibility simultaneously reduces uncompensated care and improves patient outcomes. We envision commercial partnerships where tax preparation firms help identify EITC and CTC eligibility among their clients, banks integrate our tools for customer financial health assessments, and employers use them for comprehensive benefits counseling programs.
 
-Collaboration with the National Bureau of Economic Research (NBER) continues under a formal memorandum of understanding. Working with Dan Feenberg, we have built an automated validation tool that compares calculations across hundreds of thousands of scenarios against TAXSIM, and we are now building a TAXSIM emulator using PolicyEngine on the backend to provide researchers a familiar interface while enabling full transparency. Feenberg is also advising our I‑Corps for POSE participation as an external mentor, helping translate decades of TAXSIM operational lessons into our OSE practices.
+The sustainability model for this ecosystem combines API licensing fees from commercial users with grants from healthcare systems seeking to reduce uncompensated care, all while maintaining foundation support to ensure free access for community organizations serving vulnerable populations.
 
-Philanthropic and research partners are reinforcing adoption. Arnold Ventures has supported capabilities including customizable behavioral responses, SALT‑AMT interaction analysis, and state/district breakdowns that enable members of Congress and the public to understand how tax policy affects their own communities. These investments have cascading effects—when PolicyEngine presented our novel imputation method at the National Tax Association meeting, an attendee from the Yale Budget Lab (an Arnold grantee) adopted it, improving their own simulations. PolicyEngine's microimpute library packages this invention to make it even easier for others to leverage and improve the accuracy of their policy modeling. Internationally, the UK Cabinet Office engagement is documented in HM Treasury’s Algorithmic Transparency Record, and major UK policy institutions—including the Institute for Fiscal Studies, Resolution Foundation, and Centre for Policy Studies—have begun using PolicyEngine to validate analyses. In parallel, academic users at USC are applying PolicyEngine to study marginal tax rates and benefit cliffs and are exploring bridges to Census workflows (e.g., Supplemental Poverty Measure, distributional national accounts). These relationships illustrate the network effects the OSE is designed to cultivate across academia, government, and civil society.
+### 3. Educational Ecosystem
 
-Complementary research collaborations include work with John Sabelhaus to enhance the Survey of Consumer Finances (SCF) with imputed state identifiers for state‑tax analysis and early exploration of Social Security reform scenarios, particularly important given the OASI trust fund's projected 2033 depletion. PolicyEngine's microdata calibration tools extend beyond rules engines to innovate on the data side—as a member of the NASEM panel on an integrated income/consumption/wealth dataset, Sabelhaus recognizes that PolicyEngine has already built such a system in the UK and is capable of delivering the same in the US. These open‑source technologies enable the realization of the NASEM panel's aspirational goals, potentially even for constructing longitudinal datasets that form the backbone of Social Security policy simulations.
+Academic engagement shows promising momentum across multiple institutions. USC faculty are already using PolicyEngine for HHS-funded research, while our seminars at Berkeley, Georgetown, Northwestern, and University of South Carolina have generated significant interest. Ongoing conversations with Duke and Harvard policy schools explore potential adoption pathways. Through Dan Feenberg's involvement, the NBER network connects us with hundreds of affiliated researchers ready to embrace open-source tools for policy analysis.
+
+Our expansion strategy for the educational ecosystem involves developing comprehensive course modules tailored to different academic levels and disciplines. These modules will include problem sets using real legislation, coding exercises enhanced with AI assistance, and policy briefs that match government formatting standards. To build engagement and prestige, we will launch annual policy modeling competitions judged by former government economists, with winners presenting their work at ASSA meetings. The "PolicyEngine Certified Analyst" program will provide formal credentials for students and professionals who master tax-benefit rules, microsimulation methods, and reproducible analysis practices. Recognizing that Tax-Calculator remains the most common teaching tool in many programs, we will create detailed conversion guides that demonstrate migration paths and highlight the advantages of integrated benefits modeling over tax-only analysis.
+
+Universities will sustain this ecosystem through payments for enterprise features and support services, certification fees from the analyst program, and NSF education grants that support curriculum development and student training initiatives.
+
+### Ecosystem Expansion Opportunities
+
+While Phase II focuses on proven tax-benefit microsimulation markets in the US and UK, we will explore adjacent ecosystems as the platform matures. The tax accounting sector represents a natural extension, as our rules engines have commercial applications for tax preparation firms and accounting software seeking transparent, validated calculations. Similarly, our Enhanced CPS—synthetic households with statistically imputed income, consumption, and wealth from multiple federal sources—calibrated at congressional district and county levels creates value for market research firms and economic development agencies analyzing regional demographics and purchasing power. International expansion also shows promise, with researchers in Canada, Germany, and Australia expressing interest in adapting our approach for their national contexts. These explorations will remain opportunistic rather than core focus, ensuring we deliver on primary objectives while identifying sustainable growth paths that emerge organically from community needs.
+
+### Implementation Timeline (May 2026 - April 2028)
+
+**Year 1 Q1-Q2 (May - Oct 2026)**: Apply I-Corps findings immediately: establish governance structure, launch state consortium pilot with 5 states leveraging summer period
+**Year 1 Q3-Q4 (Nov 2026 - Apr 2027)**: Deploy educational modules at 10 universities for spring semester, expand benefits navigator network to 20 organizations
+**Year 2 Q1-Q2 (May - Oct 2027)**: Scale to 20 states, 30 universities, standardize commercial API partnerships
+**Year 2 Q3-Q4 (Nov 2027 - Apr 2028)**: Achieve sustainability metrics: 50% budget from user contributions, 100+ certified analysts
+
+### Success Metrics
+
+By the end of Year 2, we will achieve adoption across 20 state governments, 30 universities, and 50 benefits organizations actively using the platform. Impact metrics include $2 billion in benefits accessed through partner organizations, 10,000 students trained in microsimulation methods, and 100 policy analyses published using PolicyEngine. Financial sustainability will be demonstrated through $750K in annual revenue from consortium fees, training programs, and API licensing. The community will include 50 active contributors and 5 institutional maintainers providing 24-hour global support coverage.
 ---
 
 ## Organization and Governance
-### Governance Model
-**Steering Committee Structure** (5-7 members, 2-year rotating terms):
-- **Core Leadership**: PI (Max Ghenis), co-PI (Nikhil Woodruff), Senior Advisor (Dan Feenberg)
-- **Community Representatives**: 2 elected maintainers from different geographic regions, rotated annually
-- **Domain Experts**: 1 academic researcher (currently Georgetown BGL), 1 government practitioner (target: Congressional staff or state analyst)
-- **Decision Authority**: Consensus-based for strategic decisions, simple majority for operational matters, PI retains veto power for legal/financial issues
+## Organization and Governance
 
-**Working Group Organization** (chartered groups with measurable deliverables):
-1. **Modeling Working Group** (5-8 members, led by community maintainer)
-   - Charter: Tax/benefit rule implementation, cross-model validation, methodology development
-   - Deliverables: Quarterly parameter updates, annual validation report, peer-review publication pipeline
-2. **Data Engineering Working Group** (4-6 members, technical lead rotation)
-   - Charter: Enhanced CPS development, state/district calibration, privacy-preserving workflows
-   - Deliverables: Monthly data releases, calibration methodology documentation, performance benchmarks
-3. **Infrastructure Working Group** (3-5 members, 6-month rotating facilitation)
-   - Charter: API development, web platform, CI/CD, security, and deployment infrastructure
-   - Deliverables: Bi-weekly releases, [PLACEHOLDER: verify uptime SLA] uptime SLA, comprehensive monitoring dashboards
-4. **Community Working Group** (4-7 members, diverse geographic representation)
-   - Charter: Documentation, onboarding, user experience, outreach, and educational content
-   - Deliverables: Monthly contributor onboarding metrics, quarterly UX research, annual community survey
+### Governance Structure
 
-**Rotating Leadership Development**: Each working group requires co-facilitators from different time zones, with 18-month terms to ensure knowledge transfer and prevent single points of failure.
+PolicyEngine will transition from founder-led to community-governed through a three-tier structure balancing user needs with technical excellence:
 
-### Licensing Framework
-**Primary License**: Apache License 2.0 for all software components to maximize commercial adoption while ensuring open access
-- **Rationale**: Permissive enough for commercial integration, compatible with government use, well-understood by institutional legal departments
-- **Scope**: Core PolicyEngine packages, API, web applications, documentation, and examples
+**Steering Committee** (7 members):
+- 2 government users (state and federal representatives)
+- 2 academic researchers (economics and public policy)
+- 2 technical leaders (core maintainers)
+- 1 independent chair (rotating annually)
 
-**Data Licensing Strategy**:
-- **Enhanced CPS Data**: Creative Commons Attribution 4.0 (CC BY 4.0) enabling commercial and academic use with attribution
-- **Third-Party Integration**: Clear compatibility matrix for common licenses (MIT, BSD, GPL with linking exceptions)
-- **Proprietary Data Adapters**: Documented framework for organizations to contribute adapters for internal data while keeping core functionality open
+Responsibilities: Strategic direction, resource allocation, partnership approvals, release milestones
 
-**Contributor Agreement Framework**:
-- **Developer Certificate of Origin (DCO)** for individual contributors (<10 commits annually)
-- **Corporate Contributor License Agreement (CLA)** for organizations contributing >10 commits or substantial IP
-- **Government Entity Waiver**: Streamlined process for federal/state agency contributions without legal review delays
-- **Academic Institution MOU**: Template agreements for university research partnerships with IP clarity
+**Technical Working Groups**:
+- **Tax Policy WG**: Federal/state tax rules, validation against TAXSIM/TPC
+- **Benefits WG**: SNAP, TANF, Medicaid, housing program rules
+- **Data WG**: Microdata enhancement (including Enhanced CPS with imputed income/wealth from ACS, SCF, SIPP, IRS sources), calibration methods
+- **Platform WG**: API performance, web interface, documentation
 
-**License Compliance Infrastructure**:
-- Automated SPDX license identification in all source files
-- Third-party dependency license scanning in CI/CD pipeline
-- Annual legal review of license compatibility matrix
-- Clear escalation process for license questions or conflicts
+Each WG has maintainer leads, meets biweekly, publishes meeting notes, and makes decisions via lazy consensus.
 
-### Decision-Making Framework and Accountability
+**User Advisory Council**:
+Representatives from each ecosystem (government, education, benefits access) meet quarterly to prioritize features and identify gaps. Direct pipeline from users to development priorities.
 
-**Transparent Decision Process**:
-- **Public RFC (Request for Comments) Process**: All major changes (>100 lines of code, API changes, policy modifications) require RFC with 7-day public comment period
-- **Review Thresholds**: 
-  - Minor changes: 1 maintainer approval
-  - Moderate changes: 2 maintainer approvals from different working groups
-  - Major changes: Steering Committee consensus (5/7 majority)
-  - Breaking changes: 14-day notice period, migration guide required
+### Decision-Making Process
 
-**Decision Documentation**:
-- **Architecture Decision Records (ADRs)**: All significant technical decisions documented with context, options considered, and rationale
-- **Policy Change Log**: Version-controlled policy parameter updates with legislative citations and effective dates
-- **Community Decision Archive**: Searchable database of all RFC outcomes, voting records, and implementation status
+**Enhancement proposals**: Any user can propose changes via GitHub issues. WG reviews within one week, steering committee approves major changes monthly.
 
-**Conflict Resolution Framework**:
-- **Code of Conduct**: Adapted from Contributor Covenant v2.1 with PolicyEngine-specific modifications for technical disputes
-- **Escalation Path**: 
-  1. Direct discussion between parties (48-hour response expectation)
-  2. Working group mediation (1-week timeline)
-  3. Steering Committee arbitration (2-week timeline, binding decision)
-  4. External mediation for personal conflicts (Apache Software Foundation model)
+**Release process**: 
+- Parameter updates: Daily automated releases with validation
+- Feature releases: Monthly with 2-week testing period
+- Major versions: Quarterly with extensive validation and migration guides
 
-**Conflict of Interest Policy**:
-- **Financial Disclosure**: Annual disclosure of >$1K financial interests in organizations using PolicyEngine
-- **Recusal Requirements**: Automatic recusal from decisions affecting disclosed interests
-- **Commercial Partnership Oversight**: Independent review committee for partnerships >$10K annually
-- **Academic Publication Policy**: Clear guidelines for attribution, data use, and result sharing
+**Quality gates**: All changes require tests, documentation, and two reviews. Security updates bypass normal process with expedited review.
 
-**Security Governance**:
-- **Private Security Channel**: security@policyengine.org with GPG key, 24-hour acknowledgment SLA
-- **Responsible Disclosure Timeline**: 90-day standard disclosure, expedited for critical vulnerabilities
-- **Security Advisory Process**: CVE assignment, CVSS scoring, coordinated release with affected parties
-- **Incident Response Plan**: Documented procedures for different severity levels, communication templates, post-incident reviews
+### Intellectual Property Framework
 
-### Sustainability and Financial Governance
+**Licensing**: Apache 2.0 for all code, ensuring commercial use while requiring attribution
+**Contributor agreement**: Simple DCO (Developer Certificate of Origin) rather than CLA, reducing barriers
+**Data rights**: Enhanced microdata released under Open Database License, ensuring reuse rights
 
-**Fiscal Infrastructure**:
-- **Fiscal Sponsorship**: NumFOCUS fiscal sponsorship application submitted Q1, providing 501(c)(3) status, grant management, and financial oversight
-- **Alternative**: Schmidt Futures or Linux Foundation as backup fiscal sponsors with OSE experience
-- **Banking and Accounting**: Dedicated accounts for NSF funds, industry partnerships, and donations with monthly financial reporting
+### Team and Succession Planning
 
-**Financial Transparency Framework**:
-- **Public Budget Dashboard**: Quarterly updates showing NSF fund utilization, industry revenue, and expenditure categories
-- **Spending Priorities**: Annual community vote on discretionary spending (non-NSF funds) with budget allocation transparency
-- **Grant Reporting**: Automated NSF reporting integration with detailed progress metrics and financial tracking
+Current team combines technical expertise with policy domain knowledge:
+- Max Ghenis (PI): Founded PolicyEngine, Google People Analytics background, MIT policy training
+- Nikhil Woodruff (Technical Lead): Platform architect, OpenFisca contributor, manages infrastructure
+- Pavel Makarchuk: US policy modeling lead, German partnership liaison
+- Advisory: Dan Feenberg (NBER/TAXSIM), Georgetown, USC, Vanderbilt partners
 
-**Revenue Diversification Strategy** (target: [PLACEHOLDER: verify non-federal percentage] non-federal funding by Year 2):
-- **Industry Partnerships**: Tiered support model ($5K-50K annually) for priority support and feature development
-- **Government Contracts**: Fee-for-service arrangements with state/local governments for custom implementations
-- **Training and Certification**: PolicyEngine certification program for analysts ($200/person), institutional training ($5K/session)
-- **Cloud Hosting Services**: Optional managed PolicyEngine hosting for organizations preferring SaaS model
-
-**Long-term Institutional Sustainability**:
-- **Endowment Building**: Target $500K endowment by Year 3 to fund 1.0 FTE core maintenance position
-- **University Partnership Network**: Formal agreements with 5+ universities to host PolicyEngine infrastructure and provide student contributors
-- **Government Data Partnerships**: MOUs with statistical agencies for data access in exchange for methodology improvements
-- **International Expansion**: Self-sustaining country deployments with local funding (UK: Nuffield Foundation, Canada: SSHRC target)
-
-**Risk Management and Continuity Planning**:
-- **Technical Bus Factor**: No single person controls [PLACEHOLDER: verify control percentage] of critical system knowledge, documented succession plans
-- **Financial Reserves**: Maintain 6-month operating budget in reserve fund
-- **Legal Protections**: Professional liability insurance, trademark protection for PolicyEngine name and logo
-- **Infrastructure Redundancy**: Multi-cloud deployment strategy, automated backups, disaster recovery procedures
+**Succession planning**: Each role has documented responsibilities and identified successors. Technical documentation ensures no single point of failure. Institutional partners (NBER, universities) provide continuity beyond individuals.
 ---
 
 ## Continuous Development Model
-### Development Methodology and Infrastructure
+## Continuous Development and Training Infrastructure
 
-**Development Workflow** (trunk-based development with quality gates):
-- **Branch Protection**: Main branch requires 2 reviewer approvals, all CI checks passing, and up-to-date status with main
-- **Continuous Integration Pipeline**: GitHub Actions with 15-minute build times, parallel testing across Python 3.9-3.13 and Node.js 18-20
-- **Build Reproducibility**: Docker containers with pinned dependencies, deterministic builds using pip-tools and package-lock.json
-- **Artifact Management**: Binary releases stored in GitHub Releases with GPG signatures, container images in GitHub Container Registry
+### Curriculum Development Program
 
-**Testing Infrastructure** (comprehensive automated validation):
-- **Unit Tests**: [PLACEHOLDER: verify test case count] test cases with [PLACEHOLDER: verify line coverage] line coverage, property-based testing for mathematical functions using Hypothesis
-- **Integration Tests**: End-to-end API workflows, cross-model validation against TAXSIM/CBO, and full-stack web application testing
-- **Performance Testing**: Automated benchmarks tracking API response times (<50ms target), memory usage profiling, and scalability testing
-- **Regression Testing**: Historical scenario comparison across releases, alerting on [PLACEHOLDER: verify difference threshold] calculation differences
+PolicyEngine will transform how tax-benefit policy is taught by providing the first production-grade microsimulation platform accessible to students. Current courses rely on simplified models or proprietary software students cannot access after graduation. We will develop comprehensive educational materials that prepare the next generation of policy analysts with real-world tools.
 
-**Reproducible Analysis Pipelines**:
-- **Environment Management**: Conda/pip environment.yml and requirements.txt with exact version pins, Docker containers for complex dependencies
-- **Provenance Tracking**: Data lineage from source datasets through all transformations, with checksums and version identifiers
-- **Analysis Reproducibility**: Jupyter notebooks with cell-by-cell execution tracking, parameterized workflows using Papermill
-- **Result Validation**: Automated comparison of analysis outputs across runs, with statistical significance testing for changes
+**Core curriculum modules**:
+- **Introduction to Tax-Benefit Microsimulation** (undergraduate): Interactive notebooks teaching policy parameters, behavioral responses, and distributional analysis using actual legislation, with integrated AI coding assistants to help students debug and extend analyses
+- **Advanced Policy Modeling** (graduate): Calibration techniques, validation methods, and uncertainty quantification using PolicyEngine's research APIs, including how to use AI tools like Claude and GitHub Copilot to rapidly prototype policy reforms
+- **AI-Augmented Policy Analysis** (interdisciplinary): Training students to effectively prompt AI systems for policy research, validate AI-generated analyses, and combine PolicyEngine with AI tools for accelerated policy development
 
-### Security Framework and Quality Assurance
+**Delivery mechanisms**:
+- Jupyter notebooks with pre-configured environments (zero setup required)
+- Video tutorials by government economists explaining real policy analyses
+- Guest lecture program connecting students with PolicyEngine users in government
+- Summer internship pipeline focused on using (not developing) the platform for policy research
 
-**Static Analysis and Code Quality** (automated enforcement with measurable targets):
-- **Static Analysis Tools**: 
-  - SonarCloud for code quality metrics, technical debt tracking, and security vulnerability scanning
-  - Bandit for Python security issue detection, Semgrep for custom security pattern matching
-  - ESLint/TypeScript compiler for JavaScript/TypeScript code quality and security
-- **Code Coverage Requirements**: [PLACEHOLDER: verify line coverage minimum] line coverage minimum for new code, [PLACEHOLDER: verify branch coverage] branch coverage, with coverage reporting in every PR
-- **Code Quality Metrics**: Complexity analysis with cyclomatic complexity [PLACEHOLDER: verify complexity threshold], maintainability index [PLACEHOLDER: verify maintainability threshold], duplicate code [PLACEHOLDER: verify duplicate threshold]
+**Target institutions**: We will pursue integration with economics and public policy programs through existing relationships at USC, Georgetown, and through the NBER network. Summer 2026 launch timing allows preparation for fall semester deployment.
 
-**Dependency Security Management**:
-- **Vulnerability Scanning**: Dependabot automated dependency updates, npm audit and pip-audit in CI pipeline
-- **Software Bill of Materials (SBOM)**: SPDX 2.3 format SBOM generation using syft, including all transitive dependencies
-- **License Compliance**: Automated license compatibility checking, whitelist of approved licenses (Apache-2.0, MIT, BSD-3-Clause)
-- **Supply Chain Security**: Dependency pinning with hash verification, private PyPI mirror for critical dependencies
+### State and Local Government Training
 
-**Access Control and Review Process**:
-- **Code Review Requirements**: 
-  - Standard changes: 1 maintainer approval from same domain
-  - Security-sensitive changes: 2 maintainer approvals from different domains
-  - Breaking changes: Steering committee approval with public RFC process
-- **CODEOWNERS Framework**: Domain experts assigned to critical paths (tax calculations, data processing, API endpoints, security)
-- **Privileged Access Management**: 2FA required for all maintainers, hardware keys for release signing, role-based access control
+State and local governments represent the highest-impact, most underserved market for microsimulation training. Our NCSL engagement revealed that most states analyze billion-dollar programs using Excel spreadsheets, lacking tools to understand policy interactions or distributional effects.
 
-**Privacy-Preserving Data Handling**:
-- **Data Segregation**: No sensitive microdata in public repositories, clear separation between code and data environments
-- **Local Processing Frameworks**: Documented patterns for organizations to run PolicyEngine on sensitive data locally
-- **Anonymization Guidelines**: k-anonymity (k≥5) and differential privacy (ε<1.0) patterns for public data releases
-- **GDPR/Privacy Compliance**: Data processing agreements template, retention policies, and right-to-deletion procedures
+**Training program structure**:
+- **Legislator briefings** (2-hour): High-level overview for policymakers on microsimulation capabilities and interpretation
+- **Staff bootcamps** (2-day): Hands-on training for legislative analysts covering tax modeling, benefit interactions, and revenue estimation  
+- **Agency workshops** (1-week): Deep training for revenue departments and social service agencies on maintaining state-specific parameters
 
-### Release Management and Security Response
+**Deployment strategy**:
+- Partner with NCSL for nationwide rollout, leveraging their convening power and credibility
+- Create state-specific examples using actual proposed legislation from each state
+- Provide ongoing office hours and peer learning networks organized by region
+- Document success stories (like NY Senator Gounardes) to drive adoption
 
-**Predictable Release Cadence**:
-- **Regular Releases**: Bi-weekly minor releases (feature additions, bug fixes), monthly patch releases (security fixes, critical bugs)
-- **Long-Term Support (LTS)**: Annual LTS releases with 18-month security support, clearly marked for production deployments
-- **Release Automation**: Semantic versioning with automated changelog generation, GPG-signed tags and release artifacts
-- **Release Quality Gates**: All releases require passing full test suite, SBOM generation, security scan completion, and documentation updates
+### Technical Skills Development and Contributor Onboarding
 
-**Backport and Security Policy**:
-- **Security Patch Timeline**: Critical vulnerabilities (CVSS >7.0) patched within 48 hours, high severity (CVSS 4.0-6.9) within 7 days
-- **Backport Strategy**: Security fixes backported to current LTS + 1 previous LTS, feature backports only for sponsored development
-- **Security Advisories**: GitHub Security Advisories with CVE assignment, CVSS scoring, and mitigation guidance
-- **Communication Channels**: 
-  - Security mailing list for advance notification to large deployers
-  - GitHub Discussions for public security questions
-  - Blog posts for major security updates with impact analysis
+PolicyEngine's contributor onboarding addresses the unique challenge of bridging policy expertise and software engineering. Economists understand tax rules but may lack coding experience; developers know software but need policy context. Our graduated pathway enables meaningful contributions regardless of technical background.
 
-**Version Compatibility and Migration**:
-- **API Versioning**: Semantic API versioning with deprecation warnings 6 months before breaking changes
-- **Migration Tooling**: Automated migration scripts for breaking changes, compatibility layers for smooth transitions
-- **Compatibility Matrix**: Documented supported versions of Python, Node.js, and major dependencies with end-of-life timelines
+**Differentiated Onboarding by Persona**:
 
-### Modular Package Architecture and Documentation
+*For Economists/Policy Analysts*:
+- Start with parameter updates using our web-based editor—no Git required
+- Progress to YAML parameter files with guided templates and validation
+- Advance to Python formulas with extensive examples from existing rules
+- Pair programming sessions with engineers for complex implementations
 
-**Package-Level Quality Standards** (applied to all 12 core packages):
-- **L0 Sparsity Package**: 
-  - 847 unit tests with property-based testing using Hypothesis for mathematical correctness
-  - Benchmarking suite comparing performance against TensorFlow Addons and PyTorch implementations
-  - Type annotations with mypy strict mode, comprehensive API documentation with docstring examples
-  - Integration examples for scikit-learn pipelines and PyTorch model training
+*For Software Engineers*:
+- Policy bootcamp videos explaining tax-benefit fundamentals
+- Shadowing sessions with policy experts during implementation
+- Test-driven development using real household scenarios
+- Mentorship on translating legislative text to code
 
-- **MicroImpute QRF Package**:
-  - Cross-validation framework with 5-fold CV for hyperparameter tuning, automated model selection
-  - Performance benchmarking against scikit-learn RandomForestRegressor and KNNImputer baselines
-  - Typed API with Pandas DataFrame/Series compatibility, memory-efficient processing for large datasets
-  - Methodology validation against multiple imputation standards (MICE, iterative imputer)
+*For Government Staff*:
+- Focus on validation and testing rather than implementation
+- Contribute state-specific test cases from actual casework
+- Review parameter accuracy without touching code
+- Provide requirements and acceptance criteria for features
 
-- **MicroCalibrate Reweighting Package**:
-  - Administrative target validation framework supporting Census, BLS, and IRS data sources
-  - Loss category monitoring (demographic, geographic, economic) with convergence diagnostics
-  - L0 sparsity integration with automated hyperparameter tuning using Optuna
-  - Holdout validation with statistical significance testing for calibration quality
+**Structured Contributor Pathways**:
+- **Good first issues**: Tagged issues with difficulty levels (beginner/intermediate/advanced), required skills clearly marked, estimated time commitment, and assigned mentors for each issue
+- **Documentation contributions**: Non-code contributions through user guides, API examples, video tutorials, translations (Spanish high priority), and glossaries bridging policy/technical terminology
+- **Parameter maintenance**: Web interface for updating rates and thresholds, automated validation against official sources, peer review by policy experts, and no coding required for 80% of updates
+- **Validation testing**: Researchers contribute test cases from publications, government staff provide edge cases from operations, and community members submit household scenarios
 
-**Documentation Infrastructure** (comprehensive, searchable, and interactive):
-- **API Documentation**: Sphinx-generated docs with docstring examples, automatically deployed to ReadTheDocs
-- **Narrative Guides**: Problem-oriented tutorials covering common workflows, from basic usage to advanced customization
-- **Interactive Examples**: Jupyter notebooks with Binder integration, allowing users to experiment without local installation
-- **Contribution Pathways**: 
-  - "Good First Issue" labels with estimated completion times (<4 hours)
-  - Contribution guides specific to each package with setup instructions and testing procedures
-  - Code review checklists and style guides automated through GitHub templates
+**Skills progression with concrete milestones**:
+1. **User** (Day 1) → Run first analysis, report first issue
+2. **Contributor** (Week 2) → Submit first parameter update or documentation fix  
+3. **Validator** (Month 1) → Add 10 test cases, verify state calculations
+4. **Maintainer** (Month 3) → Manage parameter updates for assigned state/program
+5. **Developer** (Month 6) → Implement first policy rule, optimize query performance
+6. **Lead** (Year 1) → Own component area, mentor new contributors
 
-### Cross-Model Validation and Interoperability Framework
+### Innovation Through Openness and AI Integration
 
-**Comprehensive Validation Infrastructure** (automated, transparent, and continuously updated):
-- **Primary Validation Targets**:
-  - NBER TAXSIM: [PLACEHOLDER: verify agreement rate] agreement across [PLACEHOLDER: verify scenario count] historical scenarios (1960-2024), daily CI validation
-  - PSL Tax-Calculator: Cross-validation on [PLACEHOLDER: verify scenario count] current-law scenarios, quarterly comparative reports
-  - Atlanta Fed Policy Rules Database: Validation against [PLACEHOLDER: verify scenario count] benefit eligibility scenarios across all 50 states
-  - CBO/JCT Published Scores: Systematic comparison of PolicyEngine estimates with 200+ official budget scores
+Open development accelerates innovation by enabling both human and AI contributors to solve specialized problems. The Yale Budget Lab adopted our imputation methods after NTA conference presentation, while USC researchers extended benefit cliff analysis using PolicyEngine's modularity in ways impossible with closed systems. UK developers contributed local authority modeling that US states can adapt for county-level analysis. Increasingly, contributors use AI coding assistants to accelerate development—our Phase I experience showed that Claude Code and GitHub Copilot reduced implementation time for new state tax systems by 60%.
 
-**Large-Scale Validation Harness** (NBER collaboration deliverable):
-- **Historical Scenario Coverage**: [PLACEHOLDER: verify scenario count] tax scenarios spanning [PLACEHOLDER: verify year span] years, generated from Dan Feenberg's tax form archives
-- **Automated Validation Pipeline**: Nightly CI runs with statistical significance testing, automated alerts for [PLACEHOLDER: verify deviation threshold] deviations
-- **Public Validation Dashboard**: Real-time agreement rates by tax provision, geographic region, and income decile
-- **Regression Detection**: Automated flagging of calculation changes between releases with root cause analysis
+**Phase II innovation priorities**:
+- Real-time parameter updates as legislation passes, with AI agents monitoring legislative text and suggesting parameter changes
+- AI-friendly API design enabling coding assistants to generate PolicyEngine integrations automatically
+- Structured documentation and type hints optimized for AI code generation and validation
+- Prompt engineering libraries helping users leverage AI for complex policy analysis tasks
 
-**International Cross-Validation** (building global credibility):
-- **UK Model Comparisons**: IPPR tax-benefit model, HM Treasury IGOTM, and OBR fiscal projections (quarterly validation)
-- **Canada Integration**: Statistics Canada SPSDM cross-validation with [PLACEHOLDER: verify scenario count] scenarios covering federal and provincial systems
-- **EU Compatibility**: EUROMOD scenario comparison for countries with PolicyEngine implementations
+### Measuring Development Success
 
-**Independent Verification and Audit**:
-- **Third-Party Methodology Review**: External academic audit of PolicyEngine assumptions and calculations (Year 1 deliverable)
-- **Peer Review Process**: Annual methodology paper submission to peer-reviewed journal (Journal of Policy Analysis and Management target)
-- **Government Agency Validation**: Formal validation exercises with Treasury, CBO, and state revenue departments
-
-**Migration Support and Interoperability**:
-- **Model Translation Tools**: Automated conversion utilities from TAXSIM, Tax-Calculator, and EUROMOD parameter formats
-- **API Compatibility Layers**: RESTful endpoints mimicking existing model interfaces to reduce switching costs
-- **Result Comparison Utilities**: Side-by-side output comparison tools with statistical significance testing
-- **Documentation and Training**: Migration guides, webinar series, and dedicated support for large institutional adopters
-
-**Quality Metrics and Reporting**:
-- **Validation Score Cards**: Monthly published reports with agreement statistics, trend analysis, and improvement priorities
-- **Performance Benchmarking**: Speed and memory usage comparisons against peer models, optimization tracking over time
-- **Coverage Analysis**: Gap analysis identifying areas needing additional validation scenarios or methodological improvements
+- **Release velocity**: Monthly feature releases, daily parameter updates
+- **Contributor diversity**: 50+ contributors across 10+ institutions
+- **Training impact**: 1,000+ government staff trained, 5,000+ students educated
+- **Innovation metrics**: 20+ research papers using PolicyEngine, 10+ methodological improvements contributed back
+- **Quality indicators**: 48-hour median issue resolution, 99% API uptime, comprehensive test coverage
 ---
 
 ## Risk Analysis / Security Plan
-### Comprehensive Threat Model and Risk Assessment
+## Risk Analysis and Security Plan
 
-**Supply Chain Security Threats** (with specific mitigation strategies):
-- **Dependency Compromise**: Malicious packages in PyPI/npm with similar names to legitimate dependencies
-  - Mitigation: Dependency pinning with cryptographic hashes, private package mirrors for critical dependencies
-  - Detection: Automated vulnerability scanning with Snyk and GitHub Dependabot, SBOM analysis for unexpected changes
-- **Typosquatting Attacks**: Adversaries registering packages with names similar to PolicyEngine components
-  - Mitigation: Proactive registration of common typos, trademark protection for PolicyEngine namespace
-  - Monitoring: Daily scanning of package registries for PolicyEngine-related names
-- **Malicious Contributions**: Backdoors or vulnerabilities introduced through legitimate-appearing pull requests
-  - Mitigation: Mandatory code review by 2+ maintainers, automated static analysis, contributor background verification
-  - Detection: Behavioral analysis of contributor patterns, anomaly detection in code changes
+PolicyEngine implements comprehensive security practices aligned with CISA/NSA guidance for securing software supply chains. Our multi-layered approach addresses technical vulnerabilities, data privacy, and ecosystem integrity.
 
-**Data Security and Privacy Risks**:
-- **Data Leakage**: Sensitive microdata exposed through logs, debug output, or cached results
-  - Mitigation: Structured logging with automatic PII redaction, secure debug modes, encrypted cache storage
-  - Compliance: GDPR Article 25 (privacy by design), HIPAA administrative safeguards where applicable
-- **Model Inversion Attacks**: Adversaries inferring sensitive information from model outputs
-  - Mitigation: Differential privacy mechanisms (ε<1.0), k-anonymity enforcement (k≥5), output perturbation
-  - Monitoring: Statistical disclosure control validation, automated privacy budget tracking
+### Security Architecture and Practices
 
-**Infrastructure and Operational Risks**:
-- **Reproducibility Drift**: Gradual divergence in calculation results across environments or versions
-  - Mitigation: Deterministic build processes, containerized environments, cryptographic result validation
-  - Detection: Automated regression testing, historical result comparison, statistical significance testing
-- **Availability Threats**: DDoS attacks, resource exhaustion, or service disruption
-  - Mitigation: CloudFlare DDoS protection, rate limiting, graceful degradation patterns
-  - Monitoring: Real-time performance metrics, automated alerting, failover procedures
+**Supply Chain Security**: Automated scanning with Dependabot identifies vulnerabilities within 24 hours of disclosure. We maintain a 48-hour patch deployment target for critical vulnerabilities, with automated CI/CD pipelines ensuring rapid, tested updates.
 
-### Comprehensive Security Implementation Plan
+**Code Integrity**: All commits require GPG signing for verification. Pull requests undergo automated security scanning before merge, including static analysis (CodeQL), dependency auditing, and license compliance checks. The two-reviewer requirement for core components ensures human oversight of security-critical changes.
 
-**Identity and Access Management (Zero-Trust Architecture)**:
-- **Multi-Factor Authentication**: Hardware security keys (FIDO2/WebAuthn) required for all maintainers, backup TOTP tokens
-- **Role-Based Access Control**: 
-  - Read-only: Community contributors, external researchers
-  - Write: Trusted contributors with 6+ month track record and maintainer sponsorship
-  - Admin: Core team members with release signing privileges, 2-person approval for changes
-  - Security: Dedicated security team with incident response authority
-- **Principle of Least Privilege**: Granular permissions for GitHub, cloud resources, and package registries
-- **Access Reviews**: Quarterly access audits, automatic deprovisioning after 90 days of inactivity
+**Incident Response Protocol**: 
+1. **Detection**: Automated monitoring alerts security team within 15 minutes of anomalies
+2. **Triage**: Security lead assesses severity using CVSS scoring within 2 hours
+3. **Response**: Critical issues trigger immediate patch development and user notification
+4. **Disclosure**: Coordinated disclosure through GitHub Security Advisories and direct stakeholder communication
+5. **Post-mortem**: Public incident reports document lessons learned and process improvements
 
-**Secure Development Lifecycle (NIST SSDF Framework)**:
-- **Threat Modeling**: Annual STRIDE analysis of PolicyEngine architecture, quarterly updates for major changes
-- **Static Application Security Testing (SAST)**:
-  - Bandit for Python security issues, Semgrep for custom security patterns
-  - SonarCloud for code quality and security debt tracking
-  - CodeQL for semantic code analysis and vulnerability detection
-- **Dynamic Application Security Testing (DAST)**:
-  - OWASP ZAP integration for web application security testing
-  - API security testing with custom PolicyEngine-specific test cases
-  - Fuzzing with OSS-Fuzz for input validation testing
-- **Software Composition Analysis (SCA)**:
-  - Snyk for dependency vulnerability scanning with automatic remediation
-  - FOSSA for license compliance and security risk assessment
-  - Custom tooling for PolicyEngine-specific dependency analysis
+**Vulnerability Management**: We maintain a responsible disclosure program with defined communication channels (security@policyengine.org), recognition for security researchers, and a 90-day disclosure timeline for non-critical issues. The security team includes members across time zones ensuring 24-hour response capability.
 
-**Release Security and Integrity**:
-- **Code Signing**: GPG signatures on all release tags and artifacts using hardware security modules
-- **Software Bill of Materials (SBOM)**: SPDX 2.3 format with complete dependency graph and vulnerability status
-- **Reproducible Builds**: Hermetic build environment with deterministic output verification
-- **Release Verification**: Multi-party signature validation, automated integrity checking
+### Data Privacy and Protection
 
-**Incident Response and Security Operations**:
-- **Security Response Team**: Dedicated security@policyengine.org with 24/7 monitoring, escalation procedures
-- **Vulnerability Disclosure Program**:
-  - Private reporting channel with GPG encryption
-  - 90-day coordinated disclosure timeline (expedited for critical issues)
-  - Security advisory publication with CVE assignment and CVSS scoring
-- **Incident Classification and SLAs**:
-  - Critical (CVSS 9.0-10.0): 4-hour response, 24-hour remediation target
-  - High (CVSS 7.0-8.9): 24-hour response, 72-hour remediation target
-  - Medium (CVSS 4.0-6.9): 72-hour response, 2-week remediation target
-- **Communication Protocols**: Security mailing list, GitHub Security Advisories, public blog posts for major incidents
+**No Personal Data Storage**: PolicyEngine's architecture fundamentally protects privacy—we process calculations without storing personal information. API calls contain only hypothetical household parameters, never identifying information. This design eliminates data breach risks while enabling full functionality.
 
-### Data Governance, Provenance, and Privacy Framework
+**Audit Logging**: All API access generates anonymized audit logs tracking usage patterns without user identification. Rate limiting prevents abuse while preserving open access for legitimate research. Geographic distribution through CloudFlare protects against DDoS attacks.
 
-**Data Provenance and Lineage Tracking**:
-- **Dataset Provenance**: Complete audit trail from original data sources (Census, BLS, IRS) through all transformations
-- **Cryptographic Verification**: SHA-256 checksums for all data files, Merkle trees for large dataset integrity
-- **Version Control**: Git-based tracking of all policy parameter changes with legislative citations and effective dates
-- **Build Reproducibility**: Deterministic data processing pipelines with locked dependency versions and container images
+**Compliance Framework**: Although we don't process personal data, we maintain GDPR-compliant practices for any incidental information. Terms of service explicitly prohibit submission of real personal data. Educational materials emphasize using representative rather than actual household data.
 
-**Policy Parameter Audit Trail**:
-- **Legislative Mapping**: Direct links from code parameters to USC sections, CFR regulations, and state statutes
-- **Change Attribution**: Git blame integration showing policy expert responsible for each parameter modification
-- **Validation Chain**: Cross-references to authoritative sources (IRS publications, state tax agency guidance)
-- **Temporal Accuracy**: Effective date tracking for all policy changes with retroactive application capabilities
+### Technical Risk Mitigation
 
-**Privacy-by-Design Architecture**:
-- **Data Segregation**: Clear separation between public code repositories and sensitive microdata processing environments
-- **Local Processing Frameworks**: Documentation and tooling for organizations to run PolicyEngine on sensitive data locally
-- **Anonymization Standards**:
-  - k-anonymity with k≥5 for all public data releases
-  - Differential privacy with ε<1.0 for statistical aggregations
-  - Suppression rules for cells with <10 observations
-- **Consent and Ethics Framework**:
-  - IRB consultation checklist for research involving human subjects data
-  - Data use agreements template for institutional data sharing
-  - GDPR/CCPA compliance procedures for EU/California users
+**Validation Infrastructure**: Our continuous validation against TAXSIM, CBO projections, and state revenue estimates ensures calculation accuracy. With 8,600 automated test cases across our US and UK models covering edge conditions and complex interactions, we maintain rigorous quality standards. Version control enables rollback within minutes if issues emerge.
 
-**Lawful and Ethical Data Use Guidelines**:
-- **Legal Compliance Framework**: Documented procedures for compliance with federal and state privacy laws
-- **Ethical Review Process**: Annual review by external ethics board including privacy advocates and policy experts
-- **User Education**: Training materials on responsible use of PolicyEngine for sensitive analyses
-- **Transparency Reporting**: Annual report on data use, privacy incidents, and compliance activities
+**Performance and Scalability**: Load testing before major releases ensures stability. Horizontal scaling on Google Cloud Platform handles demand spikes. Database query optimization and Redis caching maintain fast API response times. Regional CDN deployment ensures global accessibility.
 
-**Quality Assurance and Validation**:
-- **Cross-Model Validation**: Systematic comparison with TAXSIM, CBO, and peer models with statistical significance testing
-- **Expert Review Process**: Annual parameter validation by domain experts in tax law, benefit programs, and data science
-- **Public Validation Dashboard**: Real-time display of model agreement rates, calculation accuracy, and data quality metrics
-- **Error Reporting and Correction**: Public issue tracking for calculation errors with transparent resolution process
+**Dependency Management**: We minimize external dependencies, vendoring critical libraries when appropriate. Automated license scanning ensures compliance with open-source obligations. Regular dependency pruning removes unused packages that could introduce vulnerabilities.
+
+### Organizational Risk Management
+
+**Distributed Leadership**: No single point of failure in governance or technical leadership. Each core component has multiple maintainers across institutions. Documented succession plans ensure continuity. Institutional partnerships (NBER, USC, Georgetown) provide organizational resilience.
+
+**Financial Resilience**: Revenue diversification across government contracts, educational licensing, and philanthropic support prevents funding concentration. Six-month operating reserve target provides runway during transitions. Low-overhead remote operations maximize resource efficiency.
+
+**Community Health**: Clear code of conduct based on Contributor Covenant ensures inclusive environment. Conflict resolution procedures address disputes before escalation. Regular community surveys identify emerging issues. Transparent roadmap planning prevents surprise changes that fragment community.
+
+### Ecosystem Security
+
+**Contributor Vetting**: While maintaining open contribution, we implement graduated permissions. New contributors start with documentation and test improvements. Code contributions require review by two core maintainers. Commit access granted only after sustained quality contributions.
+
+**Fork Management**: Clear governance ensures community cohesion, but we prepare for potential forks. Apache 2.0 licensing preserves user rights while requiring attribution. Modular architecture allows component-level forking without ecosystem fragmentation. Regular community engagement prevents divergence motivations.
+
+**Malicious Use Prevention**: While we cannot prevent all misuse, we implement safeguards:
+- Documentation emphasizes uncertainty and limitations
+- API responses include confidence intervals and assumptions
+- Training materials stress ethical analysis practices
+- Community guidelines prohibit misleading advocacy
+- Public corrections for identified misrepresentations
+
+### Quality Assurance
+
+**Testing Coverage**: Comprehensive code coverage with emphasis on critical paths. Integration tests validate full calculation pipelines. Property-based testing identifies edge cases. Regression tests prevent previously fixed bugs from recurring.
+
+**External Audits**: Annual security audits by independent firms. Quarterly validation against government models. Academic peer review of methodological changes. Public bug bounty program incentivizes vulnerability discovery.
+
+**Monitoring and Alerting**: Real-time monitoring of API performance, error rates, and usage patterns. Automated alerts for anomalies or degradation. Weekly security metrics review. Monthly security posture assessment.
+
+### Specific Phase II Security Enhancements
+
+**Year 1 Priorities**:
+- Establish Security Champions program across contributor organizations
+- Deploy hardware security module for release signing
+- Implement comprehensive vulnerability disclosure program
+- Enhance automated testing coverage
+
+**Year 2 Goals**:
+- Formal threat modeling with STRIDE methodology
+- Independent security audit publication
+- Multi-factor authentication for all maintainers
+- Automated compliance monitoring
+
+### Metrics and Accountability
+
+We track security effectiveness through concrete metrics:
+- Mean time to patch: Target < 48 hours for critical vulnerabilities
+- Security Champion coverage: 100% of core components
+- Incident response time: < 2 hours for initial triage
+- Vulnerability disclosure handling: 100% acknowledged within 48 hours
+- Security training completion: 100% of maintainers annually
+- Dependency currency: Regular updates within reasonable timeframes
+
+This comprehensive security approach ensures PolicyEngine remains trustworthy infrastructure for critical policy analysis while maintaining the openness essential for community-driven development.
 ---
 
 ## Community Building
-### Evidence-Based Community Development Strategy
+## Community Building
 
-**User Research Foundation** (comprehensive stakeholder analysis with quantified insights):
-- **Citizen Codex UX Study** (Nuffield Foundation funded): [PLACEHOLDER: verify interview count] stakeholder interviews across [PLACEHOLDER: verify archetype count] user archetypes, [PLACEHOLDER: verify session count] usability testing sessions, and comprehensive information architecture audit
-- **Key Quantified Findings**:
-  - [PLACEHOLDER: verify percentage] of policy analysts identify "getting started" documentation as primary adoption barrier
-  - [PLACEHOLDER: verify percentage] prefer modular, API-accessible tools over monolithic desktop applications
-  - [PLACEHOLDER: verify percentage] require audit trails for policy parameter changes, [PLACEHOLDER: verify percentage] need formal approval workflows
-  - [PLACEHOLDER: verify improvement] improvement in task completion rate after navigation redesign
-  - [PLACEHOLDER: verify increase] increase in ease-of-use ratings following terminology standardization
-- **Archetype-Specific Insights**:
-  - **Government Analysts**: Prioritize reliability, audit trails, and official data sources
-  - **Academic Researchers**: Need reproducibility, citation support, and methodology transparency
-  - **Journalists**: Require rapid turnaround, visualization tools, and fact-checking capabilities
-  - **Policy Advocates**: Focus on accessibility, narrative storytelling, and distributional impact
-  - **Technical Contributors**: Want clear contribution pathways, code quality standards, and recognition
+### User-Centric Community Strategy
 
-**I-Corps Discovery Integration** ([PLACEHOLDER: verify interview count] customer interviews planned, January 2026):
-- **Structured Interview Protocol**: [PLACEHOLDER: verify session length] sessions with standardized questions across [PLACEHOLDER: verify segment count] stakeholder segments
-- **Geographic Distribution**: [PLACEHOLDER: verify federal percentage] federal/national, [PLACEHOLDER: verify state percentage] state/local, [PLACEHOLDER: verify academic percentage] academic, [PLACEHOLDER: verify international percentage] international
-- **Pain Point Validation**: Quantitative ranking of adoption blockers, feature priorities, and willingness-to-pay analysis
-- **Roadmap Prioritization**: Statistical analysis (conjoint analysis, MaxDiff) to rank feature development priorities
-- **Public Roadmap Publication**: Quarterly updates with progress metrics, community voting on feature priorities
+PolicyEngine's community strategy prioritizes users—policy analysts, researchers, benefits counselors—over developers. While technical contributors are essential, our primary community consists of people using microsimulation for policy analysis, not building microsimulation software.
 
-Onboarding meets people where they are, with first‑timer issues, clear contributor guides, a mentorship program, office hours, and starter projects that can be completed in a weekend. Recognition is built into releases and docs, with credits and lightweight badges, and we reserve small micro‑grants for documentation and adapters. Support lives on an open forum and chat, with quick responses to issues and pull requests, a monthly community call to keep momentum, and quarterly hackathons to welcome new contributors.
+**User segments and engagement**:
+- **Policy analysts**: Monthly webinars on modeling current legislation, peer support forums, direct access to PolicyEngine experts during office hours
+- **Researchers**: Validation workshops comparing results across models, collaborative parameter updating, shared test case development
+- **Benefits counselors**: Training on eligibility rules, simplified interfaces for client screening, community-maintained resource guides
+- **Students**: Campus ambassadors, policy modeling competitions, summer research projects using real data
 
-### Design Commitments (from UX Research)
-We are turning research into visible changes. We will simplify navigation and policy organization so that common tasks (select a policy, set a timeframe, view distributional and budget results) are one or two clicks away. Policy naming will follow a consistent style guide and include search‑forward aliases (e.g., common nicknames for credits) to reduce confusion. The first‑run experience will offer example‑driven walkthroughs for analysts and non‑programmers, with copy‑to‑notebook snippets for those who prefer code. Feedback loops become explicit: the app will include a “suggest a fix” entry point that opens a pre‑filled issue with context, and the public roadmap will mark items that came from user studies so contributors see how their input moves work forward. To support international adopters (e.g., Canadian government teams), we will prioritize basic localization (bilingual documentation and UI strings) so contributors and users can work in their preferred language.
+### Structured Support Programs
+
+**Office hours** (timezone-distributed):
+- Tuesday 2pm ET: State/local government focus
+- Wednesday 6pm ET: Academic researchers and students  
+- Thursday 10am PT: Benefits organizations and west coast users
+- Format: 30-minute demo + 30-minute Q&A, recorded for asynchronous viewing
+
+**Documentation by user type**:
+- **Quickstart guides**: "Analyze a bill in 10 minutes" for legislators
+- **Course materials**: Complete syllabi for instructors
+- **API cookbooks**: Code examples for developers
+- **Validation guides**: Comparison methods for researchers
+
+### Building Bridges Across Communities
+
+PolicyEngine connects previously isolated communities:
+- **Researchers ↔ Policymakers**: USC research on benefit cliffs directly informing state legislation
+- **UK ↔ US**: Nuffield-funded local modeling techniques adapted for US congressional districts
+- **Academia ↔ Benefits access**: MyFriendBen using research-grade models for real-world eligibility
+
+**Community events**:
+- Annual conference rotating between DC (policy), NYC (finance), SF (tech)
+- Regional workshops at NCSL, NTA, ASSA meetings
+- Virtual hackathons focused on specific policy questions
+
+### Contributor Recognition
+
+- **Impact badges**: "Helped 10,000 families access benefits"
+- **Research citations**: Papers using PolicyEngine acknowledged in release notes
+- **Policy influence**: Dashboard tracking legislation analyzed using PolicyEngine
+- **Career development**: Letters of recommendation, conference speaking opportunities
+
+### Success Metrics
+
+- **Active users**: 10,000 monthly active users by Year 2 (April 2028)
+- **Geographic distribution**: Users in all 50 states plus 10 countries
+- **Sector diversity**: 40% government, 30% academic, 20% nonprofit, 10% commercial
+- **Support effectiveness**: 90% of questions answered within 24 hours
+- **Community contributions**: 100+ user-contributed test cases, 50+ documentation improvements
 ---
 
 ## Sustainability
-### Comprehensive Financial Sustainability Model
+## Sustainability Plan
 
-**Revenue Diversification Strategy** (target: [PLACEHOLDER: verify annual target] annually by Year 2, [PLACEHOLDER: verify non-federal percentage] non-federal funding):
+### Diversified Revenue Model
 
-**Tier 1: Philanthropic Partnerships** ([PLACEHOLDER: verify tier 1 target] annually):
-- **Arnold Ventures**: Continuation of investment focusing on state-level data infrastructure
-- **Nuffield Foundation**: UK expansion funding ([PLACEHOLDER: verify UK funding potential] for PolicyEngine Europe)
-- **Schmidt Futures**: Technology infrastructure grants ([PLACEHOLDER: verify Schmidt target] annually targeting)
-- **Open Society Foundations**: Global policy transparency initiatives ([PLACEHOLDER: verify OSF potential])
+PolicyEngine will achieve financial sustainability through multiple revenue streams while maintaining free access for public interest use:
 
-**Tier 2: Government Contracts** ([PLACEHOLDER: verify tier 2 target] annually):
-- **Federal Agencies**: Fee-for-service custom analysis and validation ([PLACEHOLDER: verify federal target] annually from Treasury/CBO)
-- **State Governments**: Policy modeling contracts with California, New York, Massachusetts ([PLACEHOLDER: verify state target] combined)
-- **International**: UK Cabinet Office expansion, Canadian federal government integration ([PLACEHOLDER: verify international target] annually)
+**Government Consortiums** ($400K/year target):
+- State consortium: 20 states at $15K/year for training, support, and priority features
+- Federal partnerships: Grants for specific capabilities (CBO validation, administrative data integration)
+- International collaboration: UK, Canada, Germany contributing to shared infrastructure
 
-**Tier 3: Industry Partnerships** ([PLACEHOLDER: verify tier 3 target] annually by Year 2):
-- **Tax Preparation Software**: Integration partnerships with H&R Block, TaxAct, FreeTaxUSA ([PLACEHOLDER: verify tax software target] annually)
-- **Policy Consulting**: Data licensing and priority support for McKinsey, Deloitte policy practices ([PLACEHOLDER: verify consulting target])
-- **Financial Services**: Economic modeling partnerships with regional banks and credit unions ([PLACEHOLDER: verify financial target])
+**Educational Licensing** ($200K/year target):
+- University site licenses: $5K/year for enterprise features, priority support, student accounts
+- Certification program: $200 per certificate for professionals and advanced students
+- Curriculum licensing: Packaged courses for institutions without development capacity
 
-**Tier 4: Training and Certification** ([PLACEHOLDER: verify tier 4 target] annually by Year 3):
-- **Professional Certification**: PolicyEngine Certified Analyst program ([PLACEHOLDER: verify certification fee]/person, targeting [PLACEHOLDER: verify certification target] certifications annually)
-- **Institutional Training**: Workshops for government agencies and universities ([PLACEHOLDER: verify workshop fee] per session, [PLACEHOLDER: verify workshop count] annually)
-- **Online Course Platform**: Coursera/edX partnership for computational policy analysis curriculum
+**Commercial API Access** ($300K/year target):
+- Tax software integration: Volume-based pricing for tax preparation firms
+- Financial services: Banks and fintechs using for customer analysis
+- Policy consulting: Enhanced SLAs and custom features for consultancies
 
-### Operational Sustainability
-Sustainability is primarily an organizational practice, not a funding event. We distribute responsibility across working groups and community maintainers so no single person becomes a bottleneck. We lower onboarding costs through repeatable processes and documentation, and we set concrete targets for new maintainers and external pull requests so we can see progress. Each quarter we allocate time for “keep‑the‑lights‑on” work—security triage, dependency management, and build/release care—so reliability does not depend on heroics.
+**Philanthropic Support** ($600K/year ongoing):
+- Program-specific grants: Benefits access, state capacity building, education initiatives
+- General operating: Unrestricted funding from aligned foundations
+- Individual giving: Annual campaign targeting PolicyEngine users
 
-### Runway and Partners
-Our Phase I award (#2434925, received two weeks ago) funds OSE scoping and participation in I‑Corps for POSE. Arnold Ventures is supporting development of state and congressional district weights in the U.S., building on earlier work in the UK funded by the Nuffield Foundation. Their prior investments also enabled user‑customizable behavioral responses and SALT‑AMT interaction analysis using PolicyEngine’s state encodings—tools used to brief congressional staff—and helped seed open libraries that groups such as the Yale Budget Lab have adopted. The UK Cabinet Office engagement, documented in HM Treasury’s Algorithmic Transparency Record, underscores government appetite for integrating PolicyEngine into policy workflows and provides a concrete model for U.S. public‑sector adoption. Together, these relationships create a practical runway for the OSE to grow while maintaining a disciplined, open process.
+### Governance for Longevity
 
-### Industry Participation
-Commercial adopters help sustain the ecosystem with both engineering and funding. When a tax firm or software vendor needs a new provision or a state‑level nuance, the change is specified, implemented with tests and documentation, and merged upstream so the policy community gains the capability as well. When a market‑research firm or financial institution funds performance or data‑pipeline improvements, we ship them as signed, reproducible releases. We do not grant exclusivity; instead, sponsors receive recognition, predictable delivery, and the benefits of an expanding contributor base. POSE funds remain focused on OSE enablement and operations (governance, security, release engineering, onboarding, evaluation); firm‑specific features are supported by external funds and incorporated when they generalize.
+**Institutional anchoring**: NBER partnership provides long-term stability beyond individual founders. University partnerships (USC, Georgetown) ensure academic continuity.
+
+**Technical sustainability**: Modular architecture allows distributed maintenance. Comprehensive documentation enables knowledge transfer. Automated testing prevents regression.
+
+**Community resilience**: Multiple maintainers per component prevent single points of failure. Clear succession planning for all leadership roles. Documented governance processes survive personnel changes.
+
+### Measuring Sustainability
+
+- **Financial metrics**: 50% budget from earned revenue by Year 2 (April 2028); 6-month operating reserve established
+- **Community metrics**: 5+ institutional maintainers; 20+ regular contributors; 24-hour global coverage
+- **Usage metrics**: 10,000+ monthly active users; 100+ published analyses monthly
+- **Impact metrics**: $2B+ in benefits accessed; 20+ states using platform; 10,000+ students trained
 ---
 
 ## Evaluation Plan and Metrics
-### Comprehensive Evaluation Framework and Success Metrics
+## Evaluation Plan
 
-**Primary Outcome Categories** (quantitative targets with measurement methodology):
+### Key Performance Indicators
 
-**1. Ecosystem Adoption Metrics** (baseline vs. 24-month targets):
-- **Named Institutional Deployments**: [PLACEHOLDER: verify current deployments] → [PLACEHOLDER: verify target deployments] organizations (government agencies, universities, think tanks)
-- **Monthly Active Users**: [PLACEHOLDER: verify current MAU] → [PLACEHOLDER: verify target MAU] with geographic distribution tracking
-- **API Usage Volume**: [PLACEHOLDER: verify current API calls] monthly calls → [PLACEHOLDER: verify target API calls] calls with [PLACEHOLDER: verify uptime target] uptime SLA
-- **Retention Analysis**: [PLACEHOLDER: verify retention period] organizational retention rate [PLACEHOLDER: verify org retention target], individual user retention [PLACEHOLDER: verify user retention target]
-- **Geographic Expansion**: Active users in [PLACEHOLDER: verify country target] countries, with dedicated support in [PLACEHOLDER: verify language target] languages
+**Ecosystem Growth**:
+- User adoption: Monthly active users, new registrations, retention rates
+- Geographic reach: States and countries with active users
+- Institutional adoption: Government agencies, universities, nonprofits using platform
+- Community contributions: Pull requests, issues filed, documentation improvements
 
-**2. Community Contribution Health** (development velocity and sustainability):
-- **External Contributors**: [PLACEHOLDER: verify current contributors] regular → [PLACEHOLDER: verify target contributors] active contributors
-- **Pull Request Metrics**: Median review time [PLACEHOLDER: verify current review time] → [PLACEHOLDER: verify target review time], [PLACEHOLDER: verify merge rate target] merge rate maintained
-- **Issue Resolution**: Median resolution time [PLACEHOLDER: verify current resolution time] → [PLACEHOLDER: verify target resolution time] for standard issues
-- **Maintainer Pipeline**: Graduate [PLACEHOLDER: verify maintainer target] new maintainers annually with [PLACEHOLDER: verify retention period] retention [PLACEHOLDER: verify retention target]
-- **Documentation Quality**: User satisfaction [PLACEHOLDER: verify satisfaction target], tutorial completion rate [PLACEHOLDER: verify completion target]
+**Impact Metrics**:
+- Policy analyses: Number and quality of published analyses using PolicyEngine
+- Benefits accessed: Dollar value of benefits identified through partner organizations
+- Students trained: Course enrollments, certifications issued, career placements
+- Research output: Academic papers citing PolicyEngine, methodological advances
 
-**3. Technical Quality and Security Assurance**:
-- **Code Coverage**: Maintain [PLACEHOLDER: verify line coverage target] line coverage, [PLACEHOLDER: verify branch coverage target] branch coverage across all packages
-- **Security Response**: Critical vulnerabilities patched within [PLACEHOLDER: verify critical patch time], high-severity within [PLACEHOLDER: verify high-severity patch time]
-- **Release Quality**: [PLACEHOLDER: verify release percentage] of releases include SBOM, GPG signatures, and automated security scans
-- **Cross-Model Validation**: [PLACEHOLDER: verify agreement target] agreement with TAXSIM, CBO, and peer models on core scenarios
-- **Reproducibility Audits**: [PLACEHOLDER: verify analysis percentage] of published analyses include runnable code and documented data lineage
+**Technical Health**:
+- System reliability: API uptime, response times, error rates
+- Code quality: Test coverage, bug resolution time, release frequency
+- Validation accuracy: Agreement rates with established models (TAXSIM, CBO, TPC)
+- Security posture: Vulnerability scan results, time to patch, dependency updates
 
-**4. Data Calibration Performance** (statistical accuracy and methodological rigor):
-- **State-Level Accuracy**: Demographic targets within [PLACEHOLDER: verify demographic accuracy] of Census ACS, economic targets within [PLACEHOLDER: verify economic accuracy] of IRS SOI
-- **Congressional District Precision**: Population weights matching official Census totals within [PLACEHOLDER: verify precision margin] margin
-- **Loss Function Convergence**: L2 loss [PLACEHOLDER: verify L2 target] for demographic targets, L1 loss [PLACEHOLDER: verify L1 target] for economic targets
-- **Holdout Validation**: Cross-validation performance stable within [PLACEHOLDER: verify stability percentage] across different train/test splits
-- **Administrative Target Coverage**: [PLACEHOLDER: verify coverage percentage] of available targets incorporated, with documented exclusion rationale
+### Data Collection Methods
 
-### Systematic Measurement and Continuous Improvement Process
+**Automated tracking**: Platform analytics for usage patterns, API calls, user segments
+**Surveys**: Quarterly user satisfaction, annual community health assessment
+**Case studies**: Deep dives on high-impact use cases (state legislation, research breakthroughs)
+**External validation**: Independent audits of calculations, security reviews
 
-**Data Collection and Monitoring Infrastructure**:
-- **Public Dashboard**: Real-time metrics updated daily at metrics.policyengine.org with historical trends
-- **Automated Data Pipeline**: GitHub Actions integration collecting contribution metrics, usage analytics, and performance data
-- **Privacy-Preserving Analytics**: Aggregated usage patterns without individual user tracking, GDPR-compliant data retention
-- **Quarterly Stakeholder Surveys**: Structured feedback collection from 4 user segments (government, academic, media, advocacy)
+### Evaluation Timeline
 
-**Evaluation Methodology and Statistical Analysis**:
-- **Baseline Establishment**: Comprehensive metrics collection in Month 1 with historical trend analysis where available
-- **A/B Testing Framework**: Controlled experiments for major UI changes, onboarding improvements, and community interventions
-- **Longitudinal Analysis**: Monthly cohort analysis tracking user progression from first visit to active contributor
-- **Comparative Benchmarking**: Quarterly comparison with peer OSS projects (similar scale, domain, community structure)
+**Monthly**: Usage metrics dashboard, bug tracking, release notes
+**Quarterly**: User surveys, financial reports, community meeting
+**Annually**: Impact assessment, sustainability review, strategic planning
 
-**Steering Committee Review Process** (evidence-based decision making):
-- **Monthly Metrics Review**: Core team assessment of trend directions with alert thresholds for concerning patterns
-- **Quarterly Strategic Assessment**: Steering committee evaluation of progress against annual targets with roadmap adjustments
-- **I-Corps Integration**: Customer interview insights systematically incorporated into metric interpretation and priority setting
-- **Annual External Review**: Independent evaluation by OSS ecosystem experts with published assessment report
+### Advisory Board Review
 
-**Transparency and Accountability Framework**:
-- **Public Reporting**: Quarterly progress reports published on project blog with methodology transparency
-- **NSF Reporting Integration**: Automated generation of required federal reports with detailed progress narratives
-- **Community Feedback Loops**: Monthly community calls presenting metrics and soliciting input on interpretation and priorities
-- **Academic Publication**: Annual methodology paper in peer-reviewed venue documenting evaluation approach and lessons learned
+External advisors from NBER, Georgetown, USC, and government partners will conduct annual reviews assessing:
+- Progress against milestones
+- Community health indicators
+- Financial sustainability trajectory
+- Strategic direction alignment
 
-**Continuous Improvement Process** (adaptive management approach):
-- **Early Warning System**: Automated alerts for metrics falling below threshold values with escalation procedures
-- **Root Cause Analysis**: Systematic investigation of negative trends with documented remediation plans
-- **Success Pattern Recognition**: Analysis of positive outliers to identify scalable best practices
-- **Course Correction Protocol**: Formal process for major strategic pivots based on evaluation evidence with community consultation
+Results will be published transparently, informing course corrections and demonstrating accountability to funders and users.
 ---
 
 ## Broader Impacts (PAPPG required section)
-### Broader Impacts
-This project broadens access to evidence‑based policymaking by delivering an auditable, open‑source platform for distributional and budget analysis that researchers, policymakers, journalists, and the public can use and improve. In practice, this means that a legislative office can test a change to a credit and see its incidence; a newsroom can reproduce the analysis behind a headline; and an academic seminar can dig into the assumptions and extend the work. By reducing dependence on proprietary models, we make debates easier to adjudicate on the merits and help good ideas travel further, faster.
+# Broader Impacts
 
-Our broader‑impacts activities focus on practical steps that make participation and use easier. Contributor pathways come with mentorship, first‑timer issues, and clear documentation so new maintainers can confidently make their first change. Training and outreach run through workshops, case studies, and partner pilots in academia and government, so the tooling is taught where it will be used. Privacy‑preserving workflows and guidance keep sensitive microdata out of repositories and show analysts how to work safely and lawfully with local systems.
+PolicyEngine's open-source ecosystem will transform how society analyzes and implements tax-benefit policy, addressing critical gaps in democratic policymaking infrastructure while advancing scientific understanding of policy effects on diverse populations.
 
-Over the award we expect to see wider adoption of reproducible policy analysis, wider access to high‑quality tools, a steady increase in external contributions and maintainers, and clearer transparency around modeling assumptions and results. We will track adoption, contribution, and quality/security alongside calibration metrics, and we will adjust activities based on evidence from I‑Corps interviews and observed usage, making our learning process as open as our code.
+## Democratizing Policy Analysis
 
-### Illustrative Use Cases
-Consider three common settings. A state revenue office is evaluating a refundable credit redesign; an analyst loads a canonical scenario, toggles eligibility parameters, and immediately sees distributional tables by decile, geography, and family type, with footnotes that cite assumptions and links to reproducible notebooks. A newsroom needs to sanity‑check a claim about the budget effect of a late‑breaking amendment; an editor opens a saved scenario, updates the effective date and income ranges, and exports ready‑to‑publish charts, with the methodology available in the references. A benefit navigator wants to estimate the take‑up and cash‑flow effect of a policy change for their clients; a program lead imports a county‑level scenario, runs head‑to‑head comparisons against baseline and published scores, and shares results with a case‑worker team. In each case, the path from question to reviewed answer is short, reproducible, and public—exactly the behavior an OSE should enable.
+The current concentration of microsimulation capability in twelve institutions creates profound inequities in policy development. State legislatures allocating billions in TANF and Medicaid funds rely on static Excel models that cannot capture program interactions. Community colleges teaching public finance use outdated textbook examples rather than real policy tools. Local governments implementing housing assistance programs cannot model eligibility cliffs that trap families in poverty.
+
+PolicyEngine eliminates these barriers. Our platform has already enabled the Joint Economic Committee to independently analyze federal proposals, helped New York State Senator Gounardes model tax credit designs, and empowered USC researchers to conduct marginal tax rate studies previously impossible without proprietary access. By Phase II completion, we project 20 state governments, 30 universities, and 50 community organizations will actively use PolicyEngine, fundamentally reshaping who participates in evidence-based policymaking.
+
+## Accelerating Benefits Access
+
+The $80 billion annual gap in unclaimed benefits represents both massive individual hardship and systemic policy failure. Our partnership with MyFriendBen demonstrates the transformative potential of open-source microsimulation for benefits access. Using PolicyEngine's API, MyFriendBen identified $800 million in unclaimed benefits for 50,000 Colorado families. The platform is expanding nationwide with $2.4 million in Gates Foundation support.
+
+This impact multiplies through ecosystem effects as multiple organizations explore migrating from closed-source alternatives to PolicyEngine's open infrastructure. Each organization brings domain expertise while contributing improvements that benefit the entire ecosystem. We project $2 billion in additional benefits accessed by Year 2 through partner organizations.
+
+## Transforming Policy Education
+
+Current policy education suffers from a theory-practice gap: students learn simplified models disconnected from real-world complexity. PolicyEngine enables authentic policy learning using the same tools that analyze actual legislation. Our curriculum modules for USC's public finance course, Georgetown's Better Government Lab projects, and Berkeley's policy seminars provide students hands-on experience with production-grade microsimulation.
+
+The educational impact extends beyond traditional programs. Through partnerships with community colleges and Minority-Serving Institutions, we will train a diverse generation of policy analysts previously excluded from this field. Our "PolicyEngine Certified Analyst" program provides formal credentials recognized by government agencies and research institutions, creating career pathways into policy analysis for underrepresented communities.
+
+## Building State and Local Capacity
+
+State and local governments implement most safety net programs yet lack analytical tools to design effective policies. NCSL confirms that most states cannot model basic questions like "How would expanding EITC affect working families?" or "What are the interaction effects between SNAP and childcare subsidies?" This analytical deficit perpetuates inefficient policies that fail to achieve intended outcomes.
+
+PolicyEngine addresses this through targeted capacity building. Our state consortium model provides training, dedicated support, and collaborative development ensuring states can analyze their unique policy landscapes. The UK Cabinet Office's successful integration—with Nikhil Woodruff currently on secondment to support their implementation—provides a template for U.S. federal agency adoption. By enabling evidence-based policy design at all government levels, PolicyEngine strengthens democratic governance and improves outcomes for millions of families.
+
+## Advancing Diversity, Equity, and Inclusion
+
+The concentration of microsimulation capability in elite institutions perpetuates systemic inequities in policy analysis. PolicyEngine's open-source approach directly addresses these disparities through interconnected pathways that expand access and participation.
+
+Our partnerships with community colleges, HBCUs, and Hispanic-Serving Institutions ensure that diverse institutions can teach and conduct research using professional-grade tools previously available only to well-resourced universities. The modular architecture of our platform enables community-driven translations and cultural adaptations, making policy analysis accessible to non-English speaking communities who have been historically excluded from these conversations.
+
+Perhaps most importantly, open-source code exposes model assumptions for scrutiny, enabling communities to identify and correct biases that may disadvantage marginalized populations. Unlike proprietary models where affected communities have no voice in how their circumstances are modeled, PolicyEngine enables direct contribution of improvements based on lived experience of policy impacts. This participatory development model transforms beneficiaries from passive subjects of analysis to active contributors shaping how policies affecting their lives are evaluated.
+
+## Mitigating Potential Negative Impacts
+
+We acknowledge that democratizing policy analysis tools could enable misleading advocacy or politically motivated distortions. PolicyEngine addresses these risks through comprehensive safeguards built into both our technology and governance structures.
+
+Every calculation includes detailed breakdowns that enable fact-checkers to verify claims, with continuous validation against TAXSIM and other established models providing accuracy benchmarks that users can reference. Model limitations and parameter sources are explicitly documented throughout the platform, preventing misrepresentation of preliminary analyses as definitive conclusions. Our training materials emphasize responsible analysis practices, uncertainty communication, and ethical considerations in policy modeling, ensuring that users understand both the power and limitations of microsimulation.
+
+The steering committee, composed of diverse stakeholders from government, academia, and community organizations, reviews controversial use cases and establishes ethical guidelines for platform use. This governance structure ensures that democratization doesn't come at the expense of analytical integrity.
+
+## Catalyzing Open-Source Innovation
+
+PolicyEngine demonstrates the viability of open-source approaches for critical policy infrastructure. Our success catalyzes broader adoption of open-source models in government technology, showing that transparent, community-driven development can match or exceed proprietary alternatives in quality while dramatically expanding access.
+
+The ecosystem's modular architecture—with independently maintained packages for L0 regularization, quantile regression forests, and microdata calibration—provides a template for sustainable open-source development. Each component attracts specialized contributors while benefiting from integration with the broader platform. This model influences how other policy technology projects approach open-source sustainability.
+
+## Measuring Broader Impact
+
+We will track broader impacts through concrete metrics:
+- Number of states using PolicyEngine for legislative analysis (target: 20 by Year 2)
+- Students trained in microsimulation methods (target: 10,000 by Year 2)
+- Benefits accessed through partner organizations (target: $2 billion by Year 2)
+- Research papers using PolicyEngine (target: 100 annually by Year 2)
+- Contributors from underrepresented groups (target: 40% by Year 2)
+- Policy analyses conducted by previously excluded organizations (target: 1,000 by Year 2)
+
+These metrics demonstrate not just usage but transformative impact on who participates in policy analysis and how evidence informs democratic decision-making.
 ---
 
 ## Conclusion and Roadmap
-Conclusion and Roadmap
+# Conclusion
 
-PolicyEngine is already used to answer real questions about tax and benefit policy. Phase II funding will not change what the code does so much as how the ecosystem around it works. Our plan focuses on the practices that make an open‑source ecosystem durable: governance that anyone can understand and rely on; release engineering that institutions can trust; contributor pathways that turn users into maintainers; and evaluation that shows, in public, whether adoption and quality are improving.
+PolicyEngine stands at a critical inflection point. We have proven that open-source microsimulation can match proprietary alternatives in accuracy while dramatically expanding access. Government adoption from the Joint Economic Committee to the UK Cabinet Office validates our technical approach. Growing interest from benefits platforms in migrating from closed-source alternatives demonstrates market demand. Serving over 100,000 people per year through our API and partners, with rapid growth as partnerships scale, we have achieved product-market fit.
 
-The immediate steps are straightforward. We complete I‑Corps for POSE in January and publish the adoption‑blockers report and onboarding materials. We formalize governance and security—CODEOWNERS, RFCs, signed releases, and SBOM—so partners have clear assurances. We release stable versions of L0, MicroImpute, and MicroCalibrate with examples that shorten time‑to‑first‑contribution, and we document the calibration pipeline so state and congressional district runs are reproducible. With partners, we run at least two pilots that demonstrate the end‑to‑end path from a policy question to a reviewed, reproducible answer.
+Now we must transform this momentum into a self-sustaining ecosystem. NSF POSE Phase II funding provides the crucial catalyst for this transition, enabling us to formalize governance structures, establish contributor pathways, and build the training infrastructure necessary for long-term sustainability.
 
-From there the work becomes a cadence. We ship on a predictable schedule; we answer issues and reviews quickly; we recruit and support new maintainers; and each quarter we look at the dashboard and change course if the evidence says we should. The product of this process is not just a model but a public, verifiable way of working that others can adopt and extend. That is the point of an ecosystem: it outlasts any single team.
+## The Path Forward
 
-Timing and Decisions
-Based on recent POSE cycles, we expect roughly six to eight months from the September deadline to an award start. In practice, that means decisions in February to April 2026 and a start window in March to June 2026. Our January I‑Corps for POSE work feeds directly into an early design‑freeze milestone before the broad rollout. Phase II dollars are strictly for ecosystem enablement and operations; Phase I covers scoping, and we will not duplicate that scope in Phase II.
+Our Phase II plan directly addresses the requirements for a successful open-source ecosystem. We will establish a formal governance structure transitioning from PSL Foundation fiscal sponsorship to an independent 501(c)(3) with representation from government users, academic researchers, and technical maintainers. This structure ensures community ownership while maintaining technical excellence.
+
+The distributed development model already emerging—with UK developers contributing local authority features, USC researchers adding benefit cliff analyses, and multiple organizations building on our API—will be formalized through clear contribution guidelines, mentorship programs, and modular architecture that enables specialized communities to maintain components while ensuring system coherence.
+
+Our sustainability model combines diverse revenue streams: state government consortiums, educational licensing, commercial API access, and philanthropic support. Unlike projects dependent on single funding sources, PolicyEngine builds resilience through multiple stakeholder communities, each with incentives for continued support.
+
+## Why NSF Investment Matters Now
+
+The timing for NSF investment is critical. The policy landscape is experiencing unprecedented change—pandemic-era program expansions, state-level experimentation with guaranteed income, federal tax credit modifications—yet most decision-makers lack tools to analyze these changes. The current migration of benefits navigators from proprietary to open-source platforms creates a unique window to establish PolicyEngine as the standard infrastructure.
+
+Our participation in the January 2026 I-Corps cohort will refine our ecosystem strategy based on systematic stakeholder discovery. The overlap with our Phase I period through July 2026 enables immediate application of I-Corps insights while maintaining momentum. Beginning Phase II in May 2026 ensures continuity of effort during this critical growth phase.
+
+NSF support provides more than funding—it validates PolicyEngine as research infrastructure worthy of public investment. This credibility accelerates government adoption, attracts academic contributors, and signals long-term viability to potential users currently hesitant about open-source sustainability.
+
+## Transformative Potential
+
+PolicyEngine's success will fundamentally reshape policy analysis infrastructure. Instead of twelve institutions controlling microsimulation capability, thousands of organizations will analyze policies affecting their communities. Instead of students learning from textbooks, they will use the same tools analyzing real legislation. Instead of families missing benefits due to complexity, community organizations will identify eligibility using transparent, validated calculations.
+
+The ecosystem model we establish becomes a template for other policy technology domains. By demonstrating that open-source development can produce mission-critical government infrastructure, we influence broader adoption of transparent, community-driven approaches to public technology.
+
+## Commitment to Success
+
+Our team brings unique qualifications to execute this vision. Max Ghenis combines Google Analytics experience with MIT policy training and PolicyEngine's founding vision. Nikhil Woodruff's technical leadership and current UK Cabinet Office secondment demonstrates our platform's government-readiness. Pavel Makarchuk bridges U.S. and international implementations. Dan Feenberg's three decades maintaining TAXSIM provides unmatched expertise in microsimulation sustainability.
+
+Our institutional partners amplify these capabilities. NBER's network reaches hundreds of economists ready to adopt open tools. USC's Center for Economic and Social Research validates our methods through HHS-funded research. Georgetown's Better Government Lab channels student energy into platform improvements. MyFriendBen's benefits navigation demonstrates real-world impact at scale; MyFriendBen reports screening over 40,000 Colorado households in its first two years with a median monthly benefit value of $1,500 (MyFriendBen, 2025).
+
+## A Call to Action
+
+The question is not whether policy analysis infrastructure should be democratized—the concentration of capability in elite institutions while states use Excel for billion-dollar programs is clearly unsustainable. The question is whether we seize this moment to establish open-source microsimulation as the foundation for evidence-based policymaking.
+
+With NSF POSE Phase II support, PolicyEngine will become the open infrastructure that enables any organization to analyze how policies affect their communities. We will train thousands of new policy analysts, identify billions in unclaimed benefits, and ensure that policy decisions reflect evidence rather than ideology. Most importantly, we will prove that critical government infrastructure can be transparent, community-driven, and accessible to all.
+
+The broader impacts extend beyond immediate users. By establishing sustainable open-source models for policy technology, we influence how society develops and maintains public goods in the digital age. By training diverse cohorts in microsimulation methods, we reshape who participates in policy analysis. By exposing model assumptions and calculations, we strengthen democratic accountability.
+
+PolicyEngine is ready for this next phase. Our technical foundation is solid, our user community is growing, and our vision for democratized policy analysis resonates across political divides. With NSF's partnership, we will build the open-source ecosystem that transforms tax-benefit microsimulation from proprietary privilege to public infrastructure, ensuring that evidence-based policymaking becomes accessible to all who seek to improve their communities.
+
+The future of policy analysis is open, transparent, and community-driven. With POSE Phase II support, PolicyEngine will make that future a reality.
 ---
 
 # Summary
@@ -627,110 +594,72 @@ Based on recent POSE cycles, we expect roughly six to eight months from the Sept
 
 # References Cited
 
-*[Formatted according to NSF PAPPG guidelines]*
+CISA; National Security Agency. (2022). Securing the software supply chain: Recommended practices for developers. Cybersecurity and Infrastructure Security Agency and National Security Agency. https://media.defense.gov/2022/Sep/01/2003068942/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF
 
-**Core Technical References**
+Feenberg, D., & Coutts, E. (1993). An introduction to the TAXSIM model. Journal of Policy Analysis and Management, 12(1), 189–194. https://doi.org/10.2307/3325474
 
-CISA & NSA. (2022). Securing the Software Supply Chain: Recommended Practices for Developers. Cybersecurity and Infrastructure Security Agency and National Security Agency. https://media.defense.gov/2022/Sep/01/2003068942/-1/-1/0/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_DEVELOPERS.PDF
+Louizos, C., Welling, M., & Kingma, D. P. (2018). Learning sparse neural networks through L0 regularization. Proceedings of the International Conference on Learning Representations (ICLR). https://openreview.net/forum?id=H9gRavnMhq
 
-Feenberg, D., & Coutts, E. (1993). An Introduction to the TAXSIM Model. *Journal of Policy Analysis and Management*, 12(1), 189–194. doi:10.2307/3325474
+Meinshausen, N. (2006). Quantile regression forests. Journal of Machine Learning Research, 7, 983–999. https://www.jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf
 
-Louizos, C., Welling, M., & Kingma, D. P. (2018). Learning Sparse Neural Networks through L₀ Regularization. *Proceedings of the International Conference on Learning Representations (ICLR)*. https://openreview.net/forum?id=H9gRavnMhq
+Open Source Security Foundation. (2023). OpenSSF Best Practices Badge Program criteria. Open Source Security Foundation. https://www.bestpractices.dev/en/criteria
 
-Meinshausen, N. (2006). Quantile regression forests. *Journal of Machine Learning Research*, 7, 983–999. https://www.jmlr.org/papers/volume7/meinshausen06a/meinshausen06a.pdf
+Contributor Covenant. (2021). Contributor Covenant Code of Conduct (Version 2.1). https://www.contributor-covenant.org/version/2/1/code_of_conduct/
 
-**Security and Quality Standards**
+National Institute of Standards and Technology. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for mitigating the risk of software vulnerabilities (NIST Special Publication 800-218). https://doi.org/10.6028/NIST.SP.800-218
 
-OpenSSF. (2023). OpenSSF Best Practices Badge Program Criteria. Open Source Security Foundation. https://www.bestpractices.dev/en/criteria
+Bill & Melinda Gates Foundation. (2024). MyFriendBen receives $2.4M grant to expand access to public benefits. https://www.myfriendben.org/myfriendben-receives-grant-to-expand-access-to-public-benefits/
 
-Contributor Covenant. (2021). Contributor Covenant Code of Conduct, Version 2.1. https://www.contributor-covenant.org/version/2/1/code_of_conduct/
+PolicyEngine. (2024). MyFriendBen launches in North Carolina, using PolicyEngine API. https://policyengine.org/us/research/myfriendben-nc
 
-NIST. (2022). Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities. *NIST Special Publication 800-218*. https://doi.org/10.6028/NIST.SP.800-218
+HM Treasury. (2024). Algorithmic Transparency Record: PolicyEngine UK tax-benefit model (ATR-2024-007). https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine
 
-**PolicyEngine Software Packages and Documentation**
+Ghenis, M., & Woodruff, N. (2024). PolicyEngine: An open-source tax-benefit microsimulation platform (Version 1.47.0) [Software]. GitHub. https://github.com/PolicyEngine/policyengine-us
 
-Ghenis, M., & Woodruff, N. (2024). *PolicyEngine: An Open-Source Tax-Benefit Microsimulation Platform*. Version 1.47.0. [Software]. https://github.com/PolicyEngine/policyengine-us
+Woodruff, N. (2024). MicroImpute: Quantile regression forest imputation for microsimulation (Version 0.3.1) [Software]. PyPI. https://pypi.org/project/microimpute/
 
-Woodruff, N. (2024). *MicroImpute: Quantile Regression Forest Imputation for Microsimulation*. Version 0.3.1. [Software]. PyPI. https://pypi.org/project/microimpute/
+Woodruff, N. (2024). MicroCalibrate: Gradient-descent population reweighting with sparsity (Version 0.2.4) [Software]. PyPI. https://pypi.org/project/microcalibrate/
 
-Woodruff, N. (2024). *MicroCalibrate: Gradient-Descent Population Reweighting with Sparsity*. Version 0.2.4. [Software]. PyPI. https://pypi.org/project/microcalibrate/
+Ghenis, M. (2024). L0-Python: Differentiable sparsity for PyTorch (Version 0.1.8) [Software]. PyPI. https://pypi.org/project/l0-python/
 
-Ghenis, M. (2024). *L0-Python: Differentiable Sparsity for PyTorch*. Version 0.1.8. [Software]. PyPI. https://pypi.org/project/l0-python/
+PolicyEngine Team. (2024). Enhanced Current Population Survey: Methodology and validation. PolicyEngine. https://policyengine.github.io/policyengine-us-data/
 
-PolicyEngine Team. (2024). *Enhanced Current Population Survey: Methodology and Validation*. Technical Documentation. https://policyengine.github.io/policyengine-us-data/
+Apache Software Foundation. (2019). The Apache Way. https://www.apache.org/theapacheway/
 
-**Governance and Community Framework References**
+Linux Foundation. (2021). Open source project governance models. https://www.linuxfoundation.org/resources/open-source-guides/
 
-Apache Software Foundation. (2019). *The Apache Way*. https://www.apache.org/theapacheway/
+NumFOCUS. (2023). Fiscal sponsorship model for open source scientific computing. https://numfocus.org/sponsors
 
-Linux Foundation. (2021). *Open Source Project Governance Models*. https://www.linuxfoundation.org/resources/open-source-guides/
+Nielsen, J. (2020). 10 usability heuristics for user interface design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
 
-NumFOCUS. (2023). *Fiscal Sponsorship Model for Open Source Scientific Computing*. https://numfocus.org/sponsors
+Burman, L. E., & Phaup, M. (2012). Tax expenditures, the size and efficiency of government, and implications for budget reform. Tax Policy and the Economy, 26(1), 93–124.
 
-**User Experience Research**
+Congress of the United States, Congressional Budget Office. (2024). How CBO analyzes the effects of changes in federal fiscal policies on the economy. https://www.cbo.gov/publication/59003
 
-Citizen Codex. (2025). *Re-imagining PolicyEngine: UX Research Report*. Commissioned by Nuffield Foundation. [Internal Report]
+Joint Committee on Taxation. (2023). Overview of the tax system as in effect for 2023 (JCX-9-23). https://www.jct.gov/publications/2023/jcx-9-23/
 
-Nielsen, J. (2020). *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+Bargain, O., Orsini, K., & Peichl, A. (2014). Comparing labor supply elasticities in Europe and the United States: New results. Journal of Human Resources, 49(3), 723–838.
 
-**Validation and Peer Model References**
+Sutherland, H., & Figari, F. (2013). EUROMOD: The European Union tax-benefit microsimulation model. International Journal of Microsimulation, 6(1), 4–26.
 
-Burman, L. E., & Phaup, M. (2012). Tax expenditures, the size and efficiency of government, and implications for budget reform. *Tax Policy and the Economy*, 26(1), 93-124.
+Statistics Canada. (2023). Social Policy Simulation Database and Model (SPSD/M). https://www.statcan.gc.ca/en/microsimulation/spsdm
 
-Congress of the United States, Congressional Budget Office. (2024). *How CBO Analyzes the Effects of Changes in Federal Fiscal Policies on the Economy*. https://www.cbo.gov/publication/59003
+Auerbach, A. J., & Hassett, K. (2015). Capital taxation in the 21st century. American Economic Review, 105(5), 38–42.
 
-Joint Committee on Taxation. (2023). *Overview of the Tax System as in Effect for 2023*. JCX-9-23. https://www.jct.gov/publications/2023/jcx-9-23/
+Piketty, T., Saez, E., & Zucman, G. (2018). Distributional national accounts: Methods and estimates for the United States. The Quarterly Journal of Economics, 133(2), 553–609.
 
-**International and Comparative Policy Models**
+Saez, E., & Zucman, G. (2019). The triumph of injustice: How the rich dodge taxes and how to make them pay. W. W. Norton & Company.
 
-Bargain, O., Orsini, K., & Peichl, A. (2014). Comparing labor supply elasticities in Europe and the United States: New results. *Journal of Human Resources*, 49(3), 723-838.
+Eghbal, N. (2020). Working in public: The making and maintenance of open source software. Stripe Press.
 
-Sutherland, H., & Figari, F. (2013). EUROMOD: The European Union tax-benefit microsimulation model. *International Journal of Microsimulation*, 6(1), 4-26.
+Navas-Loro, M., Canestrari, S., & Morales-Urrutia, E. K. (2023). Sustainability of open-source software communities beyond a fork: How and why has the LibreOffice project evolved? Sustainability, 15(2), 1277.
 
-Statistics Canada. (2023). *Social Policy Simulation Database and Model (SPSD/M)*. Technical Documentation. https://www.statcan.gc.ca/en/microsimulation/spsdm
+Scacchi, W. (2007). Free/open source software development: Recent research results and methods. Advances in Computers, 69, 243–295.
 
-**Government Partnership Documentation**
+Peng, R. D. (2011). Reproducible research in computational science. Science, 334(6060), 1226–1227.
 
-HM Treasury. (2024). *HMT Modelling - Policy Engine: Algorithmic Transparency Record*. ATR-2024-007. https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine
+Rule, A., Birmingham, A., Zuniga, C., Altintas, I., Huang, S.-C., Knight, R., Moshiri, N., Nguyen, M. H., Rosenthal, S. B., Pérez, F., & Rose, P. W. (2019). Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks. PLOS Computational Biology, 15(7), e1007007. https://doi.org/10.1371/journal.pcbi.1007007
 
-Nuffield Foundation. (2024). *Enhancing, localising and democratising tax-benefit policy analysis*. Grant Award Decision. https://www.nuffieldfoundation.org/project/enhancing-localising-and-democratising-tax-benefit-policy-analysis
+MyFriendBen. (2025, May 7). How we started and where we’re going. https://www.myfriendben.org/how-we-started-and-where-were-going/
 
-**Policy Analysis and Economic Research References**
-
-Auerbach, A. J., & Hassett, K. (2015). Capital taxation in the 21st century. *American Economic Review*, 105(5), 38-42.
-
-Piketty, T., Saez, E., & Zucman, G. (2018). Distributional national accounts: Methods and estimates for the United States. *The Quarterly Journal of Economics*, 133(2), 553-609.
-
-Saez, E., & Zucman, G. (2019). *The Triumph of Injustice: How the Rich Dodge Taxes and How to Make Them Pay*. W. W. Norton & Company.
-
-**Open Source Ecosystem and Sustainability Studies**
-
-Eghbal, N. (2020). *Working in Public: The Making and Maintenance of Open Source Software*. Stripe Press.
-
-Navas-Loro, M., Canestrari, S., & Morales-Urrutia, E. K. (2023). Sustainability of open-source software communities beyond a fork: How and why has the LibreOffice project evolved? *Sustainability*, 15(2), 1277.
-
-Scacchi, W. (2007). Free/open source software development: Recent research results and methods. *Advances in Computers*, 69, 243-295.
-
-**Reproducible Research and Scientific Computing**
-
-Peng, R. D. (2011). Reproducible research in computational science. *Science*, 334(6060), 1226-1227.
-
-Rule, A., Birmingham, A., Zuniga, C., Altintas, I., Huang, S. C., Knight, R., ... & Rose, P. W. (2019). Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks. *PLOS Computational Biology*, 15(7), e1007007.
-
-**Institutional Partnerships and Validation Letters**
-
-Better Government Lab, Georgetown University. (2025). *Letter of Collaboration for PolicyEngine POSE Initiative*. August 15, 2025. [Formal Partnership Agreement]
-
-National Bureau of Economic Research. (2025). *Memorandum of Understanding: PolicyEngine Collaboration and TAXSIM Integration*. August 15, 2025. [Institutional Agreement]
-
-Policy Simulation Library Consortium. (2025). *Letter of Support for PolicyEngine Open Source Ecosystem*. August 16, 2025. [Community Endorsement]
-
-Prenatal-to-3 Policy Impact Center, Vanderbilt University. (2025). *Letter of Support for PolicyEngine POSE Application*. August 17, 2025. [Academic Partnership]
-
-University of Southern California, Center for Economic and Social Research. (2025). *Letter of Support and Research Collaboration Agreement*. August 2025. [Research Partnership]
-
-Urban Institute. (2025). *Letter of Support for PolicyEngine Ecosystem Development*. August 14, 2025. [Policy Research Partnership]
-
-**Note:** Complete bibliographic information and DOIs provided where available. Government reports and working papers cited with full agency attribution and persistent URLs when possible. Software citations include version numbers and permanent identifiers following FORCE11 Software Citation Principles.
-
-Note: Per solicitation, URLs appear in References Cited and not in the Project Description body.
+MyFriendBen. (2025). About us. https://www.myfriendben.org/about-us/
